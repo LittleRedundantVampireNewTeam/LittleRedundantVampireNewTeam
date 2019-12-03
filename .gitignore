@@ -8,3 +8,5 @@ Gruppe8Eksamensprojekt2019/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInpu
 *.ide-wal
 .vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-shm
 .vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-wal
+*.ide-shm
+*.ide-wal
