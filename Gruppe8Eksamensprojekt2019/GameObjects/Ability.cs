@@ -16,7 +16,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-
+        //deez nuts
         public override void LoadContent(ContentManager content)
         {
             
