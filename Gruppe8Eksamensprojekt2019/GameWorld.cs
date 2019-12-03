@@ -41,7 +41,12 @@ namespace Gruppe8Eksamensprojekt2019
         /// and initialize them as well.
         /// </summary>
         protected override void Initialize()
+
         {
+
+            graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+            graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
+            graphics.ApplyChanges();
             // TODO: Add your initialization logic here
             levelOne = new LevelOne();
 

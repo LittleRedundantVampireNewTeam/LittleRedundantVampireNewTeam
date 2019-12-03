@@ -10,6 +10,20 @@ using System.Threading.Tasks;
 
 namespace Gruppe8Eksamensprojekt2019
 {
+    // Enums for setting objects in levels.
+    // S = Sun 
+    // R = Ray(sunray)
+    // W = Wall
+    // D = Door
+    // P = Player
+    // C = Crate
+    // V = Vase
+    // K = Key
+    // E = Enemy
+    // T = Treasure
+   
+
+
 	 abstract class Level : GameObject
 	{
 		protected Song levelMusic;
