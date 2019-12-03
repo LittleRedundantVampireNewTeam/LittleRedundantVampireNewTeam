@@ -11,3 +11,6 @@ Gruppe8Eksamensprojekt2019/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInpu
 *.ide-shm
 *.ide-wal
 .vs/Gruppe8Eksamensprojekt2019/v16/.suo
+*.cache
+Gruppe8Eksamensprojekt2019/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Gruppe8Eksamensprojekt2019/obj/x86/Debug/Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
