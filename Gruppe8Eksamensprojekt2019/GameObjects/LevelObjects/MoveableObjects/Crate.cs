@@ -16,14 +16,19 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        protected override void Update(GameTime gameTime)
+        public Crate(Vector2 position)
+        {
+            base.position = position;
+        }
+
+        public override void Update(GameTime gameTime)
         {
             Move(gameTime);
         }
 
         public override void LoadContent(ContentManager content)
         {
-
+            sprite = content.Load<Texture2D>("crateTexture");
         }
 
         protected override void Push()

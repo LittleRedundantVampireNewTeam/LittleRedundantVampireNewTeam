@@ -35,7 +35,7 @@ namespace Gruppe8Eksamensprojekt2019
             spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0);
         }
 
-        protected abstract void Update(GameTime gameTime);
+        public abstract void Update(GameTime gameTime);
 
         public abstract void LoadContent(ContentManager content);
 

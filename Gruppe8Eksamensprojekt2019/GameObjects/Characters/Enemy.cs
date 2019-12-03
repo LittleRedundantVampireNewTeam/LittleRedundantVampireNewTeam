@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,15 +28,19 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
+        public Enemy(Vector2 position)
+        {
+            base.position = position;
+        }
 
-        protected override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             Move(gameTime);
         }
 
         public override void LoadContent(ContentManager content)
         {
-
+            sprite = content.Load<Texture2D>("enemyTexture");
         }
 
         protected override void UseAbility(AbilityType ability)

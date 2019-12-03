@@ -19,16 +19,22 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-
-        protected override void Update(GameTime gameTime)
+        public Door(Vector2 position)
         {
-            
+            base.position = position;
         }
 
         public override void LoadContent(ContentManager content)
         {
+            sprite = content.Load<Texture2D>("doorTexture");
+        }
+
+        public override void Update(GameTime gameTime)
+        {
             
         }
+
+   
 
         private void OpenDoor()
         {

@@ -15,7 +15,7 @@ namespace Gruppe8Eksamensprojekt2019
             
         }
 
-        protected override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             
         }

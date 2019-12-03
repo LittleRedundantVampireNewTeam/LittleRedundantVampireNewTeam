@@ -18,15 +18,20 @@ namespace Gruppe8Eksamensprojekt2019
         {
 
         }
+        public Chest(Vector2 position)
+        {
+            base.position = position;
+        }
 
-        protected override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             
         }
 
+        
         public override void LoadContent(ContentManager content)
         {
-            
+            sprite = content.Load<Texture2D>("treasureTexture");
         }
 
         private void OpenChest()

@@ -35,6 +35,11 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected abstract void LevelSetup();
 
+        /// <summary>
+        /// Adds objects to the world from the 2d level array
+        /// </summary>
+        /// <param name="level"></param>
+        /// <param name="size"></param>
         protected void GenerateLevel(int[,] level, int size)
         {
             for (int x = 0; x < level.GetLength(1); x++)
@@ -43,13 +48,74 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     int coordinate = level[y, x];
 
-                    if (coordinate == 1)
+                    switch (coordinate)
                     {
-                        GameWorld.gameObjects.Add(new Wall(new Vector2(x * size, y * size)));
+                        case (1):
+                            {
+                                GameWorld.gameObjects.Add(new Wall(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (2):
+                            {
+                                GameWorld.gameObjects.Add(new Crate(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (3):
+                            {
+                                GameWorld.gameObjects.Add(new Sun(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (4):
+                            {
+                                GameWorld.gameObjects.Add(new SunRay(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (5):
+                            {
+                                GameWorld.gameObjects.Add(new Door(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (6):
+                            {
+                                GameWorld.gameObjects.Add(new Key(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (7):
+                            {
+                                GameWorld.gameObjects.Add(new Chest(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (8):
+                            {
+                                GameWorld.gameObjects.Add(new Enemy(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (9):
+                            {
+                                GameWorld.gameObjects.Add(new Vase(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+                        case (10):
+                            {
+                                GameWorld.gameObjects.Add(new Player(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
                     }
 
                 }
             }
         }
+
+
     }
 }

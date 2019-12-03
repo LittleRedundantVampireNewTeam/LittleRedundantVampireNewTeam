@@ -25,8 +25,12 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
+        public Player(Vector2 position)
+        {
+            base.position = position;
+        }
 
-        protected override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             Move(gameTime);
             HandleInput();
@@ -34,17 +38,19 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            playerSprite = content.Load<Texture2D>("playerTexture");
+            sprite = content.Load<Texture2D>("playerTexture");
         }
 
         private void HandleInput()
         {
+           
             velocity = Vector2.Zero;
             keyState = Keyboard.GetState();
 
             /// Controls/moves the player sprite.
             if (keyState.IsKeyDown(Keys.Right))
             {
+                Console.WriteLine(position.X);
                 velocity.X = -3f;
             }
             if (keyState.IsKeyDown(Keys.Up))

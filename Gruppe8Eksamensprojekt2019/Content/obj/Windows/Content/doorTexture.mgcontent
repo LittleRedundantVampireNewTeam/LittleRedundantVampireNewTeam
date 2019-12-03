@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</SourceFile>
-  <SourceTime>2019-12-03T15:58:15.2979245+01:00</SourceTime>
-  <DestFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/doorTexture.xnb</DestFile>
-  <DestTime>2019-12-03T15:59:37.4629499+01:00</DestTime>
+  <SourceFile>C:/Users/Henrik/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</SourceFile>
+  <SourceTime>2019-12-03T16:46:03.7842018+01:00</SourceTime>
+  <DestFile>C:/Users/Henrik/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/doorTexture.xnb</DestFile>
+  <DestTime>2019-12-03T16:46:21.8034012+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

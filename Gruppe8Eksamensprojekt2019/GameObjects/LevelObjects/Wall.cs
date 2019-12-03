@@ -27,7 +27,7 @@ namespace Gruppe8Eksamensprojekt2019
             sprite = content.Load<Texture2D>("wallTexture");
         }
 
-        protected override void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
            
         }

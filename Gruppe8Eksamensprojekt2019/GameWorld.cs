@@ -49,7 +49,7 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.ApplyChanges();
             // TODO: Add your initialization logic here
             levelOne = new LevelOne();
-
+            
             base.Initialize();
             
         }
@@ -91,6 +91,10 @@ namespace Gruppe8Eksamensprojekt2019
                 Exit();
 
             // TODO: Add your update logic here
+            foreach (GameObject gO in gameObjects)
+            {
+                gO.Update(gameTime);
+            }
 
             base.Update(gameTime);
         }
@@ -101,7 +105,7 @@ namespace Gruppe8Eksamensprojekt2019
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
