@@ -48,6 +48,8 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
             // TODO: Add your initialization logic here
+
+            gameObjects.Add(new Player(new Vector2(0, 0)));
             levelOne = new LevelOne();
             
             base.Initialize();
