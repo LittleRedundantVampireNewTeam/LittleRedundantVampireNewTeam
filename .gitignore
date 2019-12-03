@@ -1,0 +1,10 @@
+
+*.cache
+*.ide-shm
+Gruppe8Eksamensprojekt2019/obj/x86/Debug/Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+Gruppe8Eksamensprojekt2019/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+.vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-wal
+.vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-shm
+*.ide-wal
+.vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-shm
+.vs/Gruppe8Eksamensprojekt2019/v16/Server/sqlite3/storage.ide-wal
