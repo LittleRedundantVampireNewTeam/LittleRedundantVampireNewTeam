@@ -12,7 +12,6 @@ namespace Gruppe8Eksamensprojekt2019
     public abstract class GameObject
     {
         private Rectangle collisionBox;
-        //
         protected Texture2D sprite;
         protected byte currentIndex;
         protected float fps;
