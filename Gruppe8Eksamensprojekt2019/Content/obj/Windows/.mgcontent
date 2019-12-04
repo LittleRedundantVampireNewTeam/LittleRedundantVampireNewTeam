@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/collisionTexture.jpg</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/crateTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/enemyTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/playerTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/sunTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/treasureTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</File>
+    <File>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/wallTexture.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

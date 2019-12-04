@@ -14,21 +14,23 @@ namespace Gruppe8Eksamensprojekt2019
     class Player : Character
     {
         private int regeneration;
+
         private SoundEffect playerAttackSound;
 
-        private Texture2D playerSprite; /// NEW
+        private bool isColliding;
 
         private KeyboardState keyState; /// NEW
 
-        public Player(string name, int health, Vector2 position)
-        {
-
-        }
 
         public Player(Vector2 position)
         {
+            name = "Ozzy Bloodbourne";
+            health = 100;
+            speed = 200;
+            isColliding = false;
             base.position = position;
         }
+
 
         public override void Update(GameTime gameTime)
         {
@@ -48,16 +50,16 @@ namespace Gruppe8Eksamensprojekt2019
             keyState = Keyboard.GetState();
 
             /// Controls/moves the player sprite.
-            if (keyState.IsKeyDown(Keys.Right))
+            if (keyState.IsKeyDown(Keys.Left))
             {
                 Console.WriteLine(position.X);
                 velocity.X = -3f;
             }
-            if (keyState.IsKeyDown(Keys.Up))
+            if (keyState.IsKeyDown(Keys.Right))
             {
                 velocity.X = +3f;
             }
-            if (keyState.IsKeyDown(Keys.Left))
+            if (keyState.IsKeyDown(Keys.Up))
             {
                 velocity.Y = -3f;
             }
@@ -100,7 +102,12 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
+            if (other is Wall)
+            {
+                isColliding = true;
 
+
+            }
         }
     }
 }

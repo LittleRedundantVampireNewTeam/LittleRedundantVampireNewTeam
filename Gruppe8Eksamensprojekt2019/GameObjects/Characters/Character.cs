@@ -16,6 +16,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected string name;
 
 
+
         protected virtual void UpdateHealth(int health, int amount)
         {
 

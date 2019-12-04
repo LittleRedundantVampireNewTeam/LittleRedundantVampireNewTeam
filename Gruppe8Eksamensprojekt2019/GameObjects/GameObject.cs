@@ -22,6 +22,18 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool giveShadow;
         protected float drawLayer;
 
+		public Texture2D Sprite
+		{
+			get { return sprite; }
+			set { value = sprite; }
+		}
+
+        public Vector2 Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
         public bool HasShadow
         {
             get { return hasShadow;  }
@@ -44,9 +56,12 @@ namespace Gruppe8Eksamensprojekt2019
             get { return sprite; }
         }
 
-        public Rectangle CollisionBox
+        public virtual Rectangle CollisionBox
         {
-            get { return collisionBox; }
+            get
+            {
+                return new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height);
+            }
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

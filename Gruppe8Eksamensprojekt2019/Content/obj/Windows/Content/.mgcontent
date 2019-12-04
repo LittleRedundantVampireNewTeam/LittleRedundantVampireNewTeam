@@ -4,18 +4,20 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/crateTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/enemyTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/playerTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/sunTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/treasureTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</File>
-    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/wallTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/collisionTexture.jpg</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/crateTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/enemyTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/playerTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/sunTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/treasureTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</File>
+    <File>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/wallTexture.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -23,14 +23,19 @@ namespace Gruppe8Eksamensprojekt2019
         private Song currentMusic;
         private byte currentLevel;
         protected Texture2D collisionTexture;
+		public static int ScreenWidth;
+		public static int ScreenHeight;
+		private Camera camera;
+		private Player player;
 
-        Level levelOne;
+
+		Level levelOne;
 
         public GameWorld()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
+
         }
 
         /// <summary>
@@ -44,13 +49,17 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
-            // TODO: Add your initialization logic here
+			// TODO: Add your initialization logic here
 
-            gameObjects.Add(new Player(new Vector2(0, 0)));
+			ScreenWidth = graphics.PreferredBackBufferWidth;
+			ScreenHeight = graphics.PreferredBackBufferHeight;
+
+			player = new Player(new Vector2(200, 200));
+			gameObjects.Add(player);
             levelOne = new LevelOne();
-            
+
             base.Initialize();
-            
+
         }
 
         /// <summary>
@@ -66,6 +75,10 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.LoadContent(Content);
             }
+
+			camera = new Camera();
+
+            collisionTexture = Content.Load<Texture2D>("collisionTexture");
 
             // TODO: use this.Content to load your game content here
         }
@@ -101,14 +114,11 @@ namespace Gruppe8Eksamensprojekt2019
                 }
                 else
                 {
-                    
+
                 }
             }
 
-
-            gameObjects.AddRange(newObjects);
-
-            newObjects.Clear();
+			camera.FollowTarget(player);
 
             base.Update(gameTime);
         }
@@ -122,12 +132,15 @@ namespace Gruppe8Eksamensprojekt2019
             GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin(SpriteSortMode.BackToFront);
+            spriteBatch.Begin(transformMatrix:camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.Draw(spriteBatch);
+
+				DrawCollisionBox(gO);
             }
+
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -135,7 +148,18 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void DrawCollisionBox(GameObject gameObject)
         {
+            /// Draws the collisionboxes.
+            Rectangle collisionBox = gameObject.CollisionBox;
+            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
+            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
+            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
 
+            /// Makes sure the collisionbox adjusts to each sprite.
+            spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            spriteBatch.Draw(collisionTexture, bottomLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            spriteBatch.Draw(collisionTexture, rightLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+            spriteBatch.Draw(collisionTexture, leftLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
         }
     }
 }
