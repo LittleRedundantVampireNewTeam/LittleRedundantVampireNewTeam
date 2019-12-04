@@ -20,14 +20,23 @@ namespace Gruppe8Eksamensprojekt2019
         protected int speed;
         protected bool hasShadow;
 
+        public Vector2 Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
+
         public bool HasShadow
         {
             get { return hasShadow;  }
         }
 
-        public Rectangle CollisionBox
+        public virtual Rectangle CollisionBox
         {
-            get { return collisionBox; }
+            get
+            {
+                return new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height);
+            }
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

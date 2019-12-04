@@ -184,3 +184,4 @@ C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamenspr
 C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
 C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
 C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb

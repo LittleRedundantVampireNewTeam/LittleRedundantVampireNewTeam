@@ -74,10 +74,12 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void ChangeLevel()
 		{
+
 		}
 
 		protected override void LevelSetup()
 		{
+
 		}
 	}
 }
