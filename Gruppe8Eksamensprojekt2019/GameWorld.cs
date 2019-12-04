@@ -15,7 +15,7 @@ namespace Gruppe8Eksamensprojekt2019
         SpriteBatch spriteBatch;
 
         private List<GameObject> playerAbilities = new List<GameObject>();
-        private List<GameObject> shadows = new List<GameObject>();
+        public static List<GameObject> shadowObjects = new List<GameObject>();
         public static List<GameObject> gameObjects = new List<GameObject>();
         private List<GameObject> newObjects = new List<GameObject>();
         private List<GameObject> deleteObjects = new List<GameObject>();
@@ -25,7 +25,6 @@ namespace Gruppe8Eksamensprojekt2019
         protected Texture2D collisionTexture;
 
         Level levelOne;
-
 
         public GameWorld()
         {
@@ -41,9 +40,7 @@ namespace Gruppe8Eksamensprojekt2019
         /// and initialize them as well.
         /// </summary>
         protected override void Initialize()
-
         {
-
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
@@ -96,7 +93,22 @@ namespace Gruppe8Eksamensprojekt2019
             foreach (GameObject gO in gameObjects)
             {
                 gO.Update(gameTime);
+
+                if (gO.HasShadow == false && gO.GiveShadow == true)
+                {
+                    newObjects.Add(new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y+32)));
+                    gO.HasShadow = true;
+                }
+                else
+                {
+                    
+                }
             }
+
+
+            gameObjects.AddRange(newObjects);
+
+            newObjects.Clear();
 
             base.Update(gameTime);
         }
@@ -110,7 +122,7 @@ namespace Gruppe8Eksamensprojekt2019
             GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.BackToFront);
 
             foreach (GameObject gO in gameObjects)
             {

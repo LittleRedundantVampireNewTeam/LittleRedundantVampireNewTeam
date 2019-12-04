@@ -13,13 +13,14 @@ namespace Gruppe8Eksamensprojekt2019
     {
         public Shadow(Texture2D sprite, Vector2 position)
         {
-
+            base.sprite = sprite;
+            base.position = position;
         }
 
 
         public override void LoadContent(ContentManager content)
         {
-            
+           
         }
 
         public override void Update(GameTime gameTime)
@@ -27,9 +28,9 @@ namespace Gruppe8Eksamensprojekt2019
            
         }
 
-        private void Draw()
+        public override void Draw(SpriteBatch spriteBatch)
         {
-
+            spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0);
         }
     }
 }

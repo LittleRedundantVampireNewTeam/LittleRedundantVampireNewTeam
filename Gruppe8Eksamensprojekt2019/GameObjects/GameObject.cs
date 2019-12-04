@@ -19,10 +19,29 @@ namespace Gruppe8Eksamensprojekt2019
         protected Vector2 velocity;
         protected int speed;
         protected bool hasShadow;
+        protected bool giveShadow;
+        protected float drawLayer;
 
         public bool HasShadow
         {
             get { return hasShadow;  }
+            set { hasShadow = value; }
+        }
+
+        public bool GiveShadow
+        {
+            get { return giveShadow; }
+      
+        }
+
+        public Vector2 Position
+        {
+            get { return position; }
+        }
+
+        public Texture2D Sprite
+        {
+            get { return sprite; }
         }
 
         public Rectangle CollisionBox
@@ -32,7 +51,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.1f);
         }
 
         public abstract void Update(GameTime gameTime);

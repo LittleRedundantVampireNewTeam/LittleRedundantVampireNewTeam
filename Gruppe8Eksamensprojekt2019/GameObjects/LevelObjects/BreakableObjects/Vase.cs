@@ -15,6 +15,7 @@ namespace Gruppe8Eksamensprojekt2019
         public Vase(Vector2 position)
         {
             base.position = position;
+			hasShadow = true;
         }
 
 

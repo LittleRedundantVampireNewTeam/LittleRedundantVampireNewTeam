@@ -19,8 +19,12 @@ namespace Gruppe8Eksamensprojekt2019
         public Crate(Vector2 position)
         {
             base.position = position;
+            hasShadow = false;
+            giveShadow = true;
+
         }
 
+   
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);
