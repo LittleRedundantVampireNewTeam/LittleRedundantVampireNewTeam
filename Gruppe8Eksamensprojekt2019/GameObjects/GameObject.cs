@@ -20,6 +20,12 @@ namespace Gruppe8Eksamensprojekt2019
         protected int speed;
         protected bool hasShadow;
 
+		public Texture2D Sprite
+		{
+			get { return sprite; }
+			set { value = sprite; }
+		}
+
         public Vector2 Position
         {
             get { return position; }

@@ -29,7 +29,7 @@ namespace Gruppe8Eksamensprojekt2019
 		protected Song levelMusic;
 		protected List<GameObject> levelList;
 		protected Texture2D background;
-
+		
 
         protected abstract void ChangeLevel();
 
@@ -104,11 +104,12 @@ namespace Gruppe8Eksamensprojekt2019
                                 break;
                             }
 
-                        case (10):
-                            {
-                                GameWorld.gameObjects.Add(new Player(new Vector2(x * size, y * size)));
-                                break;
-                            }
+        //                case (10):
+        //                    {
+								//player = new Player(new Vector2(x * size, y * size));
+        //                        GameWorld.gameObjects.Add(player);
+        //                        break;
+        //                    }
 
                     }
 

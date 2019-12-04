@@ -23,8 +23,13 @@ namespace Gruppe8Eksamensprojekt2019
         private Song currentMusic;
         private byte currentLevel;
         protected Texture2D collisionTexture;
+		public static int ScreenWidth;
+		public static int ScreenHeight;
+		private Camera camera;
+		private Player player;
 
-        Level levelOne;
+
+		Level levelOne;
 
 
         public GameWorld()
@@ -47,9 +52,13 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
-            // TODO: Add your initialization logic here
+			// TODO: Add your initialization logic here
 
-            gameObjects.Add(new Player(new Vector2(200, 200)));
+			ScreenWidth = graphics.PreferredBackBufferWidth;
+			ScreenHeight = graphics.PreferredBackBufferHeight;
+
+			player = new Player(new Vector2(200, 200));
+			gameObjects.Add(player);
             levelOne = new LevelOne();
             
             base.Initialize();
@@ -69,6 +78,8 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.LoadContent(Content);
             }
+
+			camera = new Camera();
 
             collisionTexture = Content.Load<Texture2D>("collisionTexture");
 
@@ -100,6 +111,8 @@ namespace Gruppe8Eksamensprojekt2019
                 gO.Update(gameTime);
             }
 
+			camera.FollowTarget(player);
+
             base.Update(gameTime);
         }
 
@@ -112,7 +125,7 @@ namespace Gruppe8Eksamensprojekt2019
             GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix:camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
