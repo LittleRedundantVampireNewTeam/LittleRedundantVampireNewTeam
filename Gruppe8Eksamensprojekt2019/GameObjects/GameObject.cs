@@ -46,15 +46,6 @@ namespace Gruppe8Eksamensprojekt2019
       
         }
 
-        public Vector2 Position
-        {
-            get { return position; }
-        }
-
-        public Texture2D Sprite
-        {
-            get { return sprite; }
-        }
 
         public virtual Rectangle CollisionBox
         {
