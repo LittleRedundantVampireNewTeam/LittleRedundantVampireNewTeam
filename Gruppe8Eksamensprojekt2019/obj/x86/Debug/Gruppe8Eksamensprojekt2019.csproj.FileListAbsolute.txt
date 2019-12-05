@@ -219,3 +219,22 @@ C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamenspro
 C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
 C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
 C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
