@@ -13,6 +13,8 @@ namespace Gruppe8Eksamensprojekt2019
     {
         private Rectangle collisionBox;
         protected Texture2D sprite;
+		protected Texture2D spriteUp;
+		protected Texture2D spriteDown;
         protected byte currentIndex;
         protected float fps;
         protected Vector2 position;
@@ -21,6 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasShadow;
         protected bool giveShadow;
         protected float drawLayer;
+
         public GameObject parrent;
         public GameObject child;
 
@@ -31,6 +34,12 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
         public Texture2D Sprite
+
+		protected TimeSpan timer;
+		protected float deltaTime;
+
+		public Texture2D Sprite
+
 		{
 			get { return sprite; }
 			set { value = sprite; }
@@ -65,7 +74,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.3f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.3f);
         }
 
         public abstract void Update(GameTime gameTime);
@@ -88,8 +97,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected virtual void Move(GameTime gameTime)
         {
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
+			deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             position += ((velocity * speed) * deltaTime);
         }
     }

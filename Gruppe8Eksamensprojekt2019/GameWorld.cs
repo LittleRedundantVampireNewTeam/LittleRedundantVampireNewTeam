@@ -9,7 +9,7 @@ namespace Gruppe8Eksamensprojekt2019
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class GameWorld : Game   
+    public class GameWorld : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -27,6 +27,7 @@ namespace Gruppe8Eksamensprojekt2019
 		public static int ScreenHeight;
 		private Camera camera;
 		private Player player;
+		public static byte Scale;
 
 
 		Level levelOne;
@@ -54,8 +55,10 @@ namespace Gruppe8Eksamensprojekt2019
 			ScreenWidth = graphics.PreferredBackBufferWidth;
 			ScreenHeight = graphics.PreferredBackBufferHeight;
 
+			Scale = 1;
+
 			player = new Player(new Vector2(200, 200));
-			gameObjects.Add(player);
+
             levelOne = new LevelOne();
 
             base.Initialize();
@@ -70,8 +73,8 @@ namespace Gruppe8Eksamensprojekt2019
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            foreach (GameObject gO in gameObjects)
+			gameObjects.Add(player);
+			foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
             }
@@ -83,11 +86,16 @@ namespace Gruppe8Eksamensprojekt2019
             // TODO: use this.Content to load your game content here
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
-        protected override void UnloadContent()
+		public static void Instantiate(GameObject gO)
+		{
+			newObjects.Add(gO);
+		}
+
+		/// <summary>
+		/// UnloadContent will be called once per game and is the place to unload
+		/// game-specific content.
+		/// </summary>
+		protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
@@ -102,12 +110,13 @@ namespace Gruppe8Eksamensprojekt2019
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            deleteObjects.Clear();
+      			gameObjects.AddRange(newObjects);
 
-            // TODO: Add your update logic here
+      			newObjects.Clear();
+      			deleteObjects.Clear();
 
-            //Runs through every gameobject in the list
-            foreach (GameObject gO in gameObjects)
+      			// TODO: Add your update logic here
+      			foreach (GameObject gO in gameObjects)
             {
                 //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
@@ -127,7 +136,7 @@ namespace Gruppe8Eksamensprojekt2019
                     /// Also gives the shadow the position of the gameobject and offsets it to be placed under the gameobject.
                     /// </summary>
                     newObjects.Add(new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y + gO.Sprite.Height), gO));
-                    
+
                     //Marks the gameobject instance with a 'HasShadow' to be checked later
                     gO.HasShadow = true;
                 }
@@ -136,7 +145,16 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     gO.HasShadow = false;
                 }
-            }
+				foreach (GameObject other in gameObjects)
+				{
+					gO.CheckCollision(other);
+				}
+			}
+
+			foreach (GameObject gO in deleteObjects)
+			{
+				gameObjects.Remove(gO);
+			}
 
             gameObjects.AddRange(newObjects);
 
@@ -181,10 +199,10 @@ namespace Gruppe8Eksamensprojekt2019
         {
             /// Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
-            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
-            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
-            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
-            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width*Scale, 1);
+            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height*Scale, collisionBox.Width*Scale, 1);
+            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width*Scale, collisionBox.Y, 1, collisionBox.Height*Scale);
+            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height*Scale);
 
             /// Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);

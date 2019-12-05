@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</SourceFile>
-  <SourceTime>2019-12-05T12:54:46.4916457+01:00</SourceTime>
-  <DestFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/rayTexture.xnb</DestFile>
-  <DestTime>2019-12-05T13:57:11.087258+01:00</DestTime>
+  <SourceFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</SourceFile>
+  <SourceTime>2019-12-04T09:28:40.5583505+01:00</SourceTime>
+  <DestFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/rayTexture.xnb</DestFile>
+  <DestTime>2019-12-04T12:41:16.1537335+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

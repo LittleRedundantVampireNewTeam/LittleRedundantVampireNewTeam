@@ -59,7 +59,7 @@ namespace Gruppe8Eksamensprojekt2019
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1},
  
 
-            }, 32);
+            }, 96*GameWorld.Scale);
         }
 
         public override void LoadContent(ContentManager content)

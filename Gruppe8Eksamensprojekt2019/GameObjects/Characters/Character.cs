@@ -14,7 +14,9 @@ namespace Gruppe8Eksamensprojekt2019
         protected int health;
         protected int damage;
         protected string name;
-
+		protected bool hasAttacked;
+		protected float cooldown;
+		protected string playerDirection;
 
 
         protected virtual void UpdateHealth(int health, int amount)
@@ -22,7 +24,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        protected virtual void Attack()
+        protected virtual void Attack(GameTime gameTime)
         {
 
         }

@@ -19,7 +19,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("rayTexture");
+            sprite = content.Load<Texture2D>("Sunlight2");
         }
 
         public override void Update(GameTime gameTime)
