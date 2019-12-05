@@ -9,7 +9,7 @@ namespace Gruppe8Eksamensprojekt2019
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class GameWorld : Game
+    public class GameWorld : Game   
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -17,8 +17,8 @@ namespace Gruppe8Eksamensprojekt2019
         private List<GameObject> playerAbilities = new List<GameObject>();
         public static List<GameObject> shadowObjects = new List<GameObject>();
         public static List<GameObject> gameObjects = new List<GameObject>();
-        private List<GameObject> newObjects = new List<GameObject>();
-        private List<GameObject> deleteObjects = new List<GameObject>();
+        private static List<GameObject> newObjects = new List<GameObject>();
+        private static List<GameObject> deleteObjects = new List<GameObject>();
 
         private Song currentMusic;
         private byte currentLevel;
@@ -102,23 +102,54 @@ namespace Gruppe8Eksamensprojekt2019
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            deleteObjects.Clear();
+
             // TODO: Add your update logic here
+
+            //Runs through every gameobject in the list
             foreach (GameObject gO in gameObjects)
             {
+                //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
 
+                //Calls the CheckCollision method in every game object in the list
+                foreach (GameObject other in gameObjects)
+                {
+                    gO.CheckCollision(other);
+                }
+
+                //Checks if the gameobject does not have a shadow and if it should have a shadow
                 if (gO.HasShadow == false && gO.GiveShadow == true)
                 {
-                    newObjects.Add(new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y+32)));
+                    /// <summary>
+                    /// Adds a new shadow instance to the list newObjects so it can be added while the game is running.
+                    /// The new shadow instance is created with the same sprite of the gameobject and assigns the gameobject as the parrent.
+                    /// Also gives the shadow the position of the gameobject and offsets it to be placed under the gameobject.
+                    /// </summary>
+                    newObjects.Add(new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y + gO.Sprite.Height), gO));
+                    
+                    //Marks the gameobject instance with a 'HasShadow' to be checked later
                     gO.HasShadow = true;
                 }
-                else
+                //Checks if the gameobject has a shadow and if it should not have one
+                if (gO.HasShadow == true && gO.GiveShadow == false)
                 {
-
+                    gO.HasShadow = false;
                 }
             }
 
-			camera.FollowTarget(player);
+            gameObjects.AddRange(newObjects);
+
+            newObjects.Clear();
+
+            camera.FollowTarget(player);
+
+            foreach (GameObject gO in deleteObjects)
+            {
+                gameObjects.Remove(gO);
+            }
+
+            deleteObjects.Clear();
 
             base.Update(gameTime);
         }
@@ -132,13 +163,13 @@ namespace Gruppe8Eksamensprojekt2019
             GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin(transformMatrix:camera.CameraTransform);
+            spriteBatch.Begin(SpriteSortMode.FrontToBack,transformMatrix:camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.Draw(spriteBatch);
 
-				DrawCollisionBox(gO);
+				//DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
@@ -160,6 +191,16 @@ namespace Gruppe8Eksamensprojekt2019
             spriteBatch.Draw(collisionTexture, bottomLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, rightLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, leftLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
+        }
+
+        public static void Instantiate(GameObject gO)
+        {
+            newObjects.Add(gO);
+        }
+
+        public static void Destroy(GameObject gO)
+        {
+            deleteObjects.Add(gO);
         }
     }
 }

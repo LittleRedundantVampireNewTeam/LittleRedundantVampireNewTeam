@@ -14,20 +14,18 @@ namespace Gruppe8Eksamensprojekt2019
     class Player : Character
     {
         private int regeneration;
-
         private SoundEffect playerAttackSound;
-
-        private bool isColliding;
-
+        private TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
+        private bool invincible = false;
+        private static bool inShadow = false;
+        private static bool inSun = false;
         private KeyboardState keyState; /// NEW
-
-
+        
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
             health = 100;
             speed = 200;
-            isColliding = false;
             base.position = position;
         }
 
@@ -36,11 +34,24 @@ namespace Gruppe8Eksamensprojekt2019
         {
             Move(gameTime);
             HandleInput();
+            InvincibleTimer(gameTime);
+
+            //Checks if the player should be taking damage from standing in the sun
+            if (inSun == true && invincible == false)
+            {
+                invincible = true;
+                if (health > 0)
+                {
+                    //HEALTHSYSTEM HERE*************
+                    health--;
+                }
+            }
         }
 
         public override void LoadContent(ContentManager content)
         {
             sprite = content.Load<Texture2D>("playerTexture");
+            cooldownTimer = new TimeSpan(0, 0, 2);
         }
 
         private void HandleInput()
@@ -52,7 +63,6 @@ namespace Gruppe8Eksamensprojekt2019
             /// Controls/moves the player sprite.
             if (keyState.IsKeyDown(Keys.Left))
             {
-                Console.WriteLine(position.X);
                 velocity.X = -3f;
             }
             if (keyState.IsKeyDown(Keys.Right))
@@ -77,7 +87,19 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void InvincibleTimer(GameTime gameTime)
         {
-
+            /// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
+            if (invincible == true)
+            {
+                if (cooldownTimer > TimeSpan.Zero)
+                {
+                    cooldownTimer -= gameTime.ElapsedGameTime;
+                }
+                if (cooldownTimer <= TimeSpan.Zero)
+                {
+                    invincible = false;
+                    cooldownTimer = new TimeSpan(0, 0, 2);
+                }
+            }
         }
 
         protected override void Attack()
@@ -102,11 +124,21 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-            if (other is Wall)
+            //Checks if the player is colliding with a shadow and marks them as 'in a shadow'
+            if (other is Shadow)
             {
-                isColliding = true;
+                inShadow = true;
+                inSun = false;
+            }
+            else
+            {
+                inShadow = false;
+            }
 
-
+            //Checks if the player is colliding with a sunray and marks them as 'in the sun'
+            if (other is SunRay && inShadow == false)
+            {
+                inSun = true;
             }
         }
     }

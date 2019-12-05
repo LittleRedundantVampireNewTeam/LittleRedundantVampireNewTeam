@@ -21,8 +21,16 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasShadow;
         protected bool giveShadow;
         protected float drawLayer;
+        public GameObject parrent;
+        public GameObject child;
 
-		public Texture2D Sprite
+        public GameObject Parrent
+        {
+            get { return parrent; }
+
+        }
+
+        public Texture2D Sprite
 		{
 			get { return sprite; }
 			set { value = sprite; }
@@ -43,7 +51,7 @@ namespace Gruppe8Eksamensprojekt2019
         public bool GiveShadow
         {
             get { return giveShadow; }
-      
+            set { giveShadow = value; }
         }
 
 
@@ -57,16 +65,20 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.3f);
         }
 
         public abstract void Update(GameTime gameTime);
 
         public abstract void LoadContent(ContentManager content);
 
-        protected virtual void CheckCollision(GameObject gameObject)
-        {
 
+        public virtual void CheckCollision(GameObject other)
+        {
+            if (CollisionBox.Intersects(other.CollisionBox))
+            {
+                OnCollision(other);
+            }
         }
 
         protected virtual void OnCollision(GameObject other)
