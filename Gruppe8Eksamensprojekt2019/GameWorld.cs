@@ -23,15 +23,15 @@ namespace Gruppe8Eksamensprojekt2019
         private Song currentMusic;
         private byte currentLevel;
         protected Texture2D collisionTexture;
-		public static int ScreenWidth;
-		public static int ScreenHeight;
-		private Camera camera;
-		private Player player;
+        public static int ScreenWidth;
+        public static int ScreenHeight;
+        private Camera camera;
+        private Player player;
 
-		public static byte Scale;
+        public static byte Scale;
 
 
-		Level levelOne;
+        Level levelOne;
 
         public GameWorld()
         {
@@ -51,14 +51,14 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
-			// TODO: Add your initialization logic here
+            // TODO: Add your initialization logic here
 
-			ScreenWidth = graphics.PreferredBackBufferWidth;
-			ScreenHeight = graphics.PreferredBackBufferHeight;
+            ScreenWidth = graphics.PreferredBackBufferWidth;
+            ScreenHeight = graphics.PreferredBackBufferHeight;
 
-			Scale = 1;
+            Scale = 1;
 
-			player = new Player(new Vector2(200, 200));
+            player = new Player(new Vector2(200, 200));
 
             levelOne = new LevelOne();
 
@@ -74,13 +74,13 @@ namespace Gruppe8Eksamensprojekt2019
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-			gameObjects.Add(player);
-			foreach (GameObject gO in gameObjects)
+            gameObjects.Add(player);
+            foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
             }
 
-			camera = new Camera();
+            camera = new Camera();
 
             collisionTexture = Content.Load<Texture2D>("collisionTexture");
 
@@ -88,11 +88,11 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
 
-		/// <summary>
-		/// UnloadContent will be called once per game and is the place to unload
-		/// game-specific content.
-		/// </summary>
-		protected override void UnloadContent()
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// game-specific content.
+        /// </summary>
+        protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
@@ -107,13 +107,13 @@ namespace Gruppe8Eksamensprojekt2019
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-      			gameObjects.AddRange(newObjects);
+            gameObjects.AddRange(newObjects);
 
-      			newObjects.Clear();
-      			deleteObjects.Clear();
+            newObjects.Clear();
+            deleteObjects.Clear();
 
-      			// TODO: Add your update logic here
-      			foreach (GameObject gO in gameObjects)
+            // TODO: Add your update logic here
+            foreach (GameObject gO in gameObjects)
             {
                 //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
@@ -142,29 +142,24 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     gO.HasShadow = false;
                 }
-				foreach (GameObject other in gameObjects)
-				{
-					gO.CheckCollision(other);
-				}
-			}
-
-			foreach (GameObject gO in deleteObjects)
-			{
-				gameObjects.Remove(gO);
-			}
-
-            gameObjects.AddRange(newObjects);
-
-            newObjects.Clear();
-
-            camera.FollowTarget(player);
+                foreach (GameObject other in gameObjects)
+                {
+                    gO.CheckCollision(other);
+                }
+            }
 
             foreach (GameObject gO in deleteObjects)
             {
                 gameObjects.Remove(gO);
             }
 
+            gameObjects.AddRange(newObjects);
+
+            newObjects.Clear();
+
             deleteObjects.Clear();
+
+            camera.FollowTarget(player);
 
             base.Update(gameTime);
         }
@@ -178,13 +173,13 @@ namespace Gruppe8Eksamensprojekt2019
             GraphicsDevice.Clear(Color.DimGray);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin(SpriteSortMode.FrontToBack,transformMatrix:camera.CameraTransform);
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.Draw(spriteBatch);
 
-				//DrawCollisionBox(gO);
+                //DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
@@ -196,10 +191,10 @@ namespace Gruppe8Eksamensprojekt2019
         {
             /// Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
-            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width*Scale, 1);
-            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height*Scale, collisionBox.Width*Scale, 1);
-            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width*Scale, collisionBox.Y, 1, collisionBox.Height*Scale);
-            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height*Scale);
+            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * Scale, 1);
+            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * Scale, collisionBox.Width * Scale, 1);
+            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width * Scale, collisionBox.Y, 1, collisionBox.Height * Scale);
+            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * Scale);
 
             /// Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);

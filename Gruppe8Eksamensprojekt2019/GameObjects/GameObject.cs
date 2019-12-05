@@ -23,7 +23,8 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasShadow;
         protected bool giveShadow;
         protected float drawLayer;
-
+        protected TimeSpan timer;
+        protected float deltaTime;
         public GameObject parrent;
         public GameObject child;
 
@@ -32,9 +33,6 @@ namespace Gruppe8Eksamensprojekt2019
             get { return parrent; }
 
         }
-
-		protected TimeSpan timer;
-		protected float deltaTime;
 
 		public Texture2D Sprite
 

@@ -11,9 +11,6 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Crate : MoveableObject
     {
-
-      
-
         public Crate(Texture2D sprite, Vector2 position, bool hasShadow)
         {
 
@@ -24,12 +21,12 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             hasShadow = false;
             giveShadow = false;
+            speed = 2;
         }
-
 
         public override void Update(GameTime gameTime)
         {
-            velocity.X = +3f;
+            velocity.X = +10f;
             Move(gameTime);
         }
 

@@ -19,12 +19,11 @@ namespace Gruppe8Eksamensprojekt2019
 		public override void Update(GameTime gameTime)
 		{
 			HandleAttack(gameTime);
-            
 		}
 
 		public PlayerAttack()
 		{
-			// sets the attacktimer to zero.
+			// Sets the attacktimer to zero.
 			timer = new TimeSpan(0, 0, 0, 0, 0);
 		}
 
@@ -34,6 +33,7 @@ namespace Gruppe8Eksamensprojekt2019
 			base.position = position;
 			base.velocity = velocity;
 		}
+
 		protected override void OnCollision(GameObject other)
 		{
 			if (other is Vase)
@@ -44,8 +44,9 @@ namespace Gruppe8Eksamensprojekt2019
 
 		private void HandleAttack(GameTime gameTime)
 		{
-			//counts down the timer for the duration of the attack
+			//Counts down the timer for the duration of the attack
 			timer += gameTime.ElapsedGameTime;
+
 			//Deletes the instance of the attack when the timer is zero or below zero.
 			if (timer >= new TimeSpan(0, 0, 0, 0, 100))
 			{

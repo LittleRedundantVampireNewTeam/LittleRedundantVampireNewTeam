@@ -11,14 +11,10 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Vase : BreakableObject
     {
-
         public Vase(Vector2 position)
         {
             base.position = position;
-			hasShadow = true;
         }
-
-
 
         public override void Update(GameTime gameTime)
         {
@@ -29,7 +25,6 @@ namespace Gruppe8Eksamensprojekt2019
         {
             sprite = content.Load<Texture2D>("vaseTexture");
         }
-
 
         protected override void Break()
         {
