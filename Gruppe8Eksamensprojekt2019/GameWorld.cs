@@ -27,6 +27,7 @@ namespace Gruppe8Eksamensprojekt2019
 		public static int ScreenHeight;
 		private Camera camera;
 		private Player player;
+
 		public static byte Scale;
 
 
@@ -86,10 +87,6 @@ namespace Gruppe8Eksamensprojekt2019
             // TODO: use this.Content to load your game content here
         }
 
-		public static void Instantiate(GameObject gO)
-		{
-			newObjects.Add(gO);
-		}
 
 		/// <summary>
 		/// UnloadContent will be called once per game and is the place to unload

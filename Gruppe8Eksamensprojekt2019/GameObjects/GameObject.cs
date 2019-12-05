@@ -33,8 +33,6 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        public Texture2D Sprite
-
 		protected TimeSpan timer;
 		protected float deltaTime;
 

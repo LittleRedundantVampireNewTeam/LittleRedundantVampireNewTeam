@@ -33,8 +33,6 @@ namespace Gruppe8Eksamensprojekt2019
 
     		private Texture2D attackDown;
 
-    		private KeyboardState keyState; /// NEW
-
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";

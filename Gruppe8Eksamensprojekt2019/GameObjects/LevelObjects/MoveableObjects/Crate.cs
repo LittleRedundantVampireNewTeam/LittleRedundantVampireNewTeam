@@ -24,7 +24,6 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             hasShadow = false;
             giveShadow = false;
-            speed = 10;
         }
 
 
