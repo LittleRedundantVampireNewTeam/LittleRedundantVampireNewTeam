@@ -23,7 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("vaseTexture");
+            sprite = GameWorld.VaseSprite;
         }
 
         protected override void Break()

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttackDown.png</SourceFile>
+  <SourceFile>C:/Users/admin/Desktop/BetersFPSfix/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttackDown.png</SourceFile>
   <SourceTime>2019-12-05T15:28:17.7018817+01:00</SourceTime>
-  <DestFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/SlashAttackDown.xnb</DestFile>
-  <DestTime>2019-12-05T15:28:39.2682129+01:00</DestTime>
+  <DestFile>C:/Users/admin/Desktop/BetersFPSfix/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/SlashAttackDown.xnb</DestFile>
+  <DestTime>2019-12-06T09:20:28.4564227+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -40,13 +40,13 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-            //Gives the crate a shadow when colliding with a sunray
-            if (other is SunRay)
-            {
-                Parrent.GiveShadow = true;
-            } 
-            //Sets the crate to remove its shadow
-            else
+            ////Gives the crate a shadow when colliding with a sunray
+            //if (other is SunRay)
+            //{
+            //    Parrent.GiveShadow = true;
+            //}
+            ////Sets the crate to remove its shadow
+            //else
             {
                 Parrent.GiveShadow = false;
             }
@@ -54,7 +54,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), new Vector2(1,2), SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), new Vector2(1,2), SpriteEffects.None, 0.4f);
         }
     }
 }

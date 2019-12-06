@@ -26,13 +26,13 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Update(GameTime gameTime)
         {
-            velocity.X = +10f;
-            Move(gameTime);
+           velocity.X = +10f;
+           Move(gameTime);
         }
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("crateTexture");
+            sprite = GameWorld.CrateSprite;
         }
 
         protected override void Push()
@@ -43,10 +43,14 @@ namespace Gruppe8Eksamensprojekt2019
         protected override void OnCollision(GameObject other)
         {
             //Marks the crate to recieve a shadow
-            if (other is SunRay)
+            if (other is SunRay && giveShadow == false)
             {
                 giveShadow = true;
             }
+        }
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.5f);
         }
     }
 }

@@ -17,12 +17,22 @@ namespace Gruppe8Eksamensprojekt2019
         private List<GameObject> playerAbilities = new List<GameObject>();
         public static List<GameObject> shadowObjects = new List<GameObject>();
         public static List<GameObject> gameObjects = new List<GameObject>();
+        public static List<GameObject> collisionObjects = new List<GameObject>();
         private static List<GameObject> newObjects = new List<GameObject>();
         private static List<GameObject> deleteObjects = new List<GameObject>();
 
         private Song currentMusic;
         private byte currentLevel;
         protected Texture2D collisionTexture;
+
+        private static Texture2D wallSprite;
+        private static Texture2D sunRaySprite;
+        private static Texture2D crateSprite;
+        private static Texture2D sunSprite;
+        private static Texture2D vaseSprite;
+        private static Texture2D enemySprite;
+
+
         public static int ScreenWidth;
         public static int ScreenHeight;
         private Camera camera;
@@ -38,6 +48,37 @@ namespace Gruppe8Eksamensprojekt2019
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
+        }
+
+        public static Texture2D WallSprite
+        {
+            get { return wallSprite; }
+        }
+
+        public static Texture2D EnemySprite
+        {
+            get { return enemySprite; }
+        }
+
+
+        public static Texture2D SunSprite
+        {
+            get { return sunSprite; }
+        }
+        public static Texture2D VaseSprite
+        {
+            get { return vaseSprite; }
+        }
+
+
+        public static Texture2D CrateSprite
+        {
+            get { return crateSprite; }
+        }
+
+        public static Texture2D SunRaySprite
+        {
+            get { return sunRaySprite; }
         }
 
         /// <summary>
@@ -58,7 +99,9 @@ namespace Gruppe8Eksamensprojekt2019
 
             Scale = 1;
 
-            player = new Player(new Vector2(200, 200));
+
+            player = new Player(new Vector2(1500, 1500));
+            collisionObjects.Add(player);
 
             levelOne = new LevelOne();
 
@@ -74,16 +117,24 @@ namespace Gruppe8Eksamensprojekt2019
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            crateSprite = Content.Load<Texture2D>("Crate3");
+            wallSprite = Content.Load<Texture2D>("StonewallBroken2");
+            sunRaySprite = Content.Load<Texture2D>("Sunlight2");
+            sunSprite = Content.Load<Texture2D>("WindowDark2");
+            vaseSprite = Content.Load<Texture2D>("vaseTexture");
+            enemySprite = Content.Load<Texture2D>("enemyTexture");
+
             gameObjects.Add(player);
+            camera = new Camera();
+
             foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
             }
 
-            camera = new Camera();
-
-            collisionTexture = Content.Load<Texture2D>("collisionTexture");
-
+            
+            
             // TODO: use this.Content to load your game content here
         }
 
@@ -119,7 +170,7 @@ namespace Gruppe8Eksamensprojekt2019
                 gO.Update(gameTime);
 
                 //Calls the CheckCollision method in every game object in the list
-                foreach (GameObject other in gameObjects)
+                foreach (GameObject other in collisionObjects)
                 {
                     gO.CheckCollision(other);
                 }
@@ -132,7 +183,11 @@ namespace Gruppe8Eksamensprojekt2019
                     /// The new shadow instance is created with the same sprite of the gameobject and assigns the gameobject as the parrent.
                     /// Also gives the shadow the position of the gameobject and offsets it to be placed under the gameobject.
                     /// </summary>
-                    newObjects.Add(new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y + gO.Sprite.Height), gO));
+
+                    GameObject newShadow = new Shadow(gO.Sprite, new Vector2(gO.Position.X, gO.Position.Y + gO.Sprite.Height), gO);
+
+                    collisionObjects.Add(newShadow);
+                    newObjects.Add(newShadow);
 
                     //Marks the gameobject instance with a 'HasShadow' to be checked later
                     gO.HasShadow = true;
@@ -151,6 +206,7 @@ namespace Gruppe8Eksamensprojekt2019
             foreach (GameObject gO in deleteObjects)
             {
                 gameObjects.Remove(gO);
+                collisionObjects.Remove(gO);
             }
 
             gameObjects.AddRange(newObjects);

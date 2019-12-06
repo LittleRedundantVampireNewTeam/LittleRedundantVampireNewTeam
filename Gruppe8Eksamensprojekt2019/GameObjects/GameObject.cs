@@ -31,7 +31,6 @@ namespace Gruppe8Eksamensprojekt2019
         public GameObject Parrent
         {
             get { return parrent; }
-
         }
 
 		public Texture2D Sprite

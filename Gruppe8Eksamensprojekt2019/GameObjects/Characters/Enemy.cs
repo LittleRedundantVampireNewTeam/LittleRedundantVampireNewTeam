@@ -40,7 +40,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("enemyTexture");
+            sprite = GameWorld.EnemySprite;
         }
 
         protected override void UseAbility(AbilityType ability)

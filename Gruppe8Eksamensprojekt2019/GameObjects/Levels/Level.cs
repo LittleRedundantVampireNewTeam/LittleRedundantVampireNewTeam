@@ -21,15 +21,15 @@ namespace Gruppe8Eksamensprojekt2019
     // K = Key
     // E = Enemy
     // T = Treasure
-   
 
 
-	 abstract class Level : GameObject
-	{
-		protected Song levelMusic;
-		protected List<GameObject> levelList;
-		protected Texture2D background;
-		
+
+    abstract class Level : GameObject
+    {
+        protected Song levelMusic;
+        protected List<GameObject> levelList;
+        protected Texture2D background;
+
 
         protected abstract void ChangeLevel();
 
@@ -58,7 +58,9 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (2):
                             {
-                                GameWorld.gameObjects.Add(new Crate(new Vector2(x * size, y * size)));
+                                GameObject newCrate = new Crate(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newCrate);
+                                GameWorld.gameObjects.Add(newCrate);
                                 break;
                             }
 
@@ -103,19 +105,9 @@ namespace Gruppe8Eksamensprojekt2019
                                 GameWorld.gameObjects.Add(new Vase(new Vector2(x * size, y * size)));
                                 break;
                             }
-
-						//case (10):
-						//	{
-						//		GameWorld.gameObjects.Add(new);
-						//		break;
-						//	}
-
-					}
-
+                    }
                 }
             }
         }
-
-
     }
 }
