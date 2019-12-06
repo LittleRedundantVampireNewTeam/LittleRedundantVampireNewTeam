@@ -11,7 +11,6 @@ namespace Gruppe8Eksamensprojekt2019
 {
     public abstract class GameObject
     {
-        private Rectangle collisionBox;
         protected Texture2D sprite;
 		protected Texture2D spriteUp;
 		protected Texture2D spriteDown;
@@ -21,6 +20,9 @@ namespace Gruppe8Eksamensprojekt2019
         protected Vector2 velocity;
         protected int speed;
         protected bool hasShadow;
+        protected Rectangle intersect;
+        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        protected string name;
         protected bool giveShadow;
         protected float drawLayer;
         protected TimeSpan timer;
@@ -75,7 +77,6 @@ namespace Gruppe8Eksamensprojekt2019
         public abstract void Update(GameTime gameTime);
 
         public abstract void LoadContent(ContentManager content);
-
 
         public virtual void CheckCollision(GameObject other)
         {

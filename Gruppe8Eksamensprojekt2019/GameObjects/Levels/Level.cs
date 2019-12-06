@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Gruppe8Eksamensprojekt2019
 {
     // Enums for setting objects in levels.
-    // S = Sun 
+    // S = Sun
     // R = Ray(sunray)
     // W = Wall
     // D = Door
@@ -78,13 +78,13 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (5):
                             {
-                                GameWorld.gameObjects.Add(new Door(new Vector2(x * size, y * size)));
+                                GameWorld.gameObjects.Add(new Door("Door1", new Vector2(x * size, y * size), true));
                                 break;
                             }
 
                         case (6):
                             {
-                                GameWorld.gameObjects.Add(new Key(new Vector2(x * size, y * size)));
+                                GameWorld.gameObjects.Add(new Key("Key1", new Vector2(x * size, y * size)));
                                 break;
                             }
 
@@ -103,6 +103,18 @@ namespace Gruppe8Eksamensprojekt2019
                         case (9):
                             {
                                 GameWorld.gameObjects.Add(new Vase(new Vector2(x * size, y * size)));
+                                break;
+                            }
+
+						//case (10):
+						//	{
+						//		GameWorld.gameObjects.Add(new);
+						//		break;
+						//	}
+
+                        case (11):
+                            {
+                                GameWorld.gameObjects.Add(new Door("Door2", new Vector2(x * size, y * size), true));
                                 break;
                             }
                     }

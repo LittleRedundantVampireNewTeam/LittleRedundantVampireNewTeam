@@ -11,17 +11,11 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Door : GameObject
     {
-        private bool isOpen;
-
-
-        public Door(Texture2D sprite, Vector2 position, bool hasShadow)
-        {
-
-        }
-
-        public Door(Vector2 position)
+        public Door(string name, Vector2 position, bool doorLocked)
         {
             base.position = position;
+            base.doorLocked = doorLocked;
+
         }
 
         public override void LoadContent(ContentManager content)

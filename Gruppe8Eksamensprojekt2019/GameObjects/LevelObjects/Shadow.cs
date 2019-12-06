@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Gruppe8Eksamensprojekt2019
 {
-    
+
 
     class Shadow : GameObject
     {
@@ -22,7 +22,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-           
+
         }
 
         public override void Update(GameTime gameTime)

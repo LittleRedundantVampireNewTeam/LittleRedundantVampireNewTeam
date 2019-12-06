@@ -11,8 +11,8 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Wall : GameObject
     {
-     
-       
+
+
         public Wall(Vector2 position)
         {
             base.position = position;
@@ -25,7 +25,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Update(GameTime gameTime)
         {
-           
+
         }
         public override void Draw(SpriteBatch spriteBatch)
         {

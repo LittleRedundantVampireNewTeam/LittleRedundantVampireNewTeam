@@ -235,7 +235,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-                //DrawCollisionBox(gO);
+                DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
@@ -245,14 +245,14 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void DrawCollisionBox(GameObject gameObject)
         {
-            /// Draws the collisionboxes.
+            // Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
             Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * Scale, 1);
             Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * Scale, collisionBox.Width * Scale, 1);
             Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width * Scale, collisionBox.Y, 1, collisionBox.Height * Scale);
             Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * Scale);
 
-            /// Makes sure the collisionbox adjusts to each sprite.
+            // Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, bottomLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, rightLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
