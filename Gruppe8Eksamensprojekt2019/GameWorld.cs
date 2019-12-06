@@ -118,6 +118,7 @@ namespace Gruppe8Eksamensprojekt2019
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            collisionTexture = Content.Load<Texture2D>("collisionTexture");
             crateSprite = Content.Load<Texture2D>("Crate3");
             wallSprite = Content.Load<Texture2D>("StonewallBroken2");
             sunRaySprite = Content.Load<Texture2D>("Sunlight2");
@@ -235,7 +236,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-                DrawCollisionBox(gO);
+                //DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
