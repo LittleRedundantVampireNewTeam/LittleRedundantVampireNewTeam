@@ -51,7 +51,13 @@ namespace Gruppe8Eksamensprojekt2019
                 Parrent.GiveShadow = false;
             }
         }
-
+        public override Rectangle CollisionBox
+        {
+            get
+            {
+                return new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height*2);
+            }
+        }
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), new Vector2(1,2), SpriteEffects.None, 0.4f);

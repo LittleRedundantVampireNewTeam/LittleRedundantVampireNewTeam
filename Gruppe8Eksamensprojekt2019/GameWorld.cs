@@ -236,7 +236,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-                //DrawCollisionBox(gO);
+                DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
