@@ -49,7 +49,7 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.ApplyChanges();
             // TODO: Add your initialization logic here
 
-            gameObjects.Add(new Player(new Vector2(200, 200)));
+            gameObjects.Add(new Player(new Vector2(200, 200))); // SKAL FLYTTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             levelOne = new LevelOne();
             
             base.Initialize();
@@ -98,6 +98,11 @@ namespace Gruppe8Eksamensprojekt2019
             foreach (GameObject gO in gameObjects)
             {
                 gO.Update(gameTime);
+
+                foreach (GameObject other in gameObjects)
+                {
+                    gO.CheckCollision(other);
+                }
             }
 
             base.Update(gameTime);
@@ -118,7 +123,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-				DrawCollisionBox(gO);
+                DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
@@ -128,14 +133,14 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void DrawCollisionBox(GameObject gameObject)
         {
-            /// Draws the collisionboxes.
+            // Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
             Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
             Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
             Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
             Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
 
-            /// Makes sure the collisionbox adjusts to each sprite.
+            // Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, bottomLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, rightLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);

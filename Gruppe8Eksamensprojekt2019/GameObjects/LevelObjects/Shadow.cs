@@ -13,7 +13,8 @@ namespace Gruppe8Eksamensprojekt2019
     {
         public Shadow(Texture2D sprite, Vector2 position)
         {
-
+            base.sprite = sprite;
+            base.position = position;
         }
 
 

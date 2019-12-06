@@ -11,7 +11,6 @@ namespace Gruppe8Eksamensprojekt2019
 {
     public abstract class GameObject
     {
-        private Rectangle collisionBox;
         protected Texture2D sprite;
         protected byte currentIndex;
         protected float fps;
@@ -19,6 +18,9 @@ namespace Gruppe8Eksamensprojekt2019
         protected Vector2 velocity;
         protected int speed;
         protected bool hasShadow;
+        protected Rectangle intersect;
+        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        protected string name;
 
         public Vector2 Position
         {
@@ -31,7 +33,7 @@ namespace Gruppe8Eksamensprojekt2019
             get { return hasShadow;  }
         }
 
-        public virtual Rectangle CollisionBox
+        public Rectangle CollisionBox
         {
             get
             {
@@ -48,9 +50,12 @@ namespace Gruppe8Eksamensprojekt2019
 
         public abstract void LoadContent(ContentManager content);
 
-        protected virtual void CheckCollision(GameObject gameObject)
+        public virtual void CheckCollision(GameObject other)
         {
-
+            if (CollisionBox.Intersects(other.CollisionBox))
+            {
+                OnCollision(other);
+            }
         }
 
         protected virtual void OnCollision(GameObject other)

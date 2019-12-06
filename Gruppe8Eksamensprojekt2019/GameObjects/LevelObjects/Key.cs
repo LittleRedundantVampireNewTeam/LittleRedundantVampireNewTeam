@@ -11,7 +11,7 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Key : GameObject
     {
-        public Key(Vector2 position)
+        public Key(string name, Vector2 position)
         {
             base.position = position;
         }
