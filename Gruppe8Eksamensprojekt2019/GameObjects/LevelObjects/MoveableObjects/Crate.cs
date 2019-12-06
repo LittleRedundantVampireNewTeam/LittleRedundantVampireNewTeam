@@ -19,10 +19,14 @@ namespace Gruppe8Eksamensprojekt2019
         public Crate(Vector2 position)
         {
             base.position = position;
+            hasShadow = false;
+            giveShadow = false;
+            speed = 2;
         }
 
         public override void Update(GameTime gameTime)
         {
+            velocity.X = +10f;
             Move(gameTime);
         }
 
@@ -38,7 +42,11 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-
+            //Marks the crate to recieve a shadow
+            if (other is SunRay)
+            {
+                giveShadow = true;
+            }
         }
     }
 }

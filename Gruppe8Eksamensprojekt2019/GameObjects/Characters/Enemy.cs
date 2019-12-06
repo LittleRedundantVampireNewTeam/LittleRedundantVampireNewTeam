@@ -53,7 +53,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		protected override void Attack()
+		protected override void Attack(GameTime gameTime)
 		{
 
 		}

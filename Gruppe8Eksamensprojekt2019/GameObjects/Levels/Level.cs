@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Gruppe8Eksamensprojekt2019
 {
     // Enums for setting objects in levels.
-    // S = Sun 
+    // S = Sun
     // R = Ray(sunray)
     // W = Wall
     // D = Door
@@ -21,7 +21,7 @@ namespace Gruppe8Eksamensprojekt2019
     // K = Key
     // E = Enemy
     // T = Treasure
-   
+
 
 
 	 abstract class Level : GameObject
@@ -104,11 +104,11 @@ namespace Gruppe8Eksamensprojekt2019
                                 break;
                             }
 
-                        case (10):
-                            {
-                                GameWorld.gameObjects.Add(new Player(new Vector2(x * size, y * size)));
-                                break;
-                            }
+						//case (10):
+						//	{
+						//		GameWorld.gameObjects.Add(new);
+						//		break;
+						//	}
 
                         case (11):
                             {
