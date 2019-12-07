@@ -11,8 +11,6 @@
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/enemyTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</File>
-    <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/playerTexture.png</File>
-    <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/rayTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttack.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttackDown.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttackLeft.png</File>
@@ -22,10 +20,8 @@
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/StonewallBroken2.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Sunlight.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Sunlight2.png</File>
-    <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/sunTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Treasurechest.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/TreasurechestOpen.png</File>
-    <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/treasureTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Vampire ozzy .png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Vampire ozzy2 '.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/VampireOzzyDown.png</File>
@@ -38,16 +34,10 @@
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/VampireOzzyWalking.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/VampireWalking.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</File>
-    <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/wallTexture.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/WindowDark.png</File>
     <File>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/WindowDark2.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -18,11 +18,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-
-            sprite = content.Load<Texture2D>("WindowDark2");
-            ///////////////////////////////////////TEXTURE UPDATE
             sprite = GameWorld.SunSprite;
-
         }
 
         public override void Update(GameTime gameTime)

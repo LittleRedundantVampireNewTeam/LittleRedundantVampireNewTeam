@@ -18,7 +18,6 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
         }
 
-
         public override void LoadContent(ContentManager content)
         {
             

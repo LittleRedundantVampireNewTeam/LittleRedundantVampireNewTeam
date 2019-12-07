@@ -25,7 +25,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         protected string name;
         protected bool giveShadow;
-        protected float drawLayer;
+        protected float drawLayer = 0.01f;
         protected TimeSpan timer;
         protected float deltaTime;
         public GameObject parrent;

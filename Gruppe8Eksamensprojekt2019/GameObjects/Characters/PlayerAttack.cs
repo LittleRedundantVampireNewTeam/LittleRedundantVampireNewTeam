@@ -33,6 +33,7 @@ namespace Gruppe8Eksamensprojekt2019
 			base.position = position;
 			base.velocity = velocity;
 		}
+
 		protected override void OnCollision(GameObject other)
 		{
 			if (other is Vase)

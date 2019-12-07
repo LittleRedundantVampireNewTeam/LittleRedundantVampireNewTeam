@@ -344,4 +344,15 @@ C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamen
 C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
 C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
 C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
-C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
