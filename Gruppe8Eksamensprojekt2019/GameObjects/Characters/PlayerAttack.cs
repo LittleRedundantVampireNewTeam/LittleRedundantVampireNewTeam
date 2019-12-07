@@ -43,8 +43,9 @@ namespace Gruppe8Eksamensprojekt2019
 
 		private void HandleAttack(GameTime gameTime)
 		{
-			//counts down the timer for the duration of the attack
+			//Counts down the timer for the duration of the attack
 			timer += gameTime.ElapsedGameTime;
+
 			//Deletes the instance of the attack when the timer is zero or below zero.
 			if (timer >= new TimeSpan(0, 0, 0, 0, 100))
 			{

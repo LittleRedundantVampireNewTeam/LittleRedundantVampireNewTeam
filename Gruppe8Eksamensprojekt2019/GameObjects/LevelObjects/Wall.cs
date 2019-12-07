@@ -11,12 +11,8 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Wall : GameObject
     {
-        
-        //public Wall(Texture2D sprite, Vector2 position, bool hasShadow)
-        //{
 
-        //}
-        
+
         public Wall(Vector2 position)
         {
             base.position = position;
@@ -24,12 +20,20 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
+
             sprite = content.Load<Texture2D>("StonewallBroken2");
+            ///////////////////////////////////////TEXTURE UPDATE
+            sprite = GameWorld.WallSprite;
+
         }
 
         public override void Update(GameTime gameTime)
         {
-           
+
+        }
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.5f);
         }
     }
 }

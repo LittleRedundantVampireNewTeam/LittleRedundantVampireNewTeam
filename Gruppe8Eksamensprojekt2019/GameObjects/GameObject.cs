@@ -11,7 +11,6 @@ namespace Gruppe8Eksamensprojekt2019
 {
     public abstract class GameObject
     {
-        private Rectangle collisionBox;
         protected Texture2D sprite;
 		protected Texture2D[] sprites;
 		protected Texture2D spriteUp;
@@ -22,14 +21,25 @@ namespace Gruppe8Eksamensprojekt2019
         protected Vector2 velocity;
         protected int speed;
         protected bool hasShadow;
+        protected Rectangle intersect;
+        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        protected string name;
         protected bool giveShadow;
         protected float drawLayer;
-		protected TimeSpan timer;
-		protected float deltaTime;
-		private float timeElapsed;
-		protected bool isMoving;
-		
+        protected TimeSpan timer;
+        protected float deltaTime;
+        public GameObject parrent;
+        public GameObject child;
+        protected bool isMoving;
+        private float timeElapsed;
+
+        public GameObject Parrent
+        {
+            get { return parrent; }
+        }
+
 		public Texture2D Sprite
+
 		{
 			get { return sprite; }
 			set { value = sprite; }
@@ -50,7 +60,7 @@ namespace Gruppe8Eksamensprojekt2019
         public bool GiveShadow
         {
             get { return giveShadow; }
-      
+            set { giveShadow = value; }
         }
 
 
@@ -64,7 +74,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.3f);
         }
 
         public abstract void Update(GameTime gameTime);
@@ -73,11 +83,11 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void CheckCollision(GameObject other)
         {
-			if (CollisionBox.Intersects(other.CollisionBox))
-			{
-				OnCollision(other);
-			}
-		}
+            if (CollisionBox.Intersects(other.CollisionBox))
+            {
+                OnCollision(other);
+            }
+        }
 
         protected virtual void OnCollision(GameObject other)
         {
@@ -95,7 +105,7 @@ namespace Gruppe8Eksamensprojekt2019
 			timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
 			currentIndex = (byte)(timeElapsed * fps);
 
-			if (currentIndex >= sprites.Length) 
+			if (currentIndex >= sprites.Length)
 			{
 				timeElapsed = 0;
 				currentIndex = 0;

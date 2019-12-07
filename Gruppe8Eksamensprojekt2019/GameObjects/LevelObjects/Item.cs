@@ -11,9 +11,11 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Item : GameObject
     {
-        public Item (Texture2D sprite, Vector2 position)
+        public Item (Texture2D sprite, string name, Vector2 position)
         {
-
+            base.sprite = sprite;
+            base.name = name;
+            base.position = position;
         }
 
 

@@ -12,7 +12,6 @@ namespace Gruppe8Eksamensprojekt2019
     {
         protected bool isCollidingMO;
 
-
         protected abstract void Push();
     }
 }

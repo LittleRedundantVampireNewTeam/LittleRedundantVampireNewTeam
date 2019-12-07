@@ -14,8 +14,8 @@ namespace Gruppe8Eksamensprojekt2019
     class Player : Character
     {
         private int regeneration;
-
         private SoundEffect playerAttackSound;
+
 
         private bool isColliding;
 
@@ -42,27 +42,117 @@ namespace Gruppe8Eksamensprojekt2019
 		private KeyboardState keyState; /// NEW
 
 
+        private TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
+        private bool invincible = false;
+        private bool inShadow = false;
+        private bool inSun = false;
+
+
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
             health = 100;
             speed = 200;
-            isColliding = false;
             base.position = position;
-			playerDirection = "R";
+            playerDirection = "R";
         }
 
 
         public override void Update(GameTime gameTime)
         {
-			ChangeDirection();
-			Move(gameTime);
-            HandleInput(gameTime);
-			if (isMoving == true)
-			{
-				Animate(gameTime);
-			}
 
+            Move(gameTime);
+
+            HandleInput(gameTime);
+            InvincibleTimer(gameTime);
+
+            ChangeDirection();
+
+            if (isMoving == true)
+            {
+              Animate(gameTime);
+            }
+
+            //Checks if the player should be taking damage from standing in the sun
+            if (inSun == true && invincible == false)
+            {
+                inSun = false;
+                invincible = true;
+                if (health > 0)
+                {
+                    //HEALTHSYSTEM HERE*************
+                    health--;
+                    Console.WriteLine($"Health: {health}");
+                }
+            }
+        }
+
+        protected override void OnCollision(GameObject other)
+        {
+            //Checks if the player is colliding with a shadow and marks them as 'in a shadow'
+            if (other is Shadow)
+            {
+                inShadow = true;
+                inSun = false;
+            }
+            else
+            {
+                inShadow = false;
+            }
+
+            //Checks if the player is colliding with a sunray and marks them as 'in the sun'
+            if (other is SunRay && inShadow == false)
+            {
+                inSun = true;
+            }
+
+
+            //Do something when we collid with another object
+            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
+            {
+                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
+
+                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                {
+                    if (other.Position.Y > position.Y) //Top
+                    {
+                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
+                        position.Y -= distance;
+                    }
+
+                    if (other.Position.Y < position.Y) //Bottom
+                    {
+                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
+                        position.Y += distance;
+                    }
+                }
+
+                else
+                {
+                    if (other.Position.X < position.X) //Left collision
+                    {
+                        distance = other.CollisionBox.Right - CollisionBox.Left;
+
+                        position.X += distance;
+                    }
+
+                    if (other.Position.X > position.X) //Right
+                    {
+                        distance = CollisionBox.Right - other.CollisionBox.Left;
+
+                        position.X -= distance;
+                    }
+                }
+            }
+
+            if (other is Key)
+            {
+                //if (keyState.IsKeyDown(Keys.V))
+                //{
+                //    GameWorld.Destroy(other);
+
+                //}
+              }
 
         }
 
@@ -70,6 +160,7 @@ namespace Gruppe8Eksamensprojekt2019
         {
 			isMoving = false;
 
+      cooldownTimer = new TimeSpan(0, 0, 2);
 			sprite = content.Load<Texture2D>("VampireOzzyStill");
 			spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
 			spriteDown = content.Load<Texture2D>("VampireOzzyDown");
@@ -90,25 +181,23 @@ namespace Gruppe8Eksamensprojekt2019
 
 			fps = 5f;
 			playerDirection = "D";
-			
+
 
 			for (int i = 0; i < sprites.Length; i++)
 			{
 
 			}
-	
+
 		}
 
         private void HandleInput(GameTime gameTime)
         {
-           
             velocity = Vector2.Zero;
             keyState = Keyboard.GetState();
 
             /// Controls/moves the player sprite.
             if (keyState.IsKeyDown(Keys.Left))
             {
-                Console.WriteLine(position.X);
                 velocity.X = -3f;
 				playerDirection = "L";
 				isMoving = true;
@@ -159,7 +248,19 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void InvincibleTimer(GameTime gameTime)
         {
-
+            /// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
+            if (invincible == true)
+            {
+                if (cooldownTimer > TimeSpan.Zero)
+                {
+                    cooldownTimer -= gameTime.ElapsedGameTime;
+                }
+                if (cooldownTimer <= TimeSpan.Zero)
+                {
+                    invincible = false;
+                    cooldownTimer = new TimeSpan(0, 0, 2);
+                }
+            }
         }
 
 		protected override void Attack(GameTime gameTime)
@@ -181,10 +282,10 @@ namespace Gruppe8Eksamensprojekt2019
 				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
 			}
 			hasAttacked = true;
-			
+
 			//else
 			//{
-				
+
 			//	if(cooldown <= 0)
 			//	{
 			//		hasAttacked = false;
@@ -206,15 +307,28 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        protected override void OnCollision(GameObject other)
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            if (other is Wall)
+            if (playerDirection == "R")
             {
-                isColliding = true;
-
-
+                spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.6f);
             }
-			
+
+            if (playerDirection == "L")
+            {
+                spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, 0.6f);
+            }
+
+            if (playerDirection == "U")
+            {
+                spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.6f);
+            }
+
+            if (playerDirection == "D")
+            {
+                spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.6f);
+            }
+
         }
 
 		private void ChangeDirection()

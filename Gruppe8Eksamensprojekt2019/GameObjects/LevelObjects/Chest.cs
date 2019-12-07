@@ -11,13 +11,6 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Chest : GameObject
     {
-        private bool isOpen;
-
-
-        public Chest(Texture2D sprite, Vector2 position, bool hasShadow)
-        {
-
-        }
         public Chest(Vector2 position)
         {
             base.position = position;
@@ -27,7 +20,6 @@ namespace Gruppe8Eksamensprojekt2019
         {
             
         }
-
         
         public override void LoadContent(ContentManager content)
         {
@@ -36,7 +28,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void OpenChest()
         {
-
+            GameWorld.gameObjects.Add(new Key("Key2", new Vector2(10, 10)));
         }
 
         private void GivePrompt()

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Gruppe8Eksamensprojekt2019
 {
     // Enums for setting objects in levels.
-    // S = Sun 
+    // S = Sun
     // R = Ray(sunray)
     // W = Wall
     // D = Door
@@ -21,15 +21,15 @@ namespace Gruppe8Eksamensprojekt2019
     // K = Key
     // E = Enemy
     // T = Treasure
-   
 
 
-	 abstract class Level : GameObject
-	{
-		protected Song levelMusic;
-		protected List<GameObject> levelList;
-		protected Texture2D background;
-		
+
+    abstract class Level : GameObject
+    {
+        protected Song levelMusic;
+        protected List<GameObject> levelList;
+        protected Texture2D background;
+
 
         protected abstract void ChangeLevel();
 
@@ -58,7 +58,9 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (2):
                             {
-                                GameWorld.gameObjects.Add(new Crate(new Vector2(x * size, y * size)));
+                                GameObject newCrate = new Crate(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newCrate);
+                                GameWorld.gameObjects.Add(newCrate);
                                 break;
                             }
 
@@ -76,13 +78,13 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (5):
                             {
-                                GameWorld.gameObjects.Add(new Door(new Vector2(x * size, y * size)));
+                                GameWorld.gameObjects.Add(new Door("Door1", new Vector2(x * size, y * size), true));
                                 break;
                             }
 
                         case (6):
                             {
-                                GameWorld.gameObjects.Add(new Key(new Vector2(x * size, y * size)));
+                                GameWorld.gameObjects.Add(new Key("Key1", new Vector2(x * size, y * size)));
                                 break;
                             }
 
@@ -110,12 +112,14 @@ namespace Gruppe8Eksamensprojekt2019
 						//		break;
 						//	}
 
-					}
-
+                        case (11):
+                            {
+                                GameWorld.gameObjects.Add(new Door("Door2", new Vector2(x * size, y * size), true));
+                                break;
+                            }
+                    }
                 }
             }
         }
-
-
     }
 }
