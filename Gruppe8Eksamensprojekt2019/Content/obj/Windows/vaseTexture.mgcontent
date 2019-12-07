@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</SourceFile>
-  <SourceTime>2019-12-03T14:31:51.0523309+01:00</SourceTime>
-  <DestFile>C:/Users/Stinn/OneDrive/Dokumenter/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/vaseTexture.xnb</DestFile>
-  <DestTime>2019-12-04T09:59:38.0112798+01:00</DestTime>
+  <SourceFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/vaseTexture.png</SourceFile>
+  <SourceTime>2019-12-04T09:28:40.5603444+01:00</SourceTime>
+  <DestFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/vaseTexture.xnb</DestFile>
+  <DestTime>2019-12-06T10:10:59.8571942+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -13,6 +13,9 @@ namespace Gruppe8Eksamensprojekt2019
     {
         private Rectangle collisionBox;
         protected Texture2D sprite;
+		protected Texture2D[] sprites;
+		protected Texture2D spriteUp;
+		protected Texture2D spriteDown;
         protected byte currentIndex;
         protected float fps;
         protected Vector2 position;
@@ -21,7 +24,11 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasShadow;
         protected bool giveShadow;
         protected float drawLayer;
-
+		protected TimeSpan timer;
+		protected float deltaTime;
+		private float timeElapsed;
+		protected bool isMoving;
+		
 		public Texture2D Sprite
 		{
 			get { return sprite; }
@@ -57,17 +64,20 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.1f);
         }
 
         public abstract void Update(GameTime gameTime);
 
         public abstract void LoadContent(ContentManager content);
 
-        protected virtual void CheckCollision(GameObject gameObject)
+        public virtual void CheckCollision(GameObject other)
         {
-
-        }
+			if (CollisionBox.Intersects(other.CollisionBox))
+			{
+				OnCollision(other);
+			}
+		}
 
         protected virtual void OnCollision(GameObject other)
         {
@@ -76,9 +86,20 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected virtual void Move(GameTime gameTime)
         {
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
+			deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             position += ((velocity * speed) * deltaTime);
         }
+
+		protected void Animate(GameTime gameTime)
+		{
+			timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+			currentIndex = (byte)(timeElapsed * fps);
+
+			if (currentIndex >= sprites.Length) 
+			{
+				timeElapsed = 0;
+				currentIndex = 0;
+			}
+		}
     }
 }

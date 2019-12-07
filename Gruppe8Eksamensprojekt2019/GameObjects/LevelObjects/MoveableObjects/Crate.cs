@@ -32,7 +32,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("crateTexture");
+            sprite = content.Load<Texture2D>("Crate3");
         }
 
         protected override void Push()

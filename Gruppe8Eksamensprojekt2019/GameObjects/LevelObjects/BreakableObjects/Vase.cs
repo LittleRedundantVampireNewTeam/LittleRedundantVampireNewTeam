@@ -33,7 +33,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void Break()
         {
-
+			
         }
     }
 }

@@ -104,14 +104,13 @@ namespace Gruppe8Eksamensprojekt2019
                                 break;
                             }
 
-        //                case (10):
-        //                    {
-								//player = new Player(new Vector2(x * size, y * size));
-        //                        GameWorld.gameObjects.Add(player);
-        //                        break;
-        //                    }
+						//case (10):
+						//	{
+						//		GameWorld.gameObjects.Add(new);
+						//		break;
+						//	}
 
-                    }
+					}
 
                 }
             }

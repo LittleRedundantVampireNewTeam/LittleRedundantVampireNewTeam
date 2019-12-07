@@ -17,8 +17,8 @@ namespace Gruppe8Eksamensprojekt2019
         private List<GameObject> playerAbilities = new List<GameObject>();
         public static List<GameObject> shadowObjects = new List<GameObject>();
         public static List<GameObject> gameObjects = new List<GameObject>();
-        private List<GameObject> newObjects = new List<GameObject>();
-        private List<GameObject> deleteObjects = new List<GameObject>();
+        private static List<GameObject> newObjects = new List<GameObject>();
+        private static List<GameObject> deleteObjects = new List<GameObject>();
 
         private Song currentMusic;
         private byte currentLevel;
@@ -27,6 +27,7 @@ namespace Gruppe8Eksamensprojekt2019
 		public static int ScreenHeight;
 		private Camera camera;
 		private Player player;
+		public static byte Scale;
 
 
 		Level levelOne;
@@ -54,8 +55,10 @@ namespace Gruppe8Eksamensprojekt2019
 			ScreenWidth = graphics.PreferredBackBufferWidth;
 			ScreenHeight = graphics.PreferredBackBufferHeight;
 
+			Scale = 1;
+
 			player = new Player(new Vector2(200, 200));
-			gameObjects.Add(player);
+			
             levelOne = new LevelOne();
 
             base.Initialize();
@@ -70,8 +73,8 @@ namespace Gruppe8Eksamensprojekt2019
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            foreach (GameObject gO in gameObjects)
+			gameObjects.Add(player);
+			foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
             }
@@ -83,11 +86,16 @@ namespace Gruppe8Eksamensprojekt2019
             // TODO: use this.Content to load your game content here
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
-        protected override void UnloadContent()
+		public static void Instantiate(GameObject gO)
+		{
+			newObjects.Add(gO);
+		}
+
+		/// <summary>
+		/// UnloadContent will be called once per game and is the place to unload
+		/// game-specific content.
+		/// </summary>
+		protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
@@ -102,8 +110,13 @@ namespace Gruppe8Eksamensprojekt2019
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-            foreach (GameObject gO in gameObjects)
+			gameObjects.AddRange(newObjects);
+
+			newObjects.Clear();
+			deleteObjects.Clear();
+
+			// TODO: Add your update logic here
+			foreach (GameObject gO in gameObjects)
             {
                 gO.Update(gameTime);
 
@@ -116,7 +129,16 @@ namespace Gruppe8Eksamensprojekt2019
                 {
 
                 }
-            }
+				foreach (GameObject other in gameObjects)
+				{
+					gO.CheckCollision(other);
+				}
+			}
+
+			foreach (GameObject gO in deleteObjects)
+			{
+				gameObjects.Remove(gO);
+			}
 
 			camera.FollowTarget(player);
 
@@ -138,7 +160,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-				DrawCollisionBox(gO);
+				//DrawCollisionBox(gO);
             }
 
             spriteBatch.End();
@@ -150,10 +172,10 @@ namespace Gruppe8Eksamensprojekt2019
         {
             /// Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
-            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
-            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
-            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
-            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle topLine = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width*Scale, 1);
+            Rectangle bottomLine = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height*Scale, collisionBox.Width*Scale, 1);
+            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width*Scale, collisionBox.Y, 1, collisionBox.Height*Scale);
+            Rectangle leftLine = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height*Scale);
 
             /// Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
@@ -161,5 +183,10 @@ namespace Gruppe8Eksamensprojekt2019
             spriteBatch.Draw(collisionTexture, rightLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
             spriteBatch.Draw(collisionTexture, leftLine, null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
         }
-    }
+
+		public static void Destroy(GameObject gameObject)
+		{
+			deleteObjects.Add(gameObject);
+		}
+	}
 }
