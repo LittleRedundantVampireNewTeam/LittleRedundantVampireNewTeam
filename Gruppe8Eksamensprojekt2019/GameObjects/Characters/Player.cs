@@ -50,7 +50,6 @@ namespace Gruppe8Eksamensprojekt2019
             Move(gameTime);
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
-
             ChangeDirection();
 
             if (isMoving == true)
@@ -85,15 +84,14 @@ namespace Gruppe8Eksamensprojekt2019
                 inShadow = false;
             }
 
-            //Checks if the player is colliding with a sunray and marks them as 'in the sun'
+            // Checks if the player is colliding with a sunray and marks them as 'in the sun'
             if (other is SunRay && inShadow == false)
             {
                 inSun = true;
             }
 
-
-            //Do something when we collid with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
+            // Do something when we collid with another object
+            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Door && doorLocked == true)
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
@@ -130,6 +128,11 @@ namespace Gruppe8Eksamensprojekt2019
                         position.X -= distance;
                     }
                 }
+            }
+
+            if (other is Crate)
+            {
+
             }
 
             if (other is Key)
