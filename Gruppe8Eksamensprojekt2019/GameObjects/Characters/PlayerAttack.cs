@@ -4,20 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
 namespace Gruppe8Eksamensprojekt2019
 {
 	class PlayerAttack : GameObject
 	{
-		public override void LoadContent(ContentManager content)
-		{
 
+       
+        public override void LoadContent(ContentManager content)
+		{
+            
 		}
 
 		public override void Update(GameTime gameTime)
 		{
+                
 			HandleAttack(gameTime);
 		}
 
@@ -36,10 +41,10 @@ namespace Gruppe8Eksamensprojekt2019
 
 		protected override void OnCollision(GameObject other)
 		{
-			if (other is Vase)
-			{
-				GameWorld.Destroy(other);
-			}
+			//if (other is Vase)
+			//{
+			//	GameWorld.Destroy(other);
+			//}
 		}
 
 		private void HandleAttack(GameTime gameTime)

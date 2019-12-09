@@ -13,8 +13,11 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
+
+        private SoundEffect attackSound;
+
+
         private int regeneration;
-        private SoundEffect playerAttackSound;
         private bool isColliding;
 
 		private Texture2D attackRight;
@@ -160,7 +163,10 @@ namespace Gruppe8Eksamensprojekt2019
 			attackLeft      = content.Load<Texture2D>("SlashAttackLeft");
 			attackUp        = content.Load<Texture2D>("SlashAttackUp");
 			attackDown      = content.Load<Texture2D>("SlashAttackDown");
-			hasAttacked     = false;
+
+            attackSound = content.Load<SoundEffect>("Whoosh sound effect");
+
+            hasAttacked     = false;
 
 			sprites = new Texture2D[4];
 
@@ -211,6 +217,7 @@ namespace Gruppe8Eksamensprojekt2019
 			if (keyState.IsKeyDown(Keys.A) && hasAttacked == false)
 			{
 				Attack(gameTime);
+                attackSound.Play();
 				timer = new TimeSpan(0, 0, 0, 0, 500);
 			}
 			if (hasAttacked == true)

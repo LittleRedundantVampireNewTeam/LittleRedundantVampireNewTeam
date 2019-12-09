@@ -21,6 +21,7 @@ namespace Gruppe8Eksamensprojekt2019
         public static List<GameObject> gameObjects = new List<GameObject>();
         public static List<GameObject> collisionObjects = new List<GameObject>();
         private static List<GameObject> newObjects = new List<GameObject>();
+        private static List<GameObject> newCollisionObjects = new List<GameObject>();
         private static List<GameObject> deleteObjects = new List<GameObject>();
 
         //Sound & Music
@@ -127,6 +128,12 @@ namespace Gruppe8Eksamensprojekt2019
             vaseSprite           = Content.Load<Texture2D>("vaseTexture");
             enemySprite          = Content.Load<Texture2D>("enemyTexture");
 
+            currentMusic         = Content.Load<Song>("backgroundMusic");
+            MediaPlayer.Play(currentMusic);
+            MediaPlayer.Volume = 0.5f;
+            MediaPlayer.IsRepeating = true;
+
+
             gameObjects.Add(player);
             camera = new Camera();
 
@@ -164,9 +171,11 @@ namespace Gruppe8Eksamensprojekt2019
 
             //Add new objects to main object list
             gameObjects.AddRange(newObjects);
+            collisionObjects.AddRange(newCollisionObjects);
 
             //Clear new & deleted object lists
             newObjects.Clear();
+            newCollisionObjects.Clear();
             deleteObjects.Clear();
 
 
@@ -174,7 +183,6 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
-
 
                 //Calls the CheckCollision method in every game object in the list
                 foreach (GameObject other in collisionObjects)
@@ -268,6 +276,11 @@ namespace Gruppe8Eksamensprojekt2019
         public static void Instantiate(GameObject gO)
         {
             newObjects.Add(gO);
+
+            if (gO is PlayerAttack)
+            {
+                newCollisionObjects.Add(gO);
+            }
         }
 
         public static void Destroy(GameObject gO)
