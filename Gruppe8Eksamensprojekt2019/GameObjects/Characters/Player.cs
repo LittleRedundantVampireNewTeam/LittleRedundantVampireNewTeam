@@ -4,10 +4,6 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gruppe8Eksamensprojekt2019
 {
@@ -38,6 +34,7 @@ namespace Gruppe8Eksamensprojekt2019
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
+        private bool hasAttacked;
 
         public Player(Vector2 position)
         {
@@ -47,6 +44,7 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             playerDirection = "R";
             drawLayer = 0.5f;
+            hasAttacked = false;
         }
 
 
@@ -55,7 +53,6 @@ namespace Gruppe8Eksamensprojekt2019
             Move(gameTime);
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
-
             ChangeDirection();
 
             if (isMoving == true)
@@ -90,15 +87,14 @@ namespace Gruppe8Eksamensprojekt2019
                 inShadow = false;
             }
 
-            //Checks if the player is colliding with a sunray and marks them as 'in the sun'
+            // Checks if the player is colliding with a sunray and marks them as 'in the sun'
             if (other is SunRay && inShadow == false)
             {
                 inSun = true;
             }
 
-
-            //Do something when we collid with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
+            // Do something when we collid with another object
+            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Door && doorLocked == true)
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
@@ -106,12 +102,14 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     if (other.Position.Y > position.Y) //Top
                     {
+                        collidingTop = true;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
                         position.Y -= distance;
                     }
 
                     if (other.Position.Y < position.Y) //Bottom
                     {
+                        collidingBottom = true;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
                     }
@@ -121,18 +119,23 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     if (other.Position.X < position.X) //Left collision
                     {
+                        collidingLeft = true;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
-
                         position.X += distance;
                     }
 
                     if (other.Position.X > position.X) //Right
                     {
+                        collidingRight = true;
                         distance = CollisionBox.Right - other.CollisionBox.Left;
-
                         position.X -= distance;
                     }
                 }
+            }
+
+            if (other is Crate)
+            {
+
             }
 
             if (other is Key)
@@ -186,26 +189,45 @@ namespace Gruppe8Eksamensprojekt2019
             keyState = Keyboard.GetState();
 
             /// Controls/moves the player sprite.
-            if (keyState.IsKeyDown(Keys.Left))
+            if (keyState.IsKeyDown(Keys.Left) && collidingLeft == false)
             {
+                collidingRight = false;
+                collidingTop = false;
+                collidingBottom = false;
+
                 velocity.X = -3f;
 				playerDirection = "L";
 				isMoving = true;
             }
-            if (keyState.IsKeyDown(Keys.Right))
+
+            if (keyState.IsKeyDown(Keys.Right) && collidingRight == false)
             {
+                collidingLeft = false;
+                collidingTop = false;
+                collidingBottom = false;
+
                 velocity.X = +3f;
-				playerDirection = "R";
-				isMoving = true;
-			}
-            if (keyState.IsKeyDown(Keys.Up))
+                playerDirection = "R";
+                isMoving = true;
+            }
+
+            if (keyState.IsKeyDown(Keys.Up) && collidingBottom == false)
             {
+                collidingRight = false;
+                collidingLeft = false;
+                collidingTop = false;
+
                 velocity.Y = -3f;
-				playerDirection = "U";
-				isMoving = true;
-			}
-            if (keyState.IsKeyDown(Keys.Down))
+                playerDirection = "U";
+                isMoving = true;
+            }
+
+            if (keyState.IsKeyDown(Keys.Down) && collidingTop == false)
             {
+                collidingRight = false;
+                collidingBottom = false;
+                collidingLeft = false;
+
                 velocity.Y = +3f;
 				playerDirection = "D";
 				isMoving = true;

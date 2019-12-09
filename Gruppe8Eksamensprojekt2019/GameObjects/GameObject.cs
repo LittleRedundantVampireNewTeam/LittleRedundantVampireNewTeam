@@ -32,6 +32,7 @@ namespace Gruppe8Eksamensprojekt2019
         public GameObject child;
         protected bool isMoving;
         private float timeElapsed;
+        protected bool pushing = false;
 
         public GameObject Parrent
         {
