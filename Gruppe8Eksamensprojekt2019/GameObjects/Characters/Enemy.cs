@@ -13,15 +13,8 @@ namespace Gruppe8Eksamensprojekt2019
 	class Enemy : Character
 	{
 		private SoundEffect enemyAttackSound;
+        private bool enemyHasAttacked;
 
-		/// <summary>
-		/// Constructor for the Enemy Class.
-		/// </summary>
-		/// <param name=""></param>
-		/// <param name=""></param>
-		/// <param name=""></param>
-		/// <param name=""></param>
-        
 
 		public Enemy(string name, int health, Vector2 position, Ability ability)
 		{
@@ -41,6 +34,15 @@ namespace Gruppe8Eksamensprojekt2019
         public override void LoadContent(ContentManager content)
         {
             sprite = GameWorld.EnemySprite;
+
+            sprite = content.Load<Texture2D>("Vampire ozzy2 '");
+            spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
+            spriteDown = content.Load<Texture2D>("VampireOzzyDown");
+            attackRight = content.Load<Texture2D>("SlashAttackRight");
+            attackLeft = content.Load<Texture2D>("SlashAttackLeft");
+            attackUp = content.Load<Texture2D>("SlashAttackUp");
+            attackDown = content.Load<Texture2D>("SlashAttackDown");
+            enemyHasAttacked = false;
         }
 
         protected override void UseAbility(AbilityType ability)
