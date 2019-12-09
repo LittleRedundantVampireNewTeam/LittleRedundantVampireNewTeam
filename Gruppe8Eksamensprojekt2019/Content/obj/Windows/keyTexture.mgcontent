@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</SourceFile>
+  <SourceFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</SourceFile>
   <SourceTime>2019-12-04T09:28:40.5395361+01:00</SourceTime>
-  <DestFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/keyTexture.xnb</DestFile>
-  <DestTime>2019-12-04T13:37:15.0135515+01:00</DestTime>
+  <DestFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/keyTexture.xnb</DestFile>
+  <DestTime>2019-12-06T10:10:59.1806837+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

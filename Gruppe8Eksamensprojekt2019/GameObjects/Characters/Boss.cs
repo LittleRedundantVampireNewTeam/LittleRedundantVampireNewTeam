@@ -15,7 +15,6 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);

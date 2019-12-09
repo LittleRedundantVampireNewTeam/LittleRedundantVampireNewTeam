@@ -12,6 +12,7 @@ namespace Gruppe8Eksamensprojekt2019
     public abstract class GameObject
     {
         protected Texture2D sprite;
+		protected Texture2D[] sprites;
 		protected Texture2D spriteUp;
 		protected Texture2D spriteDown;
         protected byte currentIndex;
@@ -24,11 +25,13 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         protected string name;
         protected bool giveShadow;
-        protected float drawLayer;
+        protected float drawLayer = 0.01f;
         protected TimeSpan timer;
         protected float deltaTime;
         public GameObject parrent;
         public GameObject child;
+        protected bool isMoving;
+        private float timeElapsed;
 
         public GameObject Parrent
         {
@@ -96,5 +99,17 @@ namespace Gruppe8Eksamensprojekt2019
 			deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             position += ((velocity * speed) * deltaTime);
         }
+
+		protected void Animate(GameTime gameTime)
+		{
+			timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+			currentIndex = (byte)(timeElapsed * fps);
+
+			if (currentIndex >= sprites.Length)
+			{
+				timeElapsed = 0;
+				currentIndex = 0;
+			}
+		}
     }
 }

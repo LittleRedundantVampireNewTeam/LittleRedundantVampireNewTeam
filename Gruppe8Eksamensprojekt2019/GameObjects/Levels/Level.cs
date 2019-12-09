@@ -52,7 +52,9 @@ namespace Gruppe8Eksamensprojekt2019
                     {
                         case (1):
                             {
-                                GameWorld.gameObjects.Add(new Wall(new Vector2(x * size, y * size)));
+                                GameObject newWall = new Wall(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newWall);
+                                GameWorld.gameObjects.Add(newWall);
                                 break;
                             }
 
@@ -72,7 +74,9 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (4):
                             {
-                                GameWorld.gameObjects.Add(new SunRay(new Vector2(x * size, y * size)));
+                                GameObject newSunRay = new SunRay(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newSunRay);
+                                GameWorld.gameObjects.Add(newSunRay);
                                 break;
                             }
 
@@ -96,21 +100,25 @@ namespace Gruppe8Eksamensprojekt2019
 
                         case (8):
                             {
-                                GameWorld.gameObjects.Add(new Enemy(new Vector2(x * size, y * size)));
+                                GameObject newEnemy = new Enemy(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newEnemy);
+                                GameWorld.gameObjects.Add(newEnemy);
                                 break;
                             }
 
                         case (9):
                             {
-                                GameWorld.gameObjects.Add(new Vase(new Vector2(x * size, y * size)));
+                                GameObject newVase = new Vase(new Vector2(x * size, y * size));
+                                GameWorld.collisionObjects.Add(newVase);
+                                GameWorld.gameObjects.Add(newVase);
                                 break;
                             }
 
-						//case (10):
-						//	{
-						//		GameWorld.gameObjects.Add(new);
-						//		break;
-						//	}
+                        case (10):
+                            {
+                                //GameWorld.gameObjects.Add(new);
+                                break;
+                            }
 
                         case (11):
                             {

@@ -13,15 +13,16 @@ namespace Gruppe8Eksamensprojekt2019
     {
         public Crate(Texture2D sprite, Vector2 position, bool hasShadow)
         {
-
+            
         }
 
-        public Crate(Vector2 position)
+        public Crate(Vector2 position)  
         {
             base.position = position;
             hasShadow = false;
             giveShadow = false;
             speed = 2;
+            drawLayer = 0.5f;
         }
 
         public override void Update(GameTime gameTime)
@@ -37,7 +38,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void Push()
         {
-           
+
         }
 
         protected override void OnCollision(GameObject other)
@@ -48,9 +49,10 @@ namespace Gruppe8Eksamensprojekt2019
                 giveShadow = true;
             }
         }
+
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.5f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
         }
     }
 }

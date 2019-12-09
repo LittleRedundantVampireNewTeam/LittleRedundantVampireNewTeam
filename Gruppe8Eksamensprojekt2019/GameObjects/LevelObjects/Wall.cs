@@ -11,11 +11,10 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Wall : GameObject
     {
-
-
         public Wall(Vector2 position)
         {
             base.position = position;
+            drawLayer = 0.5f;
         }
 
         public override void LoadContent(ContentManager content)
@@ -26,10 +25,6 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
 
-        }
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, 0.5f);
         }
     }
 }

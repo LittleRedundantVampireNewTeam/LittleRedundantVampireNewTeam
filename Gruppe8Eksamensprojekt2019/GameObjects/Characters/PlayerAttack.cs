@@ -23,7 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		public PlayerAttack()
 		{
-			// Sets the attacktimer to zero.
+			// sets the attacktimer to zero.
 			timer = new TimeSpan(0, 0, 0, 0, 0);
 		}
 
