@@ -19,11 +19,12 @@ namespace Gruppe8Eksamensprojekt2019
 		public Enemy(string name, int health, Vector2 position, Ability ability)
 		{
 
-		}
+        }
 
         public Enemy(Vector2 position)
         {
             base.position = position;
+            drawLayer = 0.5f;
         }
 
         public override void Update(GameTime gameTime)
