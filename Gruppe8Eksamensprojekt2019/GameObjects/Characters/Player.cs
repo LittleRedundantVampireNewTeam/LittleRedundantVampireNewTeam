@@ -31,9 +31,7 @@ namespace Gruppe8Eksamensprojekt2019
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
-        private KeyboardState keyState; /// NEW
-        private bool isColliding;
-        private bool playerHasAttacked;
+        private bool hasAttacked;
 
         public Player(Vector2 position)
         {
@@ -43,6 +41,7 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             playerDirection = "R";
             drawLayer = 0.5f;
+            hasAttacked = false;
         }
 
 
@@ -161,7 +160,6 @@ namespace Gruppe8Eksamensprojekt2019
 			attackLeft      = content.Load<Texture2D>("SlashAttackLeft");
 			attackUp        = content.Load<Texture2D>("SlashAttackUp");
 			attackDown      = content.Load<Texture2D>("SlashAttackDown");
-			hasAttacked     = false;
 
 			sprites = new Texture2D[4];
 
