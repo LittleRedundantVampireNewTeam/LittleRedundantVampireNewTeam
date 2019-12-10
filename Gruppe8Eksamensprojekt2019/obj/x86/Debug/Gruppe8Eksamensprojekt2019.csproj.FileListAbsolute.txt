@@ -376,3 +376,4 @@ C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamenspro
 C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
 C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
 C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb

@@ -27,8 +27,8 @@ namespace Gruppe8Eksamensprojekt2019
 
         public LevelOne()
         {
-
            
+
             GameObject newSunRay = new SunRay(new Vector2(19 * 96, 13 * 96));
             GameWorld.collisionObjects.Add(newSunRay);
             GameWorld.gameObjects.Add(newSunRay);

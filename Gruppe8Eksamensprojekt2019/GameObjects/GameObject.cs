@@ -38,8 +38,10 @@ namespace Gruppe8Eksamensprojekt2019
         {
             get { return parrent; }
         }
+      
 
-		public Texture2D Sprite
+
+        public Texture2D Sprite
 
 		{
 			get { return sprite; }

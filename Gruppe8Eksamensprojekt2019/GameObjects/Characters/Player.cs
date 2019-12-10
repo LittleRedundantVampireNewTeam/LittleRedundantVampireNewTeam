@@ -36,15 +36,25 @@ namespace Gruppe8Eksamensprojekt2019
         private bool inSun = false;
         private bool hasAttacked;
 
+        public int Health
+        {
+            get { return health; }
+        }
+
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
-            health = 100;
+            health = 10;
             speed = 200;
             base.position = position;
             playerDirection = "R";
             drawLayer = 0.5f;
             hasAttacked = false;
+
+            for (int i = 0; i < health; i++)
+            {
+                GameWorld.UiHeartList.Add(new UiHeart(this));
+            }
         }
 
 
@@ -63,11 +73,13 @@ namespace Gruppe8Eksamensprojekt2019
             //Checks if the player should be taking damage from standing in the sun
             if (inSun == true && invincible == false)
             {
-                inSun = false;
                 invincible = true;
+
                 if (health > 0)
                 {
                     //HEALTHSYSTEM HERE*************
+                    
+                    GameWorld.UiHeartList.RemoveAt(health-1);
                     health--;
                     Console.WriteLine($"Health: {health}");
                 }
@@ -167,7 +179,7 @@ namespace Gruppe8Eksamensprojekt2019
 			attackUp        = content.Load<Texture2D>("SlashAttackUp");
 			attackDown      = content.Load<Texture2D>("SlashAttackDown");
 
-            attackSound = content.Load<SoundEffect>("Whoosh sound effect");
+            attackSound     = content.Load<SoundEffect>("Whoosh sound effect");
 
             hasAttacked     = false;
 
@@ -177,10 +189,6 @@ namespace Gruppe8Eksamensprojekt2019
 			playerDirection = "D";
 
 
-			for (int i = 0; i < sprites.Length; i++)
-			{
-                /////////////////////////////////////////////////////////
-			}
 		}
 
         private void HandleInput(GameTime gameTime)
@@ -262,6 +270,8 @@ namespace Gruppe8Eksamensprojekt2019
             /// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
             if (invincible == true)
             {
+                inSun = false;
+                UiHeart.DrawHealthUI = true;
                 if (cooldownTimer > TimeSpan.Zero)
                 {
                     cooldownTimer -= gameTime.ElapsedGameTime;
@@ -269,6 +279,7 @@ namespace Gruppe8Eksamensprojekt2019
                 if (cooldownTimer <= TimeSpan.Zero)
                 {
                     invincible = false;
+                    UiHeart.DrawHealthUI = false;
                     cooldownTimer = new TimeSpan(0, 0, 2);
                 }
             }

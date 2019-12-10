@@ -59,13 +59,16 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                if (intersection.Width > intersection.Height) // TOP AND BOTTOM
                 {
                     if (other.Position.Y > position.Y) //Top
                     {
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
-                        position.Y -= distance;
+                       
+                            position.Y -= distance;
+                        
                     }
+
 
                     if (other.Position.Y < position.Y) //Bottom
                     {
@@ -84,6 +87,8 @@ namespace Gruppe8Eksamensprojekt2019
                     if (other.Position.X > position.X) //Right
                     {
                         distance = CollisionBox.Right - other.CollisionBox.Left;
+
+                        
                         position.X -= distance;
                     }
                 }

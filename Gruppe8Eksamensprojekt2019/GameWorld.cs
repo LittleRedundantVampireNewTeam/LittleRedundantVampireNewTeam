@@ -23,6 +23,8 @@ namespace Gruppe8Eksamensprojekt2019
         private static List<GameObject> newObjects = new List<GameObject>();
         private static List<GameObject> newCollisionObjects = new List<GameObject>();
         private static List<GameObject> deleteObjects = new List<GameObject>();
+        public static  List<UiHeart> UiHeartList = new List<UiHeart>();  
+
 
         //Sound & Music
         private Song currentMusic;
@@ -36,6 +38,7 @@ namespace Gruppe8Eksamensprojekt2019
         private static Texture2D sunSprite;
         private static Texture2D vaseSprite;
         private static Texture2D enemySprite;
+        private static Texture2D uiHealthSprite;
 
         //Display
         public static int ScreenWidth;
@@ -59,6 +62,11 @@ namespace Gruppe8Eksamensprojekt2019
         public static Texture2D WallSprite
         {
             get { return wallSprite; }
+        }
+
+        public static Texture2D UiHealthSprite
+        {
+            get { return uiHealthSprite; }
         }
 
         public static Texture2D EnemySprite
@@ -104,7 +112,11 @@ namespace Gruppe8Eksamensprojekt2019
             Scale = 1;
 
             player = new Player(new Vector2(1500, 1500));
+
             collisionObjects.Add(player);
+
+
+         
 
             levelOne = new LevelOne();
 
@@ -127,6 +139,7 @@ namespace Gruppe8Eksamensprojekt2019
             sunSprite            = Content.Load<Texture2D>("WindowDark2");
             vaseSprite           = Content.Load<Texture2D>("vaseTexture");
             enemySprite          = Content.Load<Texture2D>("enemyTexture");
+            uiHealthSprite       = Content.Load<Texture2D>("healthUI");
 
             currentMusic         = Content.Load<Song>("backgroundMusic");
             MediaPlayer.Play(currentMusic);
@@ -141,6 +154,16 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.LoadContent(Content);
             }
+
+            foreach (UiHeart hE in UiHeartList)
+            {
+                hE.LoadContent(Content);
+            }
+
+
+
+
+
         }
 
 
@@ -178,6 +201,15 @@ namespace Gruppe8Eksamensprojekt2019
             newCollisionObjects.Clear();
             deleteObjects.Clear();
 
+            int i = 0;
+
+            foreach (UiHeart hE in UiHeartList)
+            {
+                //hE.Position = new Vector2(UiHeartList[i].Position.X + hE.Sprite.Width, hE.Position.Y);
+                hE.Update(gameTime);
+                hE.Position = new Vector2(hE.Position.X + hE.Sprite.Width*i, hE.Position.Y-hE.Sprite.Height);
+                i++;
+            }
 
             foreach (GameObject gO in gameObjects)
             {
@@ -249,6 +281,15 @@ namespace Gruppe8Eksamensprojekt2019
                 gO.Draw(spriteBatch);
 
                 DrawCollisionBox(gO);
+            }
+
+            foreach(UiHeart hE in UiHeartList)
+            {
+                if(UiHeart.DrawHealthUI == true)
+                {
+                    hE.Draw(spriteBatch);
+                }
+                
             }
 
             spriteBatch.End();

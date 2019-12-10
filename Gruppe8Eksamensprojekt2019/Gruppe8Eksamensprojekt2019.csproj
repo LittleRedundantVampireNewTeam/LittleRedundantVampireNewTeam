@@ -73,6 +73,7 @@
     <Compile Include="GameObjects\TextBox.cs" />
     <Compile Include="GameObjects\LevelObjects\Sun.cs" />
     <Compile Include="GameObjects\LevelObjects\SunRay.cs" />
+    <Compile Include="GameObjects\UI\UiHeart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -12,6 +12,7 @@
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/crateTexture.png</File>
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/doorTexture.png</File>
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/enemyTexture.png</File>
+    <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/healthUI.png</File>
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/keyTexture.png</File>
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttack.png</File>
     <File>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/SlashAttackDown.png</File>
@@ -42,6 +43,7 @@
   </SourceFiles>
   <DestFiles>
     <File>Whoosh sound effect.mp3</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
