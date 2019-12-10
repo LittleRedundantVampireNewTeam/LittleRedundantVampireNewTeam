@@ -31,7 +31,8 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Update(GameTime gameTime)
         {
-          // Move(gameTime);
+            //Move(gameTime);
+            //velocity = new Vector2(1, 0);
         }
 
         public override void LoadContent(ContentManager content)

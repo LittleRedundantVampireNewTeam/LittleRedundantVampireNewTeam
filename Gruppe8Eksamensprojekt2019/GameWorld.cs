@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System;
 using System.Collections.Generic;
 
 namespace Gruppe8Eksamensprojekt2019
@@ -28,7 +29,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         //Sound & Music
         private Song currentMusic;
-        private byte currentLevel;
+        private byte chooseLevel = 1;
 
         //Textures
         private static Texture2D collisionTexture;
@@ -44,11 +45,12 @@ namespace Gruppe8Eksamensprojekt2019
         public static int ScreenWidth;
         public static int ScreenHeight;
         public static byte Scale;
+        public static Color bgColor = new Color(40,40,40,255);
         private Camera camera;
         
         //Game
         private Player player;
-        Level levelOne;
+        Level CurrentLevel;
 
         //GameWorld
         public GameWorld()
@@ -111,14 +113,31 @@ namespace Gruppe8Eksamensprojekt2019
 
             Scale = 1;
 
-            player = new Player(new Vector2(1500, 1500));
+            player = new Player(new Vector2(400, 200));
 
             collisionObjects.Add(player);
 
+            switch (chooseLevel)
+            {
+                case (1):
+                    {
+                        CurrentLevel = new LevelOne();
+                        break;
+                    }
 
-         
+                case (2):
+                    {
+                        CurrentLevel = new LevelTwo();
+                        break;
+                    }
 
-            levelOne = new LevelOne();
+            }
+           
+
+            
+
+            gameObjects.Add(player);
+            camera = new Camera();
 
             base.Initialize();
         }
@@ -142,13 +161,13 @@ namespace Gruppe8Eksamensprojekt2019
             uiHealthSprite       = Content.Load<Texture2D>("healthUI");
 
             currentMusic         = Content.Load<Song>("backgroundMusic");
+
             MediaPlayer.Play(currentMusic);
             MediaPlayer.Volume = 0.5f;
             MediaPlayer.IsRepeating = true;
 
 
-            gameObjects.Add(player);
-            camera = new Camera();
+            
 
             foreach (GameObject gO in gameObjects)
             {
@@ -159,11 +178,6 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 hE.LoadContent(Content);
             }
-
-
-
-
-
         }
 
 
@@ -188,6 +202,8 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 Exit();
             }
+
+            ToggleFullscreen();
 
             //Update camera
             camera.FollowTarget(player);
@@ -254,13 +270,20 @@ namespace Gruppe8Eksamensprojekt2019
                 //}
             }
 
+            if (Keyboard.GetState().IsKeyDown(Keys.R))
+            {
+                RestartGame();
+            }
+
             foreach (GameObject gO in deleteObjects)
             {
                 gameObjects.Remove(gO);
                 collisionObjects.Remove(gO);
             }
-
-            
+            if (player.Health <= 0)
+            {
+                RestartGame();
+            }
 
             base.Update(gameTime);
         }
@@ -271,7 +294,7 @@ namespace Gruppe8Eksamensprojekt2019
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DimGray);
+            GraphicsDevice.Clear(bgColor);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: camera.CameraTransform);
@@ -289,7 +312,6 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     hE.Draw(spriteBatch);
                 }
-                
             }
 
             spriteBatch.End();
@@ -327,6 +349,48 @@ namespace Gruppe8Eksamensprojekt2019
         public static void Destroy(GameObject gO)
         {
             deleteObjects.Add(gO);
+        }
+
+        private void ToggleFullscreen()
+        {
+            KeyboardState keystate = Keyboard.GetState();
+
+            //toggles fullscreen
+            if (keystate.IsKeyDown(Keys.F11) && graphics.IsFullScreen == false)
+            {
+                graphics.IsFullScreen = true;
+                graphics.ApplyChanges();
+            }
+            //toggles not fullscreen
+            else if (keystate.IsKeyDown(Keys.F11) && graphics.IsFullScreen == true)
+            {
+                graphics.IsFullScreen = false;
+                graphics.ApplyChanges();
+            }
+        }
+        private void RestartGame()
+        {
+            foreach(GameObject gO in gameObjects)
+            {
+                deleteObjects.Add(gO);
+            }
+
+            foreach (GameObject gO in deleteObjects)
+            {
+                gameObjects.Remove(gO);
+                collisionObjects.Remove(gO);
+            }
+
+            //Clear new & deleted object lists
+            newObjects.Clear();
+            newCollisionObjects.Clear();
+            deleteObjects.Clear();
+            UiHeartList.Clear();
+
+            Console.Clear();
+            //chooseLevel = 2;
+            Initialize();
+            LoadContent();
         }
     }
 }

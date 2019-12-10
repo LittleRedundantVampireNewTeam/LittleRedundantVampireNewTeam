@@ -9,9 +9,7 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
-
         private SoundEffect attackSound;
-
 
         private int regeneration;
         private bool isColliding;
@@ -64,7 +62,7 @@ namespace Gruppe8Eksamensprojekt2019
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
             ChangeDirection();
-
+            
             if (isMoving == true)
             {
               Animate(gameTime);
@@ -83,6 +81,7 @@ namespace Gruppe8Eksamensprojekt2019
                     health--;
                     Console.WriteLine($"Health: {health}");
                 }
+              
             }
         }
 
