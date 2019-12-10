@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System;
 using System.Collections.Generic;
 
 namespace Gruppe8Eksamensprojekt2019
@@ -22,6 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
         public static List<GameObject> collisionObjects = new List<GameObject>();
         private static List<GameObject> newObjects = new List<GameObject>();
         private static List<GameObject> deleteObjects = new List<GameObject>();
+		private static List<Enemy> enemies = new List<Enemy>();
 
         //Sound & Music
         private Song currentMusic;
@@ -39,11 +41,12 @@ namespace Gruppe8Eksamensprojekt2019
         //Display
         public static int ScreenWidth;
         public static int ScreenHeight;
-        public static byte Scale;
+        public static float Scale;
         private Camera camera;
         
         //Game
         private Player player;
+		//private Enemy enemy;
         Level levelOne;
 
         //GameWorld
@@ -100,9 +103,11 @@ namespace Gruppe8Eksamensprojekt2019
             ScreenWidth = graphics.PreferredBackBufferWidth;
             ScreenHeight = graphics.PreferredBackBufferHeight;
 
-            Scale = 1;
+            Scale = ((1f / 1920f) * GraphicsDevice.DisplayMode.Width);
 
             player = new Player(new Vector2(1500, 1500));
+			//enemy = new Enemy(new Vector2(1000, 1000));
+			
             collisionObjects.Add(player);
 
             levelOne = new LevelOne();
@@ -128,11 +133,17 @@ namespace Gruppe8Eksamensprojekt2019
             enemySprite          = Content.Load<Texture2D>("enemyTexture");
 
             gameObjects.Add(player);
+			//gameObjects.Add(enemy);
             camera = new Camera();
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
+
+				if (gO is Enemy)
+				{
+					enemies.Add((Enemy)gO);
+				}
             }
         }
 
@@ -170,11 +181,25 @@ namespace Gruppe8Eksamensprojekt2019
             deleteObjects.Clear();
 
 
+			//foreach (Enemy enemy in gameObjects)
+			//{
+			//	enemy.Update(player);
+			//}
+
+			foreach (Enemy enemy in enemies)
+			{
+				enemy.UpdateDistance(player);
+			}
+
             foreach (GameObject gO in gameObjects)
             {
                 //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
-
+				//if (gO is Enemy)
+				//{
+				//	gO.FollowTarget
+				//}
+					
 
                 //Calls the CheckCollision method in every game object in the list
                 foreach (GameObject other in collisionObjects)
@@ -253,10 +278,10 @@ namespace Gruppe8Eksamensprojekt2019
             // Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
 
-            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * Scale, 1);
-            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * Scale, collisionBox.Width * Scale, 1);
-            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width * Scale, collisionBox.Y, 1, collisionBox.Height * Scale);
-            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * Scale);
+            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * (int)Scale, 1);
+            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * (int)Scale, collisionBox.Width * (int)Scale, 1);
+            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width * (int)Scale, collisionBox.Y, 1, collisionBox.Height * (int)Scale);
+            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * (int)Scale);
 
             // Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine,     null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
