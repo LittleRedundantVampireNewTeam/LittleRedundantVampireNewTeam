@@ -43,7 +43,7 @@ namespace Gruppe8Eksamensprojekt2019
         {
             name = "Ozzy Bloodbourne";
             health = 10;
-            speed = 200;
+            speed = (int)(200 * GameWorld.Scale);
             base.position = position;
             playerDirection = "R";
             drawLayer = 0.5f;
@@ -81,7 +81,6 @@ namespace Gruppe8Eksamensprojekt2019
                     health--;
                     Console.WriteLine($"Health: {health}");
                 }
-              
             }
         }
 
@@ -187,8 +186,8 @@ namespace Gruppe8Eksamensprojekt2019
 			fps = 5f;
 			playerDirection = "D";
 
-
-		}
+            
+        }
 
         private void HandleInput(GameTime gameTime)
         {

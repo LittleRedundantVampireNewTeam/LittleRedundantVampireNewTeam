@@ -32,7 +32,7 @@ namespace Gruppe8Eksamensprojekt2019
         {
             base.position = position;
 			health = 3;
-			speed = 100;
+			speed = (int)(100 * GameWorld.Scale);
 			drawLayer = 0.5f;
 		}
 

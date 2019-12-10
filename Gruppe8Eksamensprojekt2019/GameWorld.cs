@@ -60,7 +60,6 @@ namespace Gruppe8Eksamensprojekt2019
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
         //Sprite Properties
@@ -136,9 +135,6 @@ namespace Gruppe8Eksamensprojekt2019
 
             }
 
-
-
-
             gameObjects.Add(player);
             camera = new Camera();
 
@@ -175,8 +171,10 @@ namespace Gruppe8Eksamensprojekt2019
             foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
+                gO.ScaledWidth = (int)(gO.sprite.Width * Scale);
+                gO.ScaledHeight = (int)(gO.sprite.Height * Scale);
 
-				if (gO is Enemy)
+                if (gO is Enemy)
 				{
 					enemies.Add((Enemy)gO);
 				}
@@ -185,6 +183,8 @@ namespace Gruppe8Eksamensprojekt2019
             foreach (UiHeart hE in UiHeartList)
             {
                 hE.LoadContent(Content);
+                hE.ScaledWidth = (int)(hE.sprite.Width * Scale);
+                hE.ScaledHeight = (int)(hE.sprite.Height * Scale);
             }
         }
 
@@ -231,7 +231,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 //hE.Position = new Vector2(UiHeartList[i].Position.X + hE.Sprite.Width, hE.Position.Y);
                 hE.Update(gameTime);
-                hE.Position = new Vector2(hE.Position.X + hE.Sprite.Width*i, hE.Position.Y-hE.Sprite.Height);
+                hE.Position = new Vector2(hE.Position.X + (hE.Sprite.Width*i*Scale), hE.Position.Y-hE.Sprite.Height);
                 i++;
             }
 

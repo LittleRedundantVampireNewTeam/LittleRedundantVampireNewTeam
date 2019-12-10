@@ -22,7 +22,6 @@ namespace Gruppe8Eksamensprojekt2019
 
 		public override void Update(GameTime gameTime)
 		{
-                
 			HandleAttack(gameTime);
 		}
 
@@ -41,11 +40,11 @@ namespace Gruppe8Eksamensprojekt2019
 
 		protected override void OnCollision(GameObject other)
 		{
-			//if (other is Vase)
-			//{
-			//	GameWorld.Destroy(other);
-			//}
-		}
+            if (other is Vase)
+            {
+                GameWorld.Destroy(other);
+            }
+        }
 
 		private void HandleAttack(GameTime gameTime)
 		{

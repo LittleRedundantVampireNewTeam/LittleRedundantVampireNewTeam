@@ -40,7 +40,7 @@ namespace Gruppe8Eksamensprojekt2019
         /// </summary>
         /// <param name="level"></param>
         /// <param name="size"></param>
-        protected void GenerateLevel(int[,] level, int size)
+        protected void GenerateLevel(int[,] level, float size)
         {
             for (int x = 0; x < level.GetLength(1); x++)
             {

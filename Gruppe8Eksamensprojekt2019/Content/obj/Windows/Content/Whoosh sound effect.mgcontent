@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/../../../../../Desktop/Whoosh sound effect.mp3</SourceFile>
-  <SourceTime>2019-12-09T13:22:52.179358+01:00</SourceTime>
-  <DestFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/Whoosh sound effect.xnb</DestFile>
-  <DestTime>2019-12-09T13:24:53.4255569+01:00</DestTime>
+  <SourceFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Whoosh sound effect.mp3</SourceFile>
+  <SourceTime>2019-12-10T21:03:59.9067493+01:00</SourceTime>
+  <DestFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/Whoosh sound effect.xnb</DestFile>
+  <DestTime>2019-12-10T21:06:12.4598776+01:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

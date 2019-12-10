@@ -13,12 +13,18 @@ namespace Gruppe8Eksamensprojekt2019
 
     class Shadow : GameObject
     {
+        private int shadowScaledWidth;
+        private int shadowScaledHeight;
+
         public Shadow(Texture2D sprite, Vector2 position, GameObject parrent)
         {
             base.sprite = sprite;
             base.position = position;
             base.parrent = parrent;
             drawLayer = 0.4f;
+
+            shadowScaledHeight = (int)(sprite.Height * GameWorld.Scale);
+            shadowScaledWidth = (int)(sprite.Width * GameWorld.Scale);
         }
 
         public override void LoadContent(ContentManager content)
@@ -48,13 +54,13 @@ namespace Gruppe8Eksamensprojekt2019
         {
             get
             {
-                return new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height*2);
+                return new Rectangle((int)position.X, (int)position.Y, shadowScaledWidth, shadowScaledHeight * 2);
             }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), new Vector2(1,2), SpriteEffects.None, drawLayer);
+            spriteBatch.Draw(sprite, position, null, Color.Black, 0, new Vector2(0, 0), new Vector2(1*GameWorld.Scale,2*GameWorld.Scale), SpriteEffects.None, drawLayer);
         }
     }
 }

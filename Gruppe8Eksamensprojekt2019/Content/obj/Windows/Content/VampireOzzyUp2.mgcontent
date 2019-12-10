@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/VampireOzzyUp2.png</SourceFile>
-  <SourceTime>2019-12-09T09:29:17.5347066+01:00</SourceTime>
-  <DestFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/VampireOzzyUp2.xnb</DestFile>
-  <DestTime>2019-12-09T09:29:33.440093+01:00</DestTime>
+  <SourceFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/VampireOzzyUp2.png</SourceFile>
+  <SourceTime>2019-12-05T13:17:42.0570608+01:00</SourceTime>
+  <DestFile>C:/Users/PeterBjørn/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/VampireOzzyUp2.xnb</DestFile>
+  <DestTime>2019-12-10T21:04:19.1917178+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

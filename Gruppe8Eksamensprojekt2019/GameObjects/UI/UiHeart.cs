@@ -38,7 +38,7 @@ namespace Gruppe8Eksamensprojekt2019
             position.Y = parrent.Position.Y-sprite.Height*1;
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), GameWorld.Scale, SpriteEffects.None, drawLayer);
         }

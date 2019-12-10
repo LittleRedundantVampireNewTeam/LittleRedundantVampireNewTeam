@@ -13,11 +13,11 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../../Desktop/Whoosh sound effect.mp3
+#begin Whoosh sound effect.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:../../../../../Desktop/Whoosh sound effect.mp3;Whoosh sound effect.mp3
+/build:Whoosh sound effect.mp3
 
 #begin backgroundMusic.mp3
 /importer:Mp3Importer

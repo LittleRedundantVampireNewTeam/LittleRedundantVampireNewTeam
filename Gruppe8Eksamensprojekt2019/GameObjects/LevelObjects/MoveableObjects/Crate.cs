@@ -25,7 +25,7 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             hasShadow = false;
             giveShadow = false;
-            speed = 200;
+            speed = (int)(200 * GameWorld.Scale);
             drawLayer = 0.5f;
         }
 
