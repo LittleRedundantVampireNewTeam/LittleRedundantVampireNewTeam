@@ -20,26 +20,20 @@ namespace Gruppe8Eksamensprojekt2019
 		private bool patrolRight;
 
 		private SoundEffect enemyAttackSound;
+        private bool enemyHasAttacked;
 
-		/// <summary>
-		/// Constructor for the Enemy Class.
-		/// </summary>
-		/// <param name=""></param>
-		/// <param name=""></param>
-		/// <param name=""></param>
-		/// <param name=""></param>
-        
 
 		public Enemy(string name, int health, Vector2 position, Ability ability)
 		{
 
-		}
+        }
 
         public Enemy(Vector2 position)
         {
             base.position = position;
 			health = 3;
 			speed = 100;
+			drawLayer = 0.5f;
 		}
 
         public override void Update(GameTime gameTime)
@@ -124,7 +118,7 @@ namespace Gruppe8Eksamensprojekt2019
 			if (targetDistanceX < -sprite.Width/2)
 			{
 				velocity.X = -1f;
-			}		
+			}
 			else if (targetDistanceX > sprite.Width/2)
 			{
 				velocity.X = 1f;

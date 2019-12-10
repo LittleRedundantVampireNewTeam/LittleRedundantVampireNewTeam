@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Camera.cs" />
+    <Compile Include="GameObjects\Characters\EnemyAttack.cs" />
     <Compile Include="GameObjects\Characters\PlayerAttack.cs" />
     <Compile Include="GameObjects\LevelObjects\BreakableObjects\BreakableObject.cs" />
     <Compile Include="GameObjects\LevelObjects\MoveableObjects\MoveableObject.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="GameObjects\TextBox.cs" />
     <Compile Include="GameObjects\LevelObjects\Sun.cs" />
     <Compile Include="GameObjects\LevelObjects\SunRay.cs" />
+    <Compile Include="GameObjects\UI\UiHeart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

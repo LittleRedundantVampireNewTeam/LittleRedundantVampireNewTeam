@@ -32,13 +32,16 @@ namespace Gruppe8Eksamensprojekt2019
         public GameObject child;
         protected bool isMoving;
         private float timeElapsed;
+        protected bool pushing = false;
 
         public GameObject Parrent
         {
             get { return parrent; }
         }
+      
 
-		public Texture2D Sprite
+
+        public Texture2D Sprite
 
 		{
 			get { return sprite; }
@@ -74,7 +77,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.3f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, drawLayer);
         }
 
         public abstract void Update(GameTime gameTime);

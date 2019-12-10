@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,9 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Crate : MoveableObject
     {
+        protected Rectangle intersection;
+        private int distance;
+
         public Crate(Texture2D sprite, Vector2 position, bool hasShadow)
         {
             
@@ -21,14 +25,14 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
             hasShadow = false;
             giveShadow = false;
-            speed = 2;
+            speed = 200;
             drawLayer = 0.5f;
         }
 
         public override void Update(GameTime gameTime)
         {
-           velocity.X = +10f;
-           Move(gameTime);
+            //Move(gameTime);
+            //velocity = new Vector2(1, 0);
         }
 
         public override void LoadContent(ContentManager content)
@@ -47,6 +51,48 @@ namespace Gruppe8Eksamensprojekt2019
             if (other is SunRay && giveShadow == false)
             {
                 giveShadow = true;
+            }
+
+            // Makes sure crates can't be pushed through windows, walls, doors or other crates.
+            // Player is added here. When the player is moving, the crate's position changes,
+            // and is thereby pushed in whatever direction the player is moving.
+            if (other is Wall || other is Sun || other is Crate || other is Door || other is Player)
+            {
+                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
+
+                if (intersection.Width > intersection.Height) // TOP AND BOTTOM
+                {
+                    if (other.Position.Y > position.Y) //Top
+                    {
+                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
+                       
+                            position.Y -= distance;
+                        
+                    }
+
+
+                    if (other.Position.Y < position.Y) //Bottom
+                    {
+                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
+                        position.Y += distance;
+                    }
+                }
+                else
+                {
+                    if (other.Position.X < position.X) //Left collision
+                    {
+                        distance = other.CollisionBox.Right - CollisionBox.Left;
+                        position.X += distance;
+                    }
+
+                    if (other.Position.X > position.X) //Right
+                    {
+                        distance = CollisionBox.Right - other.CollisionBox.Left;
+
+                        
+                        position.X -= distance;
+                    }
+                }
             }
         }
 
