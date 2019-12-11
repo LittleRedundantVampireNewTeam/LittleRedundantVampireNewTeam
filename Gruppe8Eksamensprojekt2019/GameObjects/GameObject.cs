@@ -36,7 +36,7 @@ namespace Gruppe8Eksamensprojekt2019
         private int scaledWidth;
         private int scaledHeight;
 
-        public GameObject Parrent
+		public GameObject Parrent
         {
             get { return parrent; }
         }
