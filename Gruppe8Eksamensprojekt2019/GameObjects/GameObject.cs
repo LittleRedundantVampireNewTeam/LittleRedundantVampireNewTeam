@@ -42,7 +42,6 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
         public Texture2D Sprite
-
 		{
 			get { return sprite; }
 			set { value = sprite; }

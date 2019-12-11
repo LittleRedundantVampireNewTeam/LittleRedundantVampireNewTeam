@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Sunlight2.png</SourceFile>
-  <SourceTime>2019-12-11T09:50:53.6679655+01:00</SourceTime>
-  <DestFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/Sunlight2.xnb</DestFile>
-  <DestTime>2019-12-11T09:51:16.998107+01:00</DestTime>
+  <SourceFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Sunlight2.png</SourceFile>
+  <SourceTime>2019-12-11T09:15:28.6721498+01:00</SourceTime>
+  <DestFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/Sunlight2.xnb</DestFile>
+  <DestTime>2019-12-11T13:40:00.4222889+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

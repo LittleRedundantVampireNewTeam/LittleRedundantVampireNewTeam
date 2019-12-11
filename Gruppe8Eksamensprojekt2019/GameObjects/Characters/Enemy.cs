@@ -40,8 +40,8 @@ namespace Gruppe8Eksamensprojekt2019
         {
             Move(gameTime);
 			SwitchState(gameTime);
-			Console.WriteLine(patrolDistance);
-			Console.WriteLine(patrolRight);
+			//Console.WriteLine(patrolDistance);
+			//Console.WriteLine(patrolRight);
 		}
 
 		public void UpdateDistance(Player target)

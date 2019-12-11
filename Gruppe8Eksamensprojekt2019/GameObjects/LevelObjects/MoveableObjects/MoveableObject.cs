@@ -12,6 +12,7 @@ namespace Gruppe8Eksamensprojekt2019
     {
         protected bool isCollidingMO;
         protected bool isPushing;
+        protected char direction = 'U';  
 
 
 

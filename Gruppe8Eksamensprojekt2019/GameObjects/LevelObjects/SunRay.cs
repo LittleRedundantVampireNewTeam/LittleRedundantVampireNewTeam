@@ -27,5 +27,10 @@ namespace Gruppe8Eksamensprojekt2019
         {
 
         }
+
+        public override Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X+((int)((float)ScaledWidth/(4 * 1.5f))), (int)position.Y+ ((int)((float)ScaledWidth / (4 * 1.5f))), (int)((float)ScaledWidth/1.5f), (int)((float)ScaledHeight/1.5)); }
+        }
     }
 }

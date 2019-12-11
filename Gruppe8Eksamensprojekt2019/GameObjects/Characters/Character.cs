@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,8 @@ namespace Gruppe8Eksamensprojekt2019
         protected Texture2D attackLeft;
         protected Texture2D attackUp;
         protected Texture2D attackDown;
+        protected bool hasAttacked;
+        protected SoundEffect attackSound;
 
 
         protected virtual void UpdateHealth(int health, int amount)

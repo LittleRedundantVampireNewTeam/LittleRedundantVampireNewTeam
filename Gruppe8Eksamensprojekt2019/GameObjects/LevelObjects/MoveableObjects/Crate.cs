@@ -14,13 +14,17 @@ namespace Gruppe8Eksamensprojekt2019
     {
         protected Rectangle intersection;
         private int distance;
+        private bool pushUp = true;
+        private bool pushDown = true;
+        private bool pushRight = true;
+        private bool pushLeft = true;
 
-        public Crate(Texture2D sprite, Vector2 position, bool hasShadow)
-        {
-            
-        }
+        public bool PushUp { get => pushUp; set => pushUp = value; }
+        public bool PushDown { get => pushDown; set => pushDown = value; }
+        public bool PushRight { get => pushRight; set => pushRight = value; }
+        public bool PushLeft { get => pushLeft; set => pushLeft = value; }
 
-        public Crate(Vector2 position)  
+        public Crate(Vector2 position)
         {
             base.position = position;
             hasShadow = false;
@@ -31,8 +35,13 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Update(GameTime gameTime)
         {
-            //Move(gameTime);
-            //velocity = new Vector2(1, 0);
+
+            pushUp = true;
+            pushDown = true;
+            pushLeft = true;
+            pushRight = true;
+            MoveToNearbyTile();
+
         }
 
         public override void LoadContent(ContentManager content)
@@ -53,48 +62,114 @@ namespace Gruppe8Eksamensprojekt2019
                 giveShadow = true;
             }
 
-            // Makes sure crates can't be pushed through windows, walls, doors or other crates.
-            // Player is added here. When the player is moving, the crate's position changes,
-            // and is thereby pushed in whatever direction the player is moving.
-            if (other is Wall || other is Sun || other is Crate || other is Door || other is Player)
+            //Makes sure crates can't be pushed through windows, walls, doors or other crates.
+            if (other is Wall || other is Sun || other is Crate || other is Door)
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                if (intersection.Width > intersection.Height) // TOP AND BOTTOM
+                //The bools "pushDown", up, etc, makes sure that once the crate hits a side, the player can't walk through the crate.
+                //The code making sure of this is in the class Player.
+                if (intersection.Width > intersection.Height) // Top and bottom.
                 {
-                    if (other.Position.Y > position.Y) //Top
+                    if (other.Position.Y > position.Y) //Bottom of crate
                     {
+                        pushDown = false;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
-                       
-                            position.Y -= distance;
+
+                        position.Y -= distance;
                         
                     }
+                    if (other.Position.Y < position.Y) //Top of crate
+                    {
+                        pushUp = false;
+                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
+                        position.Y += distance;
+                        
+                    }
+                }
+                else if (intersection.Width < intersection.Height)  //Right and left.
+                {
+                    if (other.Position.X > position.X) //Right of crate
+                    {
+                        pushLeft = false;
+                        distance = CollisionBox.Right - other.CollisionBox.Left;
+                        position.X -= distance;
+                        
+                    }
+                    if (other.Position.X < position.X) //Left of crate
+                    {
+                        pushRight = false;
+                        distance = other.CollisionBox.Right - CollisionBox.Left;
+                        position.X += distance;
+                        
+                    }
+                }
+            }
 
+            // Enables the player to move the crates.
+            if (other is Player)
+            {
+                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                    if (other.Position.Y < position.Y) //Bottom
+                if (intersection.Width > intersection.Height) //Top and bottom.
+                {
+                    if (other.Position.Y > position.Y) //Bottom of crate. It's being pushed upwards.
+                    {
+                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
+                        position.Y -= distance;
+                        direction = 'U';
+                    }
+                    if (other.Position.Y < position.Y) //Top of crate. It's being pushed downwards.
                     {
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
+                        direction = 'D';
                     }
                 }
-                else
+                else //Left and Right.
                 {
-                    if (other.Position.X < position.X) //Left collision
+                    if (other.Position.X < position.X) //Left of crate. It's being pushed to the right.
                     {
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
+                        direction = 'R';
                     }
-
-                    if (other.Position.X > position.X) //Right
+                    if (other.Position.X > position.X) //Right of crate. It's being pushed to the left.
                     {
                         distance = CollisionBox.Right - other.CollisionBox.Left;
+                        direction = 'L';
 
-                        
+
                         position.X -= distance;
                     }
                 }
             }
         }
+
+        private void MoveToNearbyTile()
+        {
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction == 'U')
+            {
+                position.Y--;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'R')
+            {
+                position.X++;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'L')
+            {
+                position.X--;
+            }
+
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction == 'D')
+            {
+                position.Y++;
+            }
+        }
+
+
 
         public override void Draw(SpriteBatch spriteBatch)
         {

@@ -9,30 +9,29 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
-        private SoundEffect attackSound;
+
 
         private int regeneration;
         private bool isColliding;
 
-		private Texture2D attackRight;
-		private Texture2D attackLeft;
-		private Texture2D attackUp;
-		private Texture2D attackDown;
+        //private Texture2D attackRight;
+        //private Texture2D attackLeft;
+        //private Texture2D attackUp;
+        //private Texture2D attackDown;
 
-		private Texture2D spriteDownWalk1;
-		private Texture2D spriteDownWalk2;
-		private Texture2D spriteUpWalk1;
-		private Texture2D spriteUpWalk2;
-		private Texture2D spriteWalk1;
-		private Texture2D spriteWalk2;
+        private Texture2D spriteDownWalk1;
+        private Texture2D spriteDownWalk2;
+        private Texture2D spriteUpWalk1;
+        private Texture2D spriteUpWalk2;
+        private Texture2D spriteWalk1;
+        private Texture2D spriteWalk2;
 
-		private KeyboardState keyState; /// NEW
+        private KeyboardState keyState; /// NEW
         private TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
 
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
-        private bool hasAttacked;
 
         public int Health
         {
@@ -62,10 +61,10 @@ namespace Gruppe8Eksamensprojekt2019
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
             ChangeDirection();
-            
+
             if (isMoving == true)
             {
-              Animate(gameTime);
+                Animate(gameTime);
             }
 
             //Checks if the player should be taking damage from standing in the sun
@@ -76,10 +75,10 @@ namespace Gruppe8Eksamensprojekt2019
                 if (health > 0)
                 {
                     //HEALTHSYSTEM HERE*************
-                    
-                    GameWorld.UiHeartList.RemoveAt(health-1);
+
+                    GameWorld.UiHeartList.RemoveAt(health - 1);
                     health--;
-                    Console.WriteLine($"Health: {health}");
+                    //Console.WriteLine($"Health: {health}");
                 }
             }
         }
@@ -108,16 +107,64 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                if (intersection.Width > intersection.Height) //Top and bottom.
                 {
-                    if (other.Position.Y > position.Y) //Top
+                    if (other.Position.Y > position.Y) // When player bottom hits object top.
                     {
                         collidingTop = true;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
                         position.Y -= distance;
                     }
 
-                    if (other.Position.Y < position.Y) //Bottom
+                    if (other.Position.Y < position.Y) // When player top hits object bottom.
+                    {
+                        collidingBottom = true;
+                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
+                        position.Y += distance;
+                    }
+                }
+
+                else // Left and right.
+                {
+                    if (other.Position.X < position.X) // When player left hits object right.
+                    {
+                        collidingLeft = true;
+                        distance = other.CollisionBox.Right - CollisionBox.Left;
+                        position.X += distance;
+                    }
+
+                    if (other.Position.X > position.X) // When player right hits object left.
+                    {
+                        collidingRight = true;
+                        distance = CollisionBox.Right - other.CollisionBox.Left;
+                        position.X -= distance;
+                    }
+                }
+            }
+
+            if (other is Key)
+            {
+                //if (keyState.IsKeyDown(Keys.V))
+                //{
+                //    GameWorld.Destroy(other);
+                //}
+            }
+
+            // Crates can't be walked through when they hit a solid object.
+            if (other is Crate)
+            {
+                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
+
+                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                {
+                    if (other.Position.Y > position.Y && (other as Crate).PushDown == false) // When Player bottom hits object top. Pushes the object downwards.
+                    {
+                        collidingTop = true;
+                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
+                        position.Y -= distance;
+                    }
+
+                    if (other.Position.Y < position.Y && (other as Crate).PushUp == false) // When Player top hits object bottom. Pushes the object upwards.
                     {
                         collidingBottom = true;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
@@ -127,14 +174,14 @@ namespace Gruppe8Eksamensprojekt2019
 
                 else
                 {
-                    if (other.Position.X < position.X) //Left collision
+                    if (other.Position.X < position.X && (other as Crate).PushRight == false) // When player left hits object right. Pushes the object to the left.
                     {
                         collidingLeft = true;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
                     }
 
-                    if (other.Position.X > position.X) //Right
+                    if (other.Position.X > position.X && (other as Crate).PushLeft == false) // When player right hits object left. Pushes the object to the right.
                     {
                         collidingRight = true;
                         distance = CollisionBox.Right - other.CollisionBox.Left;
@@ -142,51 +189,39 @@ namespace Gruppe8Eksamensprojekt2019
                     }
                 }
             }
-
-            if (other is Crate)
-            {
-
-            }
-
-            if (other is Key)
-            {
-                //if (keyState.IsKeyDown(Keys.V))
-                //{
-                //    GameWorld.Destroy(other);
-                //}
-              }
         }
+
 
         public override void LoadContent(ContentManager content)
         {
-			isMoving = false;
-            cooldownTimer   = new TimeSpan(0, 0, 2);
+            isMoving = false;
+            cooldownTimer = new TimeSpan(0, 0, 2);
 
-			sprite          = content.Load<Texture2D>("VampireOzzyStill");
-			spriteUp        = content.Load<Texture2D>("VampireOzzyUp2");
-			spriteDown      = content.Load<Texture2D>("VampireOzzyDown");
-			spriteWalk1     = content.Load<Texture2D>("Vampire ozzy2 '");
-			spriteWalk2     = content.Load<Texture2D>("VampireOzzyWalking");
-			spriteDownWalk1 = content.Load<Texture2D>("VampireOzzyDownWalk1");
-			spriteDownWalk2 = content.Load<Texture2D>("VampireOzzyDownWalk2");
-			spriteUpWalk1   = content.Load<Texture2D>("VampireOzzyUpWalk1");
-			spriteUpWalk2   = content.Load<Texture2D>("VampireOzzyUpWalk2");
+            sprite = content.Load<Texture2D>("VampireOzzyStill");
+            spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
+            spriteDown = content.Load<Texture2D>("VampireOzzyDown");
+            spriteWalk1 = content.Load<Texture2D>("Vampire ozzy2 '");
+            spriteWalk2 = content.Load<Texture2D>("VampireOzzyWalking");
+            spriteDownWalk1 = content.Load<Texture2D>("VampireOzzyDownWalk1");
+            spriteDownWalk2 = content.Load<Texture2D>("VampireOzzyDownWalk2");
+            spriteUpWalk1 = content.Load<Texture2D>("VampireOzzyUpWalk1");
+            spriteUpWalk2 = content.Load<Texture2D>("VampireOzzyUpWalk2");
 
-			attackRight     = content.Load<Texture2D>("SlashAttackRight");
-			attackLeft      = content.Load<Texture2D>("SlashAttackLeft");
-			attackUp        = content.Load<Texture2D>("SlashAttackUp");
-			attackDown      = content.Load<Texture2D>("SlashAttackDown");
+            attackRight = content.Load<Texture2D>("SlashAttackRight");
+            attackLeft = content.Load<Texture2D>("SlashAttackLeft");
+            attackUp = content.Load<Texture2D>("SlashAttackUp");
+            attackDown = content.Load<Texture2D>("SlashAttackDown");
 
-            attackSound     = content.Load<SoundEffect>("Whoosh sound effect");
+            attackSound = content.Load<SoundEffect>("Whoosh sound effect");
 
-            hasAttacked     = false;
+            hasAttacked = false;
 
-			sprites = new Texture2D[4];
+            sprites = new Texture2D[4];
 
-			fps = 5f;
-			characterDirection = "D";
+            fps = 5f;
+            characterDirection = "D";
 
-            
+
         }
 
         private void HandleInput(GameTime gameTime)
@@ -202,8 +237,8 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingBottom = false;
 
                 velocity.X = -3f;
-				characterDirection = "L";
-				isMoving = true;
+                characterDirection = "L";
+                isMoving = true;
             }
 
             if (keyState.IsKeyDown(Keys.Right) && collidingRight == false)
@@ -235,27 +270,27 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingLeft = false;
 
                 velocity.Y = +3f;
-				characterDirection = "D";
-				isMoving = true;
-			}
-			if (keyState.IsKeyUp(Keys.Left)&&keyState.IsKeyUp(Keys.Right)&&keyState.IsKeyUp(Keys.Up)&&keyState.IsKeyUp(Keys.Down))
-			{
-				isMoving = false;
-			}
-			if (keyState.IsKeyDown(Keys.A) && hasAttacked == false)
-			{
-				Attack(gameTime);
+                characterDirection = "D";
+                isMoving = true;
+            }
+            if (keyState.IsKeyUp(Keys.Left) && keyState.IsKeyUp(Keys.Right) && keyState.IsKeyUp(Keys.Up) && keyState.IsKeyUp(Keys.Down))
+            {
+                isMoving = false;
+            }
+            if (keyState.IsKeyDown(Keys.A) && hasAttacked == false)
+            {
+                Attack(gameTime);
                 attackSound.Play();
-				timer = new TimeSpan(0, 0, 0, 0, 500);
-			}
-			if (hasAttacked == true)
-			{
-				timer -= gameTime.ElapsedGameTime;
-				if (timer <= TimeSpan.Zero)
-				{
-					hasAttacked = false;
-				}
-			}
+                timer = new TimeSpan(0, 0, 0, 0, 500);
+            }
+            if (hasAttacked == true)
+            {
+                timer -= gameTime.ElapsedGameTime;
+                if (timer <= TimeSpan.Zero)
+                {
+                    hasAttacked = false;
+                }
+            }
             if (velocity != Vector2.Zero)
             {
                 /// Ensures that the player sprite doesn't move faster if they hold down two move keys at the same time.
@@ -283,27 +318,27 @@ namespace Gruppe8Eksamensprojekt2019
             }
         }
 
-		protected override void Attack(GameTime gameTime)
-		{
-			if (characterDirection == "R")
-			{
-				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width/2, position.Y), new Vector2(0, 0)));
-			}
-			if (characterDirection == "L")
-			{
-				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
-			}
-			if (characterDirection == "U")
-			{
-				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y-(sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
-			}
-			if (characterDirection == "D")
-			{
-				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
-			}
-            //GameWorld.newCollisionObjects.Add();
+        protected override void Attack(GameTime gameTime)
+        {
+            if (characterDirection == "R")
+            {
+                GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width / 2, position.Y), new Vector2(0, 0)));
+            }
+            if (characterDirection == "L")
+            {
+                GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width / 2, position.Y), new Vector2(0, 0)));
+            }
+            if (characterDirection == "U")
+            {
+                GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y - (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
+            }
+            if (characterDirection == "D")
+            {
+                GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
+            }
+
             hasAttacked = true;
-		}
+        }
 
         private void SuckAttack()
         {
@@ -320,72 +355,76 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-		private void ChangeDirection()
-		{
-			switch(characterDirection)
-			{
-				case "L":
-					sprites[0] = sprite;
-					sprites[1] = spriteWalk1;
-					sprites[2] = sprite;
-					sprites[3] = spriteWalk2;
-					break;
-				case "R":
-					sprites[0] = sprite;
-					sprites[1] = spriteWalk1;
-					sprites[2] = sprite;
-					sprites[3] = spriteWalk2;
-					break;
-				case "U":
-					sprites[0] = spriteUp;
-					sprites[1] = spriteUpWalk1;
-					sprites[2] = spriteUp;
-					sprites[3] = spriteUpWalk2;
-					break;
-				case "D":
-					sprites[0] = spriteDown;
-					sprites[1] = spriteDownWalk1;
-					sprites[2] = spriteDown;
-					sprites[3] = spriteDownWalk2;
-					break;
-			}
-		}
+        private void ChangeDirection()
+        {
+            switch (characterDirection)
+            {
+                case "L":
+                    sprites[0] = sprite;
+                    sprites[1] = spriteWalk1;
+                    sprites[2] = sprite;
+                    sprites[3] = spriteWalk2;
+                    break;
+                case "R":
+                    sprites[0] = sprite;
+                    sprites[1] = spriteWalk1;
+                    sprites[2] = sprite;
+                    sprites[3] = spriteWalk2;
+                    break;
+                case "U":
+                    sprites[0] = spriteUp;
+                    sprites[1] = spriteUpWalk1;
+                    sprites[2] = spriteUp;
+                    sprites[3] = spriteUpWalk2;
+                    break;
+                case "D":
+                    sprites[0] = spriteDown;
+                    sprites[1] = spriteDownWalk1;
+                    sprites[2] = spriteDown;
+                    sprites[3] = spriteDownWalk2;
+                    break;
+            }
+        }
 
+        public override Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X + (ScaledWidth / 4), (int)position.Y, ScaledWidth / 2, ScaledHeight); }
+        }
 
-		public override void Draw(SpriteBatch spriteBatch)
-		{
+        public override void Draw(SpriteBatch spriteBatch)
+        {
 
-			switch(isMoving)
-			{
-				case true:
-					if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
-					{
-						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
-					}
-					if (characterDirection == "L")
-					{
-						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
-					}
-					break;
-				case false:
+            switch (isMoving)
+            {
+                case true:
+                    if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
+                    {
+                        spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+                    }
+                    if (characterDirection == "L")
+                    {
+                        spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+                    }
+                    break;
+                case false:
 
-					switch(characterDirection)
-					{
-						case "R":
-							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
-							break;
-						case "L":
-							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
-							break;
-						case "U":
-							spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
-							break;
-						case "D":
-							spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
-							break;
-					}
-					break;
-			}
-		}
-	}
+                    switch (characterDirection)
+                    {
+                        case "R":
+                            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+                            break;
+                        case "L":
+                            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+                            break;
+                        case "U":
+                            spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+                            break;
+                        case "D":
+                            spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+                            break;
+                    }
+                    break;
+            }
+        }
+    }
 }
