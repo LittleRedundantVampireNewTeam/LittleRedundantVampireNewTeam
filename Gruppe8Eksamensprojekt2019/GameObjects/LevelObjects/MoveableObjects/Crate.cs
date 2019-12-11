@@ -77,6 +77,7 @@ namespace Gruppe8Eksamensprojekt2019
                         pushUp = false;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
+
                     }
                 }
                 else if (intersection.Width < intersection.Height)  //Right and left.
@@ -92,6 +93,7 @@ namespace Gruppe8Eksamensprojekt2019
                         pushRight = false;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
+
                     }
                 }
             }

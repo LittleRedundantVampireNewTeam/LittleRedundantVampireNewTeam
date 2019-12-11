@@ -11,18 +11,18 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Gruppe8Eksamensprojekt2019
 {
-	class PlayerAttack : GameObject
+	class PlayerAttack : Attack
 	{
-        private int attackScaledWidth;
-        private int attackScaledHeight;
+    private int attackScaledWidth;
+    private int attackScaledHeight;
 
-        public override void LoadContent(ContentManager content)
+    public override void LoadContent(ContentManager content)
 		{}
 
 		public override void Update(GameTime gameTime)
 		{
             HandleAttack(gameTime);
-        }
+    }
 
 		public PlayerAttack(Texture2D playerAttackSprite, Vector2 position, Vector2 velocity)
 		{

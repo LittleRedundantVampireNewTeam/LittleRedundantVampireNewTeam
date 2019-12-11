@@ -131,7 +131,7 @@ namespace Gruppe8Eksamensprojekt2019
             //                    break;
             //                }
 
-                        
+
 
             //            case (3):
             //                {
@@ -139,7 +139,7 @@ namespace Gruppe8Eksamensprojekt2019
             //                    break;
             //                }
 
-                       
+
             //        }
             //    }
             //}

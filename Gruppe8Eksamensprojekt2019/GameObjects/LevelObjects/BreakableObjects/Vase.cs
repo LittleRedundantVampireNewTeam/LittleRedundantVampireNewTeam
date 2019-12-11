@@ -23,7 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-            if (other is Crate || other is PlayerAttack)
+			if (other is Crate || other is PlayerAttack)
             {
                 Break();
             }

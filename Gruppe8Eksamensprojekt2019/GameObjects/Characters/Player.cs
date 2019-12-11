@@ -9,29 +9,28 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
-        private SoundEffect attackSound;
+
 
         private int regeneration;
         private bool isColliding;
 
-        
+
 
         private Texture2D spriteDownWalk1;
-		private Texture2D spriteDownWalk2;
-		private Texture2D spriteUpWalk1;
-		private Texture2D spriteUpWalk2;
-		private Texture2D spriteWalk1;
-		private Texture2D spriteWalk2;
+		    private Texture2D spriteDownWalk2;
+		    private Texture2D spriteUpWalk1;
+		    private Texture2D spriteUpWalk2;
+		    private Texture2D spriteWalk1;
+		    private Texture2D spriteWalk2;
 
-        
 
-		private KeyboardState keyState; /// NEW
+
+		    private KeyboardState keyState; /// NEW
         private TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
 
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
-        private bool hasAttacked;
 
         public int Health
         {
@@ -61,10 +60,10 @@ namespace Gruppe8Eksamensprojekt2019
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
             ChangeDirection();
-            
+
             if (isMoving == true)
             {
-              Animate(gameTime);
+                Animate(gameTime);
             }
 
             //Checks if the player should be taking damage from standing in the sun
@@ -75,8 +74,8 @@ namespace Gruppe8Eksamensprojekt2019
                 if (health > 0)
                 {
                     //HEALTHSYSTEM HERE*************
-                    
-                    GameWorld.UiHeartList.RemoveAt(health-1);
+
+                    GameWorld.UiHeartList.RemoveAt(health - 1);
                     health--;
                     //Console.WriteLine($"Health: {health}");
                 }
@@ -115,16 +114,16 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                if (intersection.Width > intersection.Height) //Top and bottom.
                 {
-                    if (other.Position.Y > position.Y) //Top
+                    if (other.Position.Y > position.Y) // When player bottom hits object top.
                     {
                         collidingTop = true;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
                         position.Y -= distance;
                     }
 
-                    if (other.Position.Y < position.Y) //Bottom
+                    if (other.Position.Y < position.Y) // When player top hits object bottom.
                     {
                         collidingBottom = true;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
@@ -132,16 +131,16 @@ namespace Gruppe8Eksamensprojekt2019
                     }
                 }
 
-                else
+                else // Left and right.
                 {
-                    if (other.Position.X < position.X) //Left collision
+                    if (other.Position.X < position.X) // When player left hits object right.
                     {
                         collidingLeft = true;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
                     }
 
-                    if (other.Position.X > position.X) //Right
+                    if (other.Position.X > position.X) // When player right hits object left.
                     {
                         collidingRight = true;
                         distance = CollisionBox.Right - other.CollisionBox.Left;
@@ -191,30 +190,33 @@ namespace Gruppe8Eksamensprojekt2019
             }
         }
 
+
         public override void LoadContent(ContentManager content)
         {
+
             hasAttacked = false;
             isMoving = false;
             fps = 5f;
             characterDirection = "D";
             cooldownTimer   = new TimeSpan(0, 0, 2);
 
-			sprite          = content.Load<Texture2D>("VampireOzzyStill");
-			spriteUp        = content.Load<Texture2D>("VampireOzzyUp2");
-			spriteDown      = content.Load<Texture2D>("VampireOzzyDown");
-			spriteWalk1     = content.Load<Texture2D>("Vampire ozzy2 '");
-			spriteWalk2     = content.Load<Texture2D>("VampireOzzyWalking");
-			spriteDownWalk1 = content.Load<Texture2D>("VampireOzzyDownWalk1");
-			spriteDownWalk2 = content.Load<Texture2D>("VampireOzzyDownWalk2");
-			spriteUpWalk1   = content.Load<Texture2D>("VampireOzzyUpWalk1");
-			spriteUpWalk2   = content.Load<Texture2D>("VampireOzzyUpWalk2");
+            sprite = content.Load<Texture2D>("VampireOzzyStill");
+            spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
+            spriteDown = content.Load<Texture2D>("VampireOzzyDown");
+            spriteWalk1 = content.Load<Texture2D>("Vampire ozzy2 '");
+            spriteWalk2 = content.Load<Texture2D>("VampireOzzyWalking");
+            spriteDownWalk1 = content.Load<Texture2D>("VampireOzzyDownWalk1");
+            spriteDownWalk2 = content.Load<Texture2D>("VampireOzzyDownWalk2");
+            spriteUpWalk1 = content.Load<Texture2D>("VampireOzzyUpWalk1");
+            spriteUpWalk2 = content.Load<Texture2D>("VampireOzzyUpWalk2");
 
-			attackRight     = content.Load<Texture2D>("SlashAttackRight");
-			attackLeft      = content.Load<Texture2D>("SlashAttackLeft");
-			attackUp        = content.Load<Texture2D>("SlashAttackUp");
-			attackDown      = content.Load<Texture2D>("SlashAttackDown");
+            attackRight = content.Load<Texture2D>("SlashAttackRight");
+            attackLeft = content.Load<Texture2D>("SlashAttackLeft");
+            attackUp = content.Load<Texture2D>("SlashAttackUp");
+            attackDown = content.Load<Texture2D>("SlashAttackDown");
 
-            attackSound     = content.Load<SoundEffect>("Whoosh sound effect");
+            attackSound = content.Load<SoundEffect>("Whoosh sound effect");
+
 
 			sprites = new Texture2D[4];
         }
