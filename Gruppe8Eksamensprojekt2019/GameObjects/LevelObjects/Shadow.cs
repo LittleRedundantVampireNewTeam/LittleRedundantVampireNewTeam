@@ -36,7 +36,7 @@ namespace Gruppe8Eksamensprojekt2019
         {
             //Keeps the shadows position relative to its parrent object (crates for now)
             position.X = parrent.Position.X;
-            position.Y = parrent.Position.Y + sprite.Height;
+            position.Y = parrent.Position.Y + (sprite.Height * GameWorld.Scale);
 
             //Checks if the shadows parrent is colliding with a sunray and removes it if not
             if (Parrent.GiveShadow == false)
