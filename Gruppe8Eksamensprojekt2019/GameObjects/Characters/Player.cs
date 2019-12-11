@@ -95,16 +95,64 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
-                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                if (intersection.Width > intersection.Height) //Top and bottom.
                 {
-                    if (other.Position.Y > position.Y) //Top
+                    if (other.Position.Y > position.Y) // When player bottom hits object top.
                     {
                         collidingTop = true;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
                         position.Y -= distance;
                     }
 
-                    if (other.Position.Y < position.Y) //Bottom
+                    if (other.Position.Y < position.Y) // When player top hits object bottom.
+                    {
+                        collidingBottom = true;
+                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
+                        position.Y += distance;
+                    }
+                }
+
+                else // Left and right.
+                {
+                    if (other.Position.X < position.X) // When player left hits object right.
+                    {
+                        collidingLeft = true;
+                        distance = other.CollisionBox.Right - CollisionBox.Left;
+                        position.X += distance;
+                    }
+
+                    if (other.Position.X > position.X) // When player right hits object left.
+                    {
+                        collidingRight = true;
+                        distance = CollisionBox.Right - other.CollisionBox.Left;
+                        position.X -= distance;
+                    }
+                }
+            }
+
+            if (other is Key)
+            {
+                //if (keyState.IsKeyDown(Keys.V))
+                //{
+                //    GameWorld.Destroy(other);
+                //}
+            }
+
+            // Crates can't be walked through when they hit a solid object.
+            if (other is Crate)
+            {
+                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
+
+                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
+                {
+                    if (other.Position.Y > position.Y && (other as Crate).PushDown == false) // When Player bottom hits object top. Pushes the object downwards.
+                    {
+                        collidingTop = true;
+                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
+                        position.Y -= distance;
+                    }
+
+                    if (other.Position.Y < position.Y && (other as Crate).PushUp == false) // When Player top hits object bottom. Pushes the object upwards.
                     {
                         collidingBottom = true;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
@@ -114,14 +162,14 @@ namespace Gruppe8Eksamensprojekt2019
 
                 else
                 {
-                    if (other.Position.X < position.X) //Left collision
+                    if (other.Position.X < position.X && (other as Crate).PushRight == false) // When player left hits object right. Pushes the object to the left.
                     {
                         collidingLeft = true;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
                     }
 
-                    if (other.Position.X > position.X) //Right
+                    if (other.Position.X > position.X && (other as Crate).PushLeft == false) // When player right hits object left. Pushes the object to the right.
                     {
                         collidingRight = true;
                         distance = CollisionBox.Right - other.CollisionBox.Left;
@@ -129,20 +177,8 @@ namespace Gruppe8Eksamensprojekt2019
                     }
                 }
             }
-
-            if (other is Crate)
-            {
-
-            }
-
-            if (other is Key)
-            {
-                //if (keyState.IsKeyDown(Keys.V))
-                //{
-                //    GameWorld.Destroy(other);
-                //}
-              }
         }
+
 
         public override void LoadContent(ContentManager content)
         {

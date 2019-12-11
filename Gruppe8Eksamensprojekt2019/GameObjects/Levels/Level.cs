@@ -23,13 +23,11 @@ namespace Gruppe8Eksamensprojekt2019
     // T = Treasure
 
 
-
     abstract class Level : GameObject
     {
         protected Song levelMusic;
         protected List<GameObject> levelList;
         protected Texture2D background;
-
 
         protected abstract void ChangeLevel();
 
