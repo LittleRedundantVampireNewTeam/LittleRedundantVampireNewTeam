@@ -11,7 +11,7 @@ namespace Gruppe8Eksamensprojekt2019
 {
     public abstract class GameObject
     {
-        protected Texture2D sprite;
+        public Texture2D sprite;
 		protected Texture2D[] sprites;
 		protected Texture2D spriteUp;
 		protected Texture2D spriteDown;
@@ -32,14 +32,16 @@ namespace Gruppe8Eksamensprojekt2019
         public GameObject child;
         protected bool isMoving;
         private float timeElapsed;
+        protected bool pushing = false;
+        private int scaledWidth;
+        private int scaledHeight;
 
-        public GameObject Parrent
+		public GameObject Parrent
         {
             get { return parrent; }
         }
 
-		public Texture2D Sprite
-
+        public Texture2D Sprite
 		{
 			get { return sprite; }
 			set { value = sprite; }
@@ -63,18 +65,26 @@ namespace Gruppe8Eksamensprojekt2019
             set { giveShadow = value; }
         }
 
+        public int ScaledWidth
+        {
+            get { return scaledWidth; }
+            set { scaledWidth = value; }
+        }
+
+        public int ScaledHeight
+        {
+            get { return scaledHeight; }
+            set { scaledHeight = value; }
+        }
 
         public virtual Rectangle CollisionBox
         {
-            get
-            {
-                return new Rectangle((int)position.X, (int)position.Y, sprite.Width, sprite.Height);
-            }
+            get { return new Rectangle((int)position.X, (int)position.Y, scaledWidth, scaledHeight); }
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.3f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, drawLayer);
         }
 
         public abstract void Update(GameTime gameTime);

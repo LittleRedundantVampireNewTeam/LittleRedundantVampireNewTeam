@@ -24,25 +24,24 @@ namespace Gruppe8Eksamensprojekt2019
         public bool PushRight { get => pushRight; set => pushRight = value; }
         public bool PushLeft { get => pushLeft; set => pushLeft = value; }
 
-        public Crate(Vector2 position)  
+        public Crate(Vector2 position)
         {
             base.position = position;
             hasShadow = false;
             giveShadow = false;
-            speed = 200;
+            speed = (int)(200 * GameWorld.Scale);
             drawLayer = 0.5f;
         }
 
         public override void Update(GameTime gameTime)
         {
-            // These bools are sat as true here, to make sure they become true again after being set as false in collision.
-            // This ensures that if a crate is moved to the left and hits a wall (or another solid object),
-            // and the player moves it away from the object, the object can again be pushed to the left.
-            // Without this, the bool would be stuck on false and the crate would no longer be able to be pushed in that direction.
+
             pushUp = true;
             pushDown = true;
             pushLeft = true;
             pushRight = true;
+            MoveToNearbyTile();
+
         }
 
         public override void LoadContent(ContentManager content)
@@ -76,13 +75,16 @@ namespace Gruppe8Eksamensprojekt2019
                     {
                         pushDown = false;
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
-                        position.Y -= distance;
+
+                            position.Y -= distance;
+                            direction = 'U';
                     }
                     if (other.Position.Y < position.Y) //Top of crate
                     {
                         pushUp = false;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
+                        direction = 'D';
                     }
                 }
                 else if (intersection.Width < intersection.Height)  //Right and left.
@@ -98,6 +100,7 @@ namespace Gruppe8Eksamensprojekt2019
                         pushRight = false;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
+                        direction = 'R';
                     }
                 }
             }
@@ -130,11 +133,39 @@ namespace Gruppe8Eksamensprojekt2019
                     if (other.Position.X > position.X) //Right of crate. It's being pushed to the left.
                     {
                         distance = CollisionBox.Right - other.CollisionBox.Left;
+                        direction = 'L';
+
+
                         position.X -= distance;
                     }
                 }
             }
         }
+
+        private void MoveToNearbyTile()
+        {
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction =='U')
+            {
+                position.Y--;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'R')
+            {
+                position.X++;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'L')
+            {
+                position.X--;
+            }
+
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction == 'D')
+            {
+                position.Y++;
+            }
+        }
+
+
 
         public override void Draw(SpriteBatch spriteBatch)
         {
@@ -142,4 +173,3 @@ namespace Gruppe8Eksamensprojekt2019
         }
     }
 }
-

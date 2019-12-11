@@ -9,14 +9,15 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
+        
+
         private int regeneration;
-        private SoundEffect playerAttackSound;
         private bool isColliding;
 
-		private Texture2D attackRight;
-		private Texture2D attackLeft;
-		private Texture2D attackUp;
-		private Texture2D attackDown;
+		//private Texture2D attackRight;
+		//private Texture2D attackLeft;
+		//private Texture2D attackUp;
+		//private Texture2D attackDown;
 
 		private Texture2D spriteDownWalk1;
 		private Texture2D spriteDownWalk2;
@@ -31,17 +32,26 @@ namespace Gruppe8Eksamensprojekt2019
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
-        private bool hasAttacked;
+
+        public int Health
+        {
+            get { return health; }
+        }
 
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
-            health = 100;
-            speed = 200;
+            health = 10;
+            speed = (int)(200 * GameWorld.Scale);
             base.position = position;
-            playerDirection = "R";
+            characterDirection = "R";
             drawLayer = 0.5f;
             hasAttacked = false;
+
+            for (int i = 0; i < health; i++)
+            {
+                GameWorld.UiHeartList.Add(new UiHeart(this));
+            }
         }
 
 
@@ -60,13 +70,15 @@ namespace Gruppe8Eksamensprojekt2019
             //Checks if the player should be taking damage from standing in the sun
             if (inSun == true && invincible == false)
             {
-                inSun = false;
                 invincible = true;
+
                 if (health > 0)
                 {
                     //HEALTHSYSTEM HERE*************
+                    
+                    GameWorld.UiHeartList.RemoveAt(health-1);
                     health--;
-                    Console.WriteLine($"Health: {health}");
+                    //Console.WriteLine($"Health: {health}");
                 }
             }
         }
@@ -200,17 +212,17 @@ namespace Gruppe8Eksamensprojekt2019
 			attackUp        = content.Load<Texture2D>("SlashAttackUp");
 			attackDown      = content.Load<Texture2D>("SlashAttackDown");
 
+            attackSound     = content.Load<SoundEffect>("Whoosh sound effect");
+
+            hasAttacked     = false;
+
 			sprites = new Texture2D[4];
 
 			fps = 5f;
-			playerDirection = "D";
+			characterDirection = "D";
 
-
-			for (int i = 0; i < sprites.Length; i++)
-			{
-                /////////////////////////////////////////////////////////
-			}
-		}
+            
+        }
 
         private void HandleInput(GameTime gameTime)
         {
@@ -225,7 +237,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingBottom = false;
 
                 velocity.X = -3f;
-				playerDirection = "L";
+				characterDirection = "L";
 				isMoving = true;
             }
 
@@ -236,7 +248,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingBottom = false;
 
                 velocity.X = +3f;
-                playerDirection = "R";
+                characterDirection = "R";
                 isMoving = true;
             }
 
@@ -247,7 +259,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingTop = false;
 
                 velocity.Y = -3f;
-                playerDirection = "U";
+                characterDirection = "U";
                 isMoving = true;
             }
 
@@ -258,7 +270,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingLeft = false;
 
                 velocity.Y = +3f;
-				playerDirection = "D";
+				characterDirection = "D";
 				isMoving = true;
 			}
 			if (keyState.IsKeyUp(Keys.Left)&&keyState.IsKeyUp(Keys.Right)&&keyState.IsKeyUp(Keys.Up)&&keyState.IsKeyUp(Keys.Down))
@@ -268,6 +280,7 @@ namespace Gruppe8Eksamensprojekt2019
 			if (keyState.IsKeyDown(Keys.A) && hasAttacked == false)
 			{
 				Attack(gameTime);
+                attackSound.Play();
 				timer = new TimeSpan(0, 0, 0, 0, 500);
 			}
 			if (hasAttacked == true)
@@ -290,6 +303,8 @@ namespace Gruppe8Eksamensprojekt2019
             /// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
             if (invincible == true)
             {
+                inSun = false;
+                UiHeart.DrawHealthUI = true;
                 if (cooldownTimer > TimeSpan.Zero)
                 {
                     cooldownTimer -= gameTime.ElapsedGameTime;
@@ -297,6 +312,7 @@ namespace Gruppe8Eksamensprojekt2019
                 if (cooldownTimer <= TimeSpan.Zero)
                 {
                     invincible = false;
+                    UiHeart.DrawHealthUI = false;
                     cooldownTimer = new TimeSpan(0, 0, 2);
                 }
             }
@@ -304,35 +320,27 @@ namespace Gruppe8Eksamensprojekt2019
 
 		protected override void Attack(GameTime gameTime)
 		{
-			if (playerDirection == "R")
+			if (characterDirection == "R")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width/2, position.Y), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width / 2, position.Y), new Vector2(0, 0)));
 			}
-			if (playerDirection == "L")
+			if (characterDirection == "L")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width / 2, position.Y), new Vector2(0, 0)));
 			}
-			if (playerDirection == "U")
+			if (characterDirection == "U")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y-(sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y - (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
 			}
-			if (playerDirection == "D")
+			if (characterDirection == "D")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
 			}
+
 			hasAttacked = true;
-
-			//else
-			//{
-
-			//	if(cooldown <= 0)
-			//	{
-			//		hasAttacked = false;
-			//	}
-			//}
 		}
 
-        private void SuckAttack()
+		private void SuckAttack()
         {
 
         }
@@ -349,7 +357,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		private void ChangeDirection()
 		{
-			switch(playerDirection)
+			switch(characterDirection)
 			{
 				case "L":
 					sprites[0] = sprite;
@@ -378,25 +386,29 @@ namespace Gruppe8Eksamensprojekt2019
 			}
 		}
 
+        public override Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X+(ScaledWidth/4), (int)position.Y, ScaledWidth/2, ScaledHeight); }
+        }
 
-		public override void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
 		{
 
 			switch(isMoving)
 			{
 				case true:
-					if (playerDirection == "R" || playerDirection == "U" || playerDirection == "D")
+					if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
 					{
 						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
 					}
-					if (playerDirection == "L")
+					if (characterDirection == "L")
 					{
 						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
 					}
 					break;
 				case false:
 
-					switch(playerDirection)
+					switch(characterDirection)
 					{
 						case "R":
 							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
