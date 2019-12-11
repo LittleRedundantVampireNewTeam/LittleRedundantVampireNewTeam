@@ -21,12 +21,6 @@ namespace Gruppe8Eksamensprojekt2019
         private SoundEffect enemyAttackSound;
         private bool enemyHasAttacked;
 
-
-		public Enemy(string name, int health, Vector2 position, Ability ability)
-		{
-
-        }
-
         public Enemy(Vector2 position)
         {
             base.position = position;

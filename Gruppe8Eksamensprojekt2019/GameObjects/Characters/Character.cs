@@ -34,8 +34,6 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasAttacked;
         protected SoundEffect attackSound;
 
-		protected SoundEffect attackSound;
-		protected bool hasAttacked;
 
 		
 
