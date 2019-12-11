@@ -33,6 +33,9 @@ namespace Gruppe8Eksamensprojekt2019
         {
             //Move(gameTime);
             //velocity = new Vector2(1, 0);
+            MoveToNearbyTile();
+
+           
         }
 
         public override void LoadContent(ContentManager content)
@@ -67,7 +70,7 @@ namespace Gruppe8Eksamensprojekt2019
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
                        
                             position.Y -= distance;
-                        
+                            direction = 'U';
                     }
 
 
@@ -75,26 +78,54 @@ namespace Gruppe8Eksamensprojekt2019
                     {
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
+                        direction = 'D';
                     }
                 }
                 else
                 {
-                    if (other.Position.X < position.X) //Left collision
+                    if (other.Position.X < position.X) //Right collision
                     {
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
+                        direction = 'R';
                     }
 
-                    if (other.Position.X > position.X) //Right
+                    if (other.Position.X > position.X) //Left
                     {
                         distance = CollisionBox.Right - other.CollisionBox.Left;
+                        direction = 'L';
 
-                        
+
                         position.X -= distance;
                     }
                 }
             }
         }
+
+        private void MoveToNearbyTile()
+        {
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction =='U')
+            {
+                position.Y--;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'R')
+            {
+                position.X++;
+            }
+
+            if ((position.X % 96 * GameWorld.Scale) != 0 && direction == 'L')
+            {
+                position.X--;
+            }
+
+            if ((position.Y % 96 * GameWorld.Scale) != 0 && direction == 'D')
+            {
+                position.Y++;
+            }
+        }
+
+
 
         public override void Draw(SpriteBatch spriteBatch)
         {

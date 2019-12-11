@@ -35,7 +35,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
             position.X = parrent.Position.X;
-            position.Y = parrent.Position.Y-sprite.Height*1;
+            position.Y = parrent.Position.Y-ScaledHeight;
         }
 
         public override void Draw(SpriteBatch spriteBatch)

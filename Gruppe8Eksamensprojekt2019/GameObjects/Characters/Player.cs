@@ -79,7 +79,7 @@ namespace Gruppe8Eksamensprojekt2019
                     
                     GameWorld.UiHeartList.RemoveAt(health-1);
                     health--;
-                    Console.WriteLine($"Health: {health}");
+                    //Console.WriteLine($"Health: {health}");
                 }
             }
         }
@@ -351,8 +351,12 @@ namespace Gruppe8Eksamensprojekt2019
 			}
 		}
 
+        public override Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X+(ScaledWidth/4), (int)position.Y, ScaledWidth/2, ScaledHeight); }
+        }
 
-		public override void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
 		{
 
 			switch(isMoving)
