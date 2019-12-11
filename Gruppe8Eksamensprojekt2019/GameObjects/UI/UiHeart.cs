@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace Gruppe8Eksamensprojekt2019
 {
     public class UiHeart : GameObject
-
     {
-
         private static bool drawHealthUI;
 
         public static bool DrawHealthUI
@@ -35,12 +33,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
             position.X = parrent.Position.X;
-            position.Y = parrent.Position.Y-sprite.Height*1;
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), GameWorld.Scale, SpriteEffects.None, drawLayer);
+            position.Y = parrent.Position.Y-ScaledHeight;
         }
     }
 }

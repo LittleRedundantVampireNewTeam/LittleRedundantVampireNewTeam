@@ -18,12 +18,8 @@ namespace Gruppe8Eksamensprojekt2019
             base.position = position;
         }
 
-    
-
         public override void Update(GameTime gameTime)
-        {
-
-        }
+        {}
 
         protected override void OnCollision(GameObject other)
         {

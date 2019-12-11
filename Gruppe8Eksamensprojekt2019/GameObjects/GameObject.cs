@@ -11,42 +11,55 @@ namespace Gruppe8Eksamensprojekt2019
 {
     public abstract class GameObject
     {
-        public Texture2D sprite;
-		protected Texture2D[] sprites;
-		protected Texture2D spriteUp;
-		protected Texture2D spriteDown;
-        protected byte currentIndex;
-        protected float fps;
-        protected Vector2 position;
-        protected Vector2 velocity;
-        protected int speed;
-        protected bool hasShadow;
-        protected Rectangle intersect;
-        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        protected string name;
-        protected bool giveShadow;
-        protected float drawLayer = 0.01f;
-        protected TimeSpan timer;
-        protected float deltaTime;
+        //Fields
         public GameObject parrent;
         public GameObject child;
-        protected bool isMoving;
-        private float timeElapsed;
-        protected bool pushing = false;
-        private int scaledWidth;
-        private int scaledHeight;
 
+        protected Texture2D[] sprites;
+        protected Texture2D spriteUp;
+        protected Texture2D spriteDown;
+        public    Texture2D sprite;
+
+        protected Vector2 position;
+        protected Vector2 velocity;
+        protected Rectangle intersect;
+        protected TimeSpan timer;
+
+        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        protected bool pushing = false;
+        protected bool hasShadow;
+        protected bool giveShadow;
+        protected bool isMoving;
+
+        protected byte currentIndex;
+
+        protected int scaledWidth;
+        protected int scaledHeight;
+        protected int speed;
+
+        protected float drawLayer = 0.01f;
+        protected float deltaTime;
+        protected float fps;
+        private   float timeElapsed;
+
+        protected string name;
+
+        //Properties
         public GameObject Parrent
         {
             get { return parrent; }
         }
 
         public Texture2D Sprite
-
 		{
 			get { return sprite; }
 			set { value = sprite; }
 		}
+
+        public virtual Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X, (int)position.Y, scaledWidth, scaledHeight); }
+        }
 
         public Vector2 Position
         {
@@ -78,11 +91,7 @@ namespace Gruppe8Eksamensprojekt2019
             set { scaledHeight = value; }
         }
 
-        public virtual Rectangle CollisionBox
-        {
-            get { return new Rectangle((int)position.X, (int)position.Y, scaledWidth, scaledHeight); }
-        }
-
+        //Methods
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, drawLayer);
@@ -101,9 +110,7 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
         protected virtual void OnCollision(GameObject other)
-        {
-
-        }
+        {}
 
         protected virtual void Move(GameTime gameTime)
         {

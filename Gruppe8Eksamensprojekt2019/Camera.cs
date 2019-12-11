@@ -19,8 +19,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		public void FollowTarget(Character target)
 		{
-			cameraTransform = Matrix.CreateTranslation(-target.Position.X-(target.Sprite.Width), -target.Position.Y-(target.Sprite.Height),0)
-				* Matrix.CreateTranslation(GameWorld.ScreenWidth/2,GameWorld.ScreenHeight/2,0);
+			cameraTransform = Matrix.CreateTranslation(-target.Position.X-(target.Sprite.Width), -target.Position.Y-(target.Sprite.Height),0) * Matrix.CreateTranslation(GameWorld.ScreenWidth/2,GameWorld.ScreenHeight/2,0);
 		}
 	}
 }

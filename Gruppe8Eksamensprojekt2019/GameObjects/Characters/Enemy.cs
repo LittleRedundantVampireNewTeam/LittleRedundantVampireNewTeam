@@ -18,8 +18,7 @@ namespace Gruppe8Eksamensprojekt2019
 		private float patrolDistance;
 		private float previousDistance;
 		private bool patrolRight;
-
-		private SoundEffect enemyAttackSound;
+        private SoundEffect enemyAttackSound;
         private bool enemyHasAttacked;
 
 
@@ -39,9 +38,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);
-			SwitchState();
-			Console.WriteLine(patrolDistance);
-			Console.WriteLine(patrolRight);
+			SwitchState(gameTime);
 		}
 
 		public void UpdateDistance(Player target)
@@ -53,6 +50,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void LoadContent(ContentManager content)
         {
             sprite = GameWorld.EnemySprite;
+
 			patrolDistance = 4*sprite.Width;
 			previousDistance = patrolDistance;
 		}
@@ -72,12 +70,14 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		private void SwitchState()
+		private void SwitchState(GameTime gameTime)
 		{
 			if ((targetDistanceX >= -sprite.Width * 4 && targetDistanceX <= sprite.Width * 4) &&
 				(targetDistanceY >= -sprite.Height * 4 && targetDistanceY <= sprite.Height * 4))
 			{
 				FollowTarget();
+				Attack(gameTime);
+
 			}
 			if (targetDistanceX > sprite.Width * 4 || targetDistanceX < -sprite.Width * 4 || targetDistanceY > sprite.Height * 4 || targetDistanceY < -sprite.Height * 4)
 			{
@@ -110,7 +110,6 @@ namespace Gruppe8Eksamensprojekt2019
 			{
 				patrolDistance -= 1;
 			}
-
 		}
 
 		private void FollowTarget()
@@ -141,46 +140,5 @@ namespace Gruppe8Eksamensprojekt2019
 				velocity.Y = 0f;
 			}
 		}
-
-		protected override void OnCollision(GameObject other)
-		{
-            //Do something when we collid with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
-            {
-                intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
-
-                if (intersection.Width > intersection.Height) // TOP OG BOTTOM
-                {
-                    if (other.Position.Y > position.Y) //Top
-                    {
-                        distance = CollisionBox.Bottom - other.CollisionBox.Top;
-                        position.Y -= distance;
-                    }
-
-                    if (other.Position.Y < position.Y) //Bottom
-                    {
-                        distance = other.CollisionBox.Bottom - CollisionBox.Top;
-                        position.Y += distance;
-                    }
-                }
-
-                else
-                {
-                    if (other.Position.X < position.X) //Left collision
-                    {
-                        distance = other.CollisionBox.Right - CollisionBox.Left;
-
-                        position.X += distance;
-                    }
-
-                    if (other.Position.X > position.X) //Right
-                    {
-                        distance = CollisionBox.Right - other.CollisionBox.Left;
-
-                        position.X -= distance;
-                    }
-                }
-            }
-        }
 	}
 }
