@@ -19,7 +19,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected Rectangle intersection;
 
 		protected float cooldown;
-		protected string playerDirection;
+		protected string characterDirection;
 
         protected bool collidingTop;
         protected bool collidingBottom;

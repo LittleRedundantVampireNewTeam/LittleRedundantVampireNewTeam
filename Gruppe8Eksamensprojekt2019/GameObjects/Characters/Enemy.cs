@@ -39,7 +39,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);
-			SwitchState();
+			SwitchState(gameTime);
 			Console.WriteLine(patrolDistance);
 			Console.WriteLine(patrolRight);
 		}
@@ -72,12 +72,14 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		private void SwitchState()
+		private void SwitchState(GameTime gameTime)
 		{
 			if ((targetDistanceX >= -sprite.Width * 4 && targetDistanceX <= sprite.Width * 4) &&
 				(targetDistanceY >= -sprite.Height * 4 && targetDistanceY <= sprite.Height * 4))
 			{
 				FollowTarget();
+				Attack(gameTime);
+
 			}
 			if (targetDistanceX > sprite.Width * 4 || targetDistanceX < -sprite.Width * 4 || targetDistanceY > sprite.Height * 4 || targetDistanceY < -sprite.Height * 4)
 			{
