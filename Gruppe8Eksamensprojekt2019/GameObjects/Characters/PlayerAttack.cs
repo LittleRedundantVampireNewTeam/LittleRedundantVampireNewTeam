@@ -13,8 +13,9 @@ namespace Gruppe8Eksamensprojekt2019
 {
 	class PlayerAttack : GameObject
 	{
+        private int attackScaledWidth;
+        private int attackScaledHeight;
 
-       
         public override void LoadContent(ContentManager content)
 		{
             
@@ -25,28 +26,36 @@ namespace Gruppe8Eksamensprojekt2019
 			HandleAttack(gameTime);
 		}
 
-		public PlayerAttack()
-		{
-			// sets the attacktimer to zero.
-			timer = new TimeSpan(0, 0, 0, 0, 0);
-		}
+		//public PlayerAttack()
+		//{
+		//	// sets the attacktimer to zero.
+		//	timer = new TimeSpan(0, 0, 0, 0, 0);    
+        //}
 
 		public PlayerAttack(Texture2D playerAttackSprite, Vector2 position, Vector2 velocity)
 		{
 			base.sprite = playerAttackSprite;
 			base.position = position;
 			base.velocity = velocity;
-		}
+
+            attackScaledHeight = (int)(sprite.Height * GameWorld.Scale);
+            attackScaledWidth = (int)(sprite.Width * GameWorld.Scale);
+        }
 
 		protected override void OnCollision(GameObject other)
 		{
-            if (other is Vase)
-            {
-                GameWorld.Destroy(other);
-            }
+            //if (other is Vase)
+            //{
+            //    GameWorld.Destroy(other);
+            //}
         }
 
-		private void HandleAttack(GameTime gameTime)
+        public override Rectangle CollisionBox
+        {
+            get { return new Rectangle((int)position.X, (int)position.Y, attackScaledWidth, attackScaledHeight); }
+        }
+
+        private void HandleAttack(GameTime gameTime)
 		{
 			//Counts down the timer for the duration of the attack
 			timer += gameTime.ElapsedGameTime;

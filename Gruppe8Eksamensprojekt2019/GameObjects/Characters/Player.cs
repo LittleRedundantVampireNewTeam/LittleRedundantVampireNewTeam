@@ -301,16 +301,8 @@ namespace Gruppe8Eksamensprojekt2019
 			{
 				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
 			}
-			hasAttacked = true;
-
-			//else
-			//{
-
-			//	if(cooldown <= 0)
-			//	{
-			//		hasAttacked = false;
-			//	}
-			//}
+            //GameWorld.newCollisionObjects.Add();
+            hasAttacked = true;
 		}
 
         private void SuckAttack()

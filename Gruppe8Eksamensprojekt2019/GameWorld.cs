@@ -22,7 +22,7 @@ namespace Gruppe8Eksamensprojekt2019
         public static List<GameObject> gameObjects = new List<GameObject>();
         public static List<GameObject> collisionObjects = new List<GameObject>();
         private static List<GameObject> newObjects = new List<GameObject>();
-        private static List<GameObject> newCollisionObjects = new List<GameObject>();
+        public static List<GameObject> newCollisionObjects = new List<GameObject>();
         private static List<GameObject> deleteObjects = new List<GameObject>();
 		private static List<Enemy> enemies = new List<Enemy>();
         public static  List<UiHeart> UiHeartList = new List<UiHeart>();

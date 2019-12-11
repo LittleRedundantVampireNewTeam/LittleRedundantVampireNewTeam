@@ -52,10 +52,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override Rectangle CollisionBox
         {
-            get
-            {
-                return new Rectangle((int)position.X, (int)position.Y, shadowScaledWidth, shadowScaledHeight * 2);
-            }
+            get { return new Rectangle((int)position.X, (int)position.Y, shadowScaledWidth, shadowScaledHeight * 2); }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
