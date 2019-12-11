@@ -340,7 +340,7 @@ namespace Gruppe8Eksamensprojekt2019
             hasAttacked = true;
         }
 
-        private void SuckAttack()
+		private void SuckAttack()
         {
 
         }

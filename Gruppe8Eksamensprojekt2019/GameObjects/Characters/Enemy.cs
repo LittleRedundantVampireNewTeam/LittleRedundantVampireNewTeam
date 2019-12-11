@@ -39,6 +39,7 @@ namespace Gruppe8Eksamensprojekt2019
         public override void Update(GameTime gameTime)
         {
             Move(gameTime);
+			HandleDirection();
 			SwitchState(gameTime);
 			//Console.WriteLine(patrolDistance);
 			//Console.WriteLine(patrolRight);
@@ -55,6 +56,15 @@ namespace Gruppe8Eksamensprojekt2019
             sprite = GameWorld.EnemySprite;
 			patrolDistance = 4*sprite.Width;
 			previousDistance = patrolDistance;
+
+			attackRight = content.Load<Texture2D>("SlashAttackRight");
+			attackLeft = content.Load<Texture2D>("SlashAttackLeft");
+			attackUp = content.Load<Texture2D>("SlashAttackUp");
+			attackDown = content.Load<Texture2D>("SlashAttackDown");
+
+			attackSound = content.Load<SoundEffect>("Whoosh sound effect");
+
+			hasAttacked = false;
 		}
 
         protected override void UseAbility(AbilityType ability)
@@ -67,8 +77,29 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		protected override void Attack(GameTime gameTime)
+		//protected override void Attack(GameTime gameTime)
+		//{
+
+		//}
+
+		private void HandleDirection()
 		{
+			if (velocity.X > 0)
+			{
+				characterDirection = "R";
+			}
+			if (velocity.X < 0)
+			{
+				characterDirection = "L";
+			}
+			if (velocity.Y > 0)
+			{
+				characterDirection = "D";
+			}
+			if (velocity.Y < 0)
+			{
+				characterDirection = "U";
+			}
 
 		}
 
@@ -78,9 +109,23 @@ namespace Gruppe8Eksamensprojekt2019
 				(targetDistanceY >= -sprite.Height * 4 && targetDistanceY <= sprite.Height * 4))
 			{
 				FollowTarget();
-				Attack(gameTime);
 
+				if (hasAttacked == false)
+				{
+					Attack(gameTime);
+					attackSound.Play();
+					timer = new TimeSpan(0, 0, 0, 1, 0);
+				}
+				if (hasAttacked == true)
+				{
+					timer -= gameTime.ElapsedGameTime;
+					if (timer <= TimeSpan.Zero)
+					{
+						hasAttacked = false;
+					}
+				}
 			}
+
 			if (targetDistanceX > sprite.Width * 4 || targetDistanceX < -sprite.Width * 4 || targetDistanceY > sprite.Height * 4 || targetDistanceY < -sprite.Height * 4)
 			{
 				velocity = new Vector2(0f, 0f);

@@ -77,14 +77,14 @@ namespace Gruppe8Eksamensprojekt2019
                         distance = CollisionBox.Bottom - other.CollisionBox.Top;
 
                         position.Y -= distance;
-                        
+
                     }
                     if (other.Position.Y < position.Y) //Top of crate
                     {
                         pushUp = false;
                         distance = other.CollisionBox.Bottom - CollisionBox.Top;
                         position.Y += distance;
-                        
+
                     }
                 }
                 else if (intersection.Width < intersection.Height)  //Right and left.
@@ -94,14 +94,14 @@ namespace Gruppe8Eksamensprojekt2019
                         pushLeft = false;
                         distance = CollisionBox.Right - other.CollisionBox.Left;
                         position.X -= distance;
-                        
+
                     }
                     if (other.Position.X < position.X) //Left of crate
                     {
                         pushRight = false;
                         distance = other.CollisionBox.Right - CollisionBox.Left;
                         position.X += distance;
-                        
+
                     }
                 }
             }
