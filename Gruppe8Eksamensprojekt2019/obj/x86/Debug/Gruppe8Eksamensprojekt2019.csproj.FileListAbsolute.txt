@@ -378,3 +378,16 @@ C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksam
 C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
 C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
 C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb

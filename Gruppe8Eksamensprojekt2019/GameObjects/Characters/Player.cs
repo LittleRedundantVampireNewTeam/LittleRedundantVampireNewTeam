@@ -45,7 +45,7 @@ namespace Gruppe8Eksamensprojekt2019
             health = 10;
             speed = (int)(200 * GameWorld.Scale);
             base.position = position;
-            playerDirection = "R";
+            characterDirection = "R";
             drawLayer = 0.5f;
             hasAttacked = false;
 
@@ -184,7 +184,7 @@ namespace Gruppe8Eksamensprojekt2019
 			sprites = new Texture2D[4];
 
 			fps = 5f;
-			playerDirection = "D";
+			characterDirection = "D";
 
             
         }
@@ -202,7 +202,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingBottom = false;
 
                 velocity.X = -3f;
-				playerDirection = "L";
+				characterDirection = "L";
 				isMoving = true;
             }
 
@@ -213,7 +213,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingBottom = false;
 
                 velocity.X = +3f;
-                playerDirection = "R";
+                characterDirection = "R";
                 isMoving = true;
             }
 
@@ -224,7 +224,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingTop = false;
 
                 velocity.Y = -3f;
-                playerDirection = "U";
+                characterDirection = "U";
                 isMoving = true;
             }
 
@@ -235,7 +235,7 @@ namespace Gruppe8Eksamensprojekt2019
                 collidingLeft = false;
 
                 velocity.Y = +3f;
-				playerDirection = "D";
+				characterDirection = "D";
 				isMoving = true;
 			}
 			if (keyState.IsKeyUp(Keys.Left)&&keyState.IsKeyUp(Keys.Right)&&keyState.IsKeyUp(Keys.Up)&&keyState.IsKeyUp(Keys.Down))
@@ -285,19 +285,19 @@ namespace Gruppe8Eksamensprojekt2019
 
 		protected override void Attack(GameTime gameTime)
 		{
-			if (playerDirection == "R")
+			if (characterDirection == "R")
 			{
 				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width/2, position.Y), new Vector2(0, 0)));
 			}
-			if (playerDirection == "L")
+			if (characterDirection == "L")
 			{
 				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
 			}
-			if (playerDirection == "U")
+			if (characterDirection == "U")
 			{
 				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y-(sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
 			}
-			if (playerDirection == "D")
+			if (characterDirection == "D")
 			{
 				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
 			}
@@ -330,7 +330,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		private void ChangeDirection()
 		{
-			switch(playerDirection)
+			switch(characterDirection)
 			{
 				case "L":
 					sprites[0] = sprite;
@@ -366,18 +366,18 @@ namespace Gruppe8Eksamensprojekt2019
 			switch(isMoving)
 			{
 				case true:
-					if (playerDirection == "R" || playerDirection == "U" || playerDirection == "D")
+					if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
 					{
 						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
 					}
-					if (playerDirection == "L")
+					if (characterDirection == "L")
 					{
 						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
 					}
 					break;
 				case false:
 
-					switch(playerDirection)
+					switch(characterDirection)
 					{
 						case "R":
 							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
