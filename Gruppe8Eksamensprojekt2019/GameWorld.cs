@@ -322,7 +322,7 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-                DrawCollisionBox(gO);
+               // DrawCollisionBox(gO);
             }
 
             foreach(UiHeart hE in UiHeartList)
@@ -343,10 +343,10 @@ namespace Gruppe8Eksamensprojekt2019
             // Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
 
-            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * (int)Scale, 1);
-            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * (int)Scale, collisionBox.Width * (int)Scale, 1);
-            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width * (int)Scale, collisionBox.Y, 1, collisionBox.Height * (int)Scale);
-            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * (int)Scale);
+            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
+            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
+            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
 
             // Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine,     null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);
