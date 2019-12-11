@@ -9,15 +9,15 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Player : Character
     {
-        private SoundEffect attackSound;
+        
 
         private int regeneration;
         private bool isColliding;
 
-		private Texture2D attackRight;
-		private Texture2D attackLeft;
-		private Texture2D attackUp;
-		private Texture2D attackDown;
+		//private Texture2D attackRight;
+		//private Texture2D attackLeft;
+		//private Texture2D attackUp;
+		//private Texture2D attackDown;
 
 		private Texture2D spriteDownWalk1;
 		private Texture2D spriteDownWalk2;
@@ -32,7 +32,6 @@ namespace Gruppe8Eksamensprojekt2019
         private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
-        private bool hasAttacked;
 
         public int Health
         {
@@ -62,7 +61,7 @@ namespace Gruppe8Eksamensprojekt2019
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
             ChangeDirection();
-            
+
             if (isMoving == true)
             {
               Animate(gameTime);
@@ -287,25 +286,25 @@ namespace Gruppe8Eksamensprojekt2019
 		{
 			if (characterDirection == "R")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width/2, position.Y), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X + sprite.Width / 2, position.Y), new Vector2(0, 0)));
 			}
 			if (characterDirection == "L")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width / 2, position.Y), new Vector2(0, 0)));
 			}
 			if (characterDirection == "U")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y-(sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackUp, new Vector2(position.X, position.Y - (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
 			}
 			if (characterDirection == "D")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height/2+sprite.Height/4)), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackDown, new Vector2(position.X, position.Y + (sprite.Height / 2 + sprite.Height / 4)), new Vector2(0, 0)));
 			}
-            //GameWorld.newCollisionObjects.Add();
-            hasAttacked = true;
+
+			hasAttacked = true;
 		}
 
-        private void SuckAttack()
+		private void SuckAttack()
         {
 
         }
