@@ -24,7 +24,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 		protected override void OnCollision(GameObject other)
 		{
-			if (other is Player)
+			if (other is Player && other.Invincible == false)
 			{
 				other.HitByAttack = true;
 			}

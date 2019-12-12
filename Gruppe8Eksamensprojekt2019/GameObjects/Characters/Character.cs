@@ -14,11 +14,14 @@ namespace Gruppe8Eksamensprojekt2019
     abstract class Character : GameObject
     {
         protected int health;
-        protected int damage;
-        protected Rectangle intersection;
+        //protected int damage;
+		
+
+		protected Rectangle intersection;
         protected float distance;
 
-		protected float cooldown;
+		//protected float cooldown;
+		protected TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
 		protected string characterDirection;
 
         protected bool collidingTop;
@@ -31,7 +34,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected Texture2D attackUp;
         protected Texture2D attackDown;
         protected bool hasAttacked;
-		
+		protected bool takeDamage;
 
         protected SoundEffect attackSound;
 
@@ -42,11 +45,25 @@ namespace Gruppe8Eksamensprojekt2019
 		protected Texture2D spriteWalk1;
 		protected Texture2D spriteWalk2;
 
+		//protected virtual void UpdateHealth(int health, int amount)
+  //      {
 
-		protected virtual void UpdateHealth(int health, int amount)
-        {
+  //      }
 
-        }
+		protected void UpdateHealth()
+		{
+			if (health > 0 && takeDamage == true)
+			{
+				//HEALTHSYSTEM HERE*************
+				if (healthIsShown == true)
+				{
+					GameWorld.UiHeartList.RemoveAt(health - 1);
+				}
+				health--;
+				//Console.WriteLine($"Health: {health}");
+				takeDamage = false;
+			}
+		}
 
 		protected void ChangeDirection()
 		{
@@ -158,6 +175,24 @@ namespace Gruppe8Eksamensprojekt2019
 		//		spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
 		//	}
 		//}
+		protected virtual void InvincibleTimer(GameTime gameTime)
+		{
+			/// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
+			if (invincible == true)
+			{
+				if (cooldownTimer > TimeSpan.Zero)
+				{
+					cooldownTimer -= gameTime.ElapsedGameTime;
+				}
+				if (cooldownTimer <= TimeSpan.Zero)
+				{
+					invincible = false;
+					cooldownTimer = new TimeSpan(0, 0, 2);
+				}
+			}
+		}
+
+
 
 		protected override void OnCollision(GameObject other)
         {

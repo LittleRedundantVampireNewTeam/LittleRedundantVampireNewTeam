@@ -23,7 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
         {
             base.position = position;
 			health = 3;
-			speed = (int)(100 * GameWorld.Scale);
+			speed = (int)(80 * GameWorld.Scale);
 			drawLayer = 0.5f;
 		}
 
@@ -34,6 +34,15 @@ namespace Gruppe8Eksamensprojekt2019
 			SwitchState(gameTime);
 			ChangeDirection();
 			Animate(gameTime);
+			InvincibleTimer(gameTime);
+			UpdateHealth();
+
+			if (HitByAttack == true && invincible == false)
+			{
+				invincible = true;
+				takeDamage = true;
+				HitByAttack = false;
+			}
 		}
 
 		public void UpdateDistance(Player target)
@@ -46,6 +55,8 @@ namespace Gruppe8Eksamensprojekt2019
         {
 			fps = 5f;
 			isMoving = true;
+			healthIsShown = false;
+			cooldownTimer = new TimeSpan(0, 0, 1);
 
 			sprite = content.Load<Texture2D>("VampireOzzyStill");
 			spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
@@ -77,10 +88,10 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		protected override void UpdateHealth(int health, int amount)
-		{
+		//protected override void UpdateHealth(int health, int amount)
+		//{
 
-		}
+		//}
 
 
 		private void HandleDirection()
@@ -131,6 +142,11 @@ namespace Gruppe8Eksamensprojekt2019
 			{
 				velocity = new Vector2(0f, 0f);
 				Patrol();
+			}
+
+			if (health <= 0)
+			{
+				GameWorld.Destroy(this);
 			}
 		}
 

@@ -30,6 +30,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasShadow;
         protected bool giveShadow;
         protected bool isMoving;
+		protected bool healthIsShown;
 
         protected byte currentIndex;
 
@@ -40,9 +41,16 @@ namespace Gruppe8Eksamensprojekt2019
         protected float drawLayer = 0.01f;
         protected float deltaTime;
         protected float fps;
-        private   float timeElapsed;
+        private float timeElapsed;
 
         protected string name;
+
+		protected bool invincible;
+
+		public bool Invincible
+		{
+			get { return invincible; }
+		}
 
 		private bool hitByAttack;
 

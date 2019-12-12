@@ -25,10 +25,10 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        protected override void UpdateHealth(int health, int amount)
-        {
+        //protected override void UpdateHealth(int health, int amount)
+        //{
 
-        }
+        //}
 
         protected override void Attack(GameTime gameTime)
         {

@@ -15,9 +15,7 @@ namespace Gruppe8Eksamensprojekt2019
 
 
 	    private KeyboardState keyState; /// NEW
-        private TimeSpan cooldownTimer;// = new TimeSpan(0, 0, 2);
 
-        private bool invincible = false;
         private bool inShadow = false;
         private bool inSun = false;
 
@@ -48,7 +46,8 @@ namespace Gruppe8Eksamensprojekt2019
             Move(gameTime);
             HandleInput(gameTime);
             InvincibleTimer(gameTime);
-            ChangeDirection();
+			UpdateHealth();
+			ChangeDirection();
 
             if (isMoving == true)
             {
@@ -59,15 +58,8 @@ namespace Gruppe8Eksamensprojekt2019
             if (invincible == false && (inSun == true || HitByAttack == true))
             {
                 invincible = true;
-
-                if (health > 0)
-                {
-                    //HEALTHSYSTEM HERE*************
-
-                    GameWorld.UiHeartList.RemoveAt(health - 1);
-                    health--;
-                    //Console.WriteLine($"Health: {health}");
-                }
+				takeDamage = true;
+				HitByAttack = false;
             }
         }
 
@@ -183,7 +175,9 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-
+			invincible = false;
+			takeDamage = false;
+			healthIsShown = true;
             hasAttacked = false;
             isMoving = false;
             fps = 5f;
@@ -289,7 +283,7 @@ namespace Gruppe8Eksamensprojekt2019
             }
         }
 
-        private void InvincibleTimer(GameTime gameTime)
+        protected override void InvincibleTimer(GameTime gameTime)
         {
             /// Tæller ned fra 2, så invisiblilty frames ikke er for evigt.
             if (invincible == true)
