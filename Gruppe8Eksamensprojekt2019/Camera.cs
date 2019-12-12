@@ -14,7 +14,6 @@ namespace Gruppe8Eksamensprojekt2019
 		public Matrix CameraTransform
 		{
 			get { return cameraTransform; }
-			private set { value = cameraTransform; }
 		}
 
 		public void FollowTarget(Character target)
