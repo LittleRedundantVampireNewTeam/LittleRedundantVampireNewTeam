@@ -318,7 +318,7 @@ namespace Gruppe8Eksamensprojekt2019
 			}
 			if (characterDirection == "L")
 			{
-				GameWorld.Instantiate(new PlayerAttack(attackRight, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
+				GameWorld.Instantiate(new PlayerAttack(attackLeft, new Vector2(position.X - sprite.Width/2, position.Y), new Vector2(0, 0)));
 			}
 			if (characterDirection == "U")
 			{
