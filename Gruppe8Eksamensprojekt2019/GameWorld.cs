@@ -139,7 +139,7 @@ namespace Gruppe8Eksamensprojekt2019
             Scale = ((1f / 1920f) * GraphicsDevice.DisplayMode.Width);
             tileSize = 96 * Scale;
 
-            player = new Player(new Vector2(400, 200));
+            player = new Player(new Vector2(1500, 1500));
             collisionObjects.Add(player);
 
             switch (chooseLevel)
