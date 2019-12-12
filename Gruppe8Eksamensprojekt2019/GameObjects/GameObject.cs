@@ -44,8 +44,16 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected string name;
 
-        //Properties
-        public GameObject Parrent
+		private bool hitByAttack;
+
+		public bool HitByAttack
+		{
+			get { return hitByAttack; }
+			set { hitByAttack = value; }
+		}
+
+		//Properties
+		public GameObject Parrent
         {
             get { return parrent; }
         }
@@ -110,7 +118,9 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
         protected virtual void OnCollision(GameObject other)
-        {}
+        {
+
+		}
 
         protected virtual void Move(GameTime gameTime)
         {

@@ -332,8 +332,8 @@ namespace Gruppe8Eksamensprojekt2019
             {
                 gO.Draw(spriteBatch);
 
-                //DrawCollisionBox(gO);
-            }
+				DrawCollisionBox(gO);
+			}
 
             foreach(UiHeart hE in UiHeartList)
             {

@@ -10,7 +10,6 @@ namespace Gruppe8Eksamensprojekt2019
     class Player : Character
     {
 
-
         private int regeneration;
         private bool isColliding;
 
@@ -57,7 +56,7 @@ namespace Gruppe8Eksamensprojekt2019
             }
 
             //Checks if the player should be taking damage from standing in the sun
-            if (inSun == true && invincible == false)
+            if (invincible == false && (inSun == true || HitByAttack == true))
             {
                 invincible = true;
 
@@ -74,8 +73,9 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-            //Checks if the player is colliding with a shadow and marks them as 'in a shadow'
-            if (other is Shadow)
+
+			//Checks if the player is colliding with a shadow and marks them as 'in a shadow'
+			if (other is Shadow)
             {
                 inShadow = true;
                 inSun = false;
@@ -98,7 +98,6 @@ namespace Gruppe8Eksamensprojekt2019
                 //    GameWorld.Destroy(other);
                 //}
             }
-
 
             // Do something when we collide with another object
             if (other is Wall || other is Vase || other is Sun || other is Chest || other is Door && doorLocked == true)

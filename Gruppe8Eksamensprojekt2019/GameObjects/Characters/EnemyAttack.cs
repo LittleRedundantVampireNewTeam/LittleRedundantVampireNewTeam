@@ -22,6 +22,14 @@ namespace Gruppe8Eksamensprojekt2019
 			HandleAttack(gameTime);
 		}
 
+		protected override void OnCollision(GameObject other)
+		{
+			if (other is Player)
+			{
+				other.HitByAttack = true;
+			}
+		}
+
 		public EnemyAttack(Texture2D enemyAttackSprite, Vector2 position, Vector2 velocity)
 		{
 			base.sprite = enemyAttackSprite;

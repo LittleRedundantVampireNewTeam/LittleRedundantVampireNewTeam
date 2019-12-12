@@ -17,7 +17,6 @@ namespace Gruppe8Eksamensprojekt2019
         protected int damage;
         protected Rectangle intersection;
         protected float distance;
-        
 
 		protected float cooldown;
 		protected string characterDirection;
@@ -32,6 +31,8 @@ namespace Gruppe8Eksamensprojekt2019
         protected Texture2D attackUp;
         protected Texture2D attackDown;
         protected bool hasAttacked;
+		
+
         protected SoundEffect attackSound;
 
 		protected Texture2D spriteDownWalk1;
