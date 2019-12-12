@@ -39,7 +39,7 @@ namespace Gruppe8Eksamensprojekt2019
         private static Texture2D crateSprite;
         private static Texture2D sunSprite;
         private static Texture2D vaseSprite;
-        private static Texture2D enemySprite;
+        //private static Texture2D enemySprite;
         private static Texture2D uiHealthSprite;
         private static Texture2D keySprite;
         private static Texture2D doorSprite;
@@ -81,10 +81,10 @@ namespace Gruppe8Eksamensprojekt2019
             get { return uiHealthSprite; }
         }
 
-        public static Texture2D EnemySprite
-        {
-            get { return enemySprite; }
-        }
+        //public static Texture2D EnemySprite
+        //{
+        //    get { return enemySprite; }
+        //}
 
         public static Texture2D SunSprite
         {
@@ -178,7 +178,7 @@ namespace Gruppe8Eksamensprojekt2019
             sunRaySprite         = Content.Load<Texture2D>("Sunlight2");
             sunSprite            = Content.Load<Texture2D>("WindowDark2");
             vaseSprite           = Content.Load<Texture2D>("vaseTexture");
-            enemySprite          = Content.Load<Texture2D>("enemyTexture");
+            //enemySprite          = Content.Load<Texture2D>("enemyTexture");
             uiHealthSprite       = Content.Load<Texture2D>("healthUI");
             keySprite            = Content.Load<Texture2D>("keyTexture");
             doorSprite           = Content.Load<Texture2D>("doorTexture");

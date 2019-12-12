@@ -34,15 +34,51 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool hasAttacked;
         protected SoundEffect attackSound;
 
+		protected Texture2D spriteDownWalk1;
+		protected Texture2D spriteDownWalk2;
+		protected Texture2D spriteUpWalk1;
+		protected Texture2D spriteUpWalk2;
+		protected Texture2D spriteWalk1;
+		protected Texture2D spriteWalk2;
 
-		
 
 		protected virtual void UpdateHealth(int health, int amount)
         {
 
         }
 
-        protected virtual void Attack(GameTime gameTime)
+		protected void ChangeDirection()
+		{
+			switch (characterDirection)
+			{
+				case "L":
+					sprites[0] = sprite;
+					sprites[1] = spriteWalk1;
+					sprites[2] = sprite;
+					sprites[3] = spriteWalk2;
+					break;
+				case "R":
+					sprites[0] = sprite;
+					sprites[1] = spriteWalk1;
+					sprites[2] = sprite;
+					sprites[3] = spriteWalk2;
+					break;
+				case "U":
+					sprites[0] = spriteUp;
+					sprites[1] = spriteUpWalk1;
+					sprites[2] = spriteUp;
+					sprites[3] = spriteUpWalk2;
+					break;
+				case "D":
+					sprites[0] = spriteDown;
+					sprites[1] = spriteDownWalk1;
+					sprites[2] = spriteDown;
+					sprites[3] = spriteDownWalk2;
+					break;
+			}
+		}
+
+		protected virtual void Attack(GameTime gameTime)
         {
 			if (characterDirection == "R")
 			{
@@ -74,7 +110,55 @@ namespace Gruppe8Eksamensprojekt2019
 
         }
 
-        protected override void OnCollision(GameObject other)
+		public override void Draw(SpriteBatch spriteBatch)
+		{
+
+			switch (isMoving)
+			{
+				case true:
+					if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
+					{
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+					}
+					if (characterDirection == "L")
+					{
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+					}
+					break;
+				case false:
+
+					switch (characterDirection)
+					{
+						case "R":
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							break;
+						case "L":
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+							break;
+						case "U":
+							spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							break;
+						case "D":
+							spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							break;
+					}
+					break;
+			}
+		}
+
+		//public override void Draw(SpriteBatch spriteBatch)
+		//{
+		//	if (characterDirection == "R" || characterDirection == "U" || characterDirection == "D")
+		//	{
+		//		spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+		//	}
+		//	if (characterDirection == "L")
+		//	{
+		//		spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+		//	}
+		//}
+
+		protected override void OnCollision(GameObject other)
         {
             // Do something when we collide with another object
             if (other is Wall || other is Vase || other is Sun || other is Chest || other is Door && doorLocked == true)

@@ -18,8 +18,6 @@ namespace Gruppe8Eksamensprojekt2019
 		private float patrolDistance;
 		private float previousDistance;
 		private bool patrolRight;
-        private SoundEffect enemyAttackSound;
-        private bool enemyHasAttacked;
 
         public Enemy(Vector2 position)
         {
@@ -34,8 +32,8 @@ namespace Gruppe8Eksamensprojekt2019
             Move(gameTime);
 			HandleDirection();
 			SwitchState(gameTime);
-			//Console.WriteLine(patrolDistance);
-			//Console.WriteLine(patrolRight);
+			ChangeDirection();
+			Animate(gameTime);
 		}
 
 		public void UpdateDistance(Player target)
@@ -46,9 +44,22 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = GameWorld.EnemySprite;
+			fps = 5f;
+			isMoving = true;
 
-			patrolDistance = 4*sprite.Width;
+			sprite = content.Load<Texture2D>("VampireOzzyStill");
+			spriteUp = content.Load<Texture2D>("VampireOzzyUp2");
+			spriteDown = content.Load<Texture2D>("VampireOzzyDown");
+			spriteWalk1 = content.Load<Texture2D>("Vampire ozzy2 '");
+			spriteWalk2 = content.Load<Texture2D>("VampireOzzyWalking");
+			spriteDownWalk1 = content.Load<Texture2D>("VampireOzzyDownWalk1");
+			spriteDownWalk2 = content.Load<Texture2D>("VampireOzzyDownWalk2");
+			spriteUpWalk1 = content.Load<Texture2D>("VampireOzzyUpWalk1");
+			spriteUpWalk2 = content.Load<Texture2D>("VampireOzzyUpWalk2");
+
+			sprites = new Texture2D[4];
+
+			patrolDistance = 2*sprite.Width;
 			previousDistance = patrolDistance;
 
 			attackRight = content.Load<Texture2D>("SlashAttackRight");
@@ -71,10 +82,6 @@ namespace Gruppe8Eksamensprojekt2019
 
 		}
 
-		//protected override void Attack(GameTime gameTime)
-		//{
-
-		//}
 
 		private void HandleDirection()
 		{
@@ -99,8 +106,8 @@ namespace Gruppe8Eksamensprojekt2019
 
 		private void SwitchState(GameTime gameTime)
 		{
-			if ((targetDistanceX >= -sprite.Width * 4 && targetDistanceX <= sprite.Width * 4) &&
-				(targetDistanceY >= -sprite.Height * 4 && targetDistanceY <= sprite.Height * 4))
+			if ((targetDistanceX >= -sprite.Width * 2 && targetDistanceX <= sprite.Width * 2) &&
+				(targetDistanceY >= -sprite.Height * 2 && targetDistanceY <= sprite.Height * 2))
 			{
 				FollowTarget();
 
@@ -120,7 +127,7 @@ namespace Gruppe8Eksamensprojekt2019
 				}
 			}
 
-			if (targetDistanceX > sprite.Width * 4 || targetDistanceX < -sprite.Width * 4 || targetDistanceY > sprite.Height * 4 || targetDistanceY < -sprite.Height * 4)
+			if (targetDistanceX > sprite.Width * 2 || targetDistanceX < -sprite.Width * 2 || targetDistanceY > sprite.Height * 2 || targetDistanceY < -sprite.Height * 2)
 			{
 				velocity = new Vector2(0f, 0f);
 				Patrol();
@@ -181,5 +188,7 @@ namespace Gruppe8Eksamensprojekt2019
 				velocity.Y = 0f;
 			}
 		}
+
+		
 	}
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/backgroundMusic.mp3</SourceFile>
-  <SourceTime>2019-12-12T09:24:00.882905+01:00</SourceTime>
-  <DestFile>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/backgroundMusic.xnb</DestFile>
-  <DestTime>2019-12-12T09:25:05.0614021+01:00</DestTime>
+  <SourceFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/backgroundMusic.mp3</SourceFile>
+  <SourceTime>2019-12-12T09:59:52.0946264+01:00</SourceTime>
+  <DestFile>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/backgroundMusic.xnb</DestFile>
+  <DestTime>2019-12-12T10:07:37.2424042+01:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>C:/Users/admin/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/backgroundMusic.wma</string>
+    <string>C:/Users/emmaj/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Content/backgroundMusic.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>
