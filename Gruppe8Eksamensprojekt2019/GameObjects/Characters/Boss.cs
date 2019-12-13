@@ -48,7 +48,7 @@ namespace Gruppe8Eksamensprojekt2019
         protected override void OnCollision(GameObject other)
         {
             //Do something when we collid with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
+            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door/* && doorOneLocked == true*/)
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 

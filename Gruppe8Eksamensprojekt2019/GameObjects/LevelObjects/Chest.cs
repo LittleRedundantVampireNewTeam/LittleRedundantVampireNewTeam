@@ -28,7 +28,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void OpenChest()
         {
-            GameWorld.gameObjects.Add(new Key("Key2", new Vector2(10, 10)));
+            //GameWorld.gameObjects.Add(new Key("Key2", new Vector2(10, 10)));
         }
 
         private void GivePrompt()

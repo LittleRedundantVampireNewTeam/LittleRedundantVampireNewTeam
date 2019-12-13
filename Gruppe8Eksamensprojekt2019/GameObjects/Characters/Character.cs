@@ -15,10 +15,10 @@ namespace Gruppe8Eksamensprojekt2019
         protected int health;
         protected int damage;
 
-        protected float distance;
         protected Rectangle intersection;
+        protected float distance;
 
-		protected float cooldown;
+        protected float cooldown;
 		protected string playerDirection;
 
         protected bool collidingTop;

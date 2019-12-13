@@ -15,12 +15,11 @@ namespace Gruppe8Eksamensprojekt2019
         {
             base.position = position;
             base.doorLocked = doorLocked;
-
         }
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("doorTexture");
+            sprite = GameWorld.DoorSprite;
         }
 
         public override void Update(GameTime gameTime)

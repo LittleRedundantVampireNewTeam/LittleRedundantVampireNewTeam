@@ -37,9 +37,9 @@ namespace Gruppe8Eksamensprojekt2019
         private static Texture2D enemySprite;
 
         //Display
-        public static int ScreenWidth;
-        public static int ScreenHeight;
-        public static byte Scale;
+        public static int screenWidth;
+        public static int screenHeight;
+        public static float scale;
         private Camera camera;
         
         //Game
@@ -97,10 +97,10 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
-            ScreenWidth = graphics.PreferredBackBufferWidth;
-            ScreenHeight = graphics.PreferredBackBufferHeight;
+            screenWidth = graphics.PreferredBackBufferWidth;
+            screenHeight = graphics.PreferredBackBufferHeight;
 
-            Scale = 1;
+            scale = ((1f / 1920f) * GraphicsDevice.DisplayMode.Width);
 
             player = new Player(new Vector2(1500, 1500));
             collisionObjects.Add(player);
@@ -253,10 +253,10 @@ namespace Gruppe8Eksamensprojekt2019
             // Draws the collisionboxes.
             Rectangle collisionBox = gameObject.CollisionBox;
 
-            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width * Scale, 1);
-            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height * Scale, collisionBox.Width * Scale, 1);
-            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width * Scale, collisionBox.Y, 1, collisionBox.Height * Scale);
-            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height * Scale);
+            Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
+            Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
+            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
 
             // Makes sure the collisionbox adjusts to each sprite.
             spriteBatch.Draw(collisionTexture, topLine,     null, Color.Red, 0, Vector2.Zero, SpriteEffects.None, 1);

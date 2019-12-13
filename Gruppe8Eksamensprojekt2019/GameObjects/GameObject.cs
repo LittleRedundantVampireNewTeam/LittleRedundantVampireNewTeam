@@ -22,7 +22,6 @@ namespace Gruppe8Eksamensprojekt2019
         protected int speed;
         protected bool hasShadow;
         protected Rectangle intersect;
-        protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         protected string name;
         protected bool giveShadow;
         protected float drawLayer = 0.01f;
@@ -33,16 +32,37 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool isMoving;
         private float timeElapsed;
 
+        //protected static bool doorOneLocked;
+        //protected static bool doorTwoLocked;
+        
+        protected static bool keyPickedUp;
+        //protected static bool keyOnePickedUp;
+        //protected static bool keyTwoPickedUp;
+        //protected static string doorOneName;
+        //protected static string doorTwoName;
+        //protected static string keyOneName;
+        //protected static string keyTwoName;
+        //public Vector2 doorOnePosition;
+        //public Vector2 doorTwoPosition;
+        //public Vector2 keyOnePosition;
+        //public Vector2 keyTwoPosition;
+        public bool unlocked;
+
+        public bool Unlocked
+        {
+            get { return unlocked; }
+            set { unlocked = value; }
+        }
         public GameObject Parrent
         {
             get { return parrent; }
+            set { parrent = value; }
         }
 
 		public Texture2D Sprite
-
 		{
 			get { return sprite; }
-			set { value = sprite; }
+			set { sprite = value; }
 		}
 
         public Vector2 Position
@@ -74,7 +94,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1*GameWorld.Scale, SpriteEffects.None, 0.3f);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1, SpriteEffects.None, 0.3f);
         }
 
         public abstract void Update(GameTime gameTime);

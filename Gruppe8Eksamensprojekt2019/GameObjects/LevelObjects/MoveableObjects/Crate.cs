@@ -52,7 +52,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+            spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
         }
     }
 }

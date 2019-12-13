@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
 
 namespace Gruppe8Eksamensprojekt2019
 {
@@ -33,11 +34,15 @@ namespace Gruppe8Eksamensprojekt2019
         private bool inSun = false;
         private bool hasAttacked;
 
+        public List<GameObject> playerKeys = new List<GameObject>();
+        public static HashSet<GameObject> lockedDoors = new HashSet<GameObject>();
+
+
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
             health = 100;
-            speed = 200;
+            speed = 600;
             base.position = position;
             playerDirection = "R";
             drawLayer = 0.5f;
@@ -73,7 +78,13 @@ namespace Gruppe8Eksamensprojekt2019
         }
 
         protected override void OnCollision(GameObject other)
-        {
+        {   
+            if (other is Key && keyState.IsKeyDown(Keys.V))
+            {
+                playerKeys.Add(other);
+                GameWorld.Destroy(other);
+            }
+
             //Checks if the player is colliding with a shadow and marks them as 'in a shadow'
             if (other is Shadow)
             {
@@ -89,11 +100,33 @@ namespace Gruppe8Eksamensprojekt2019
             if (other is SunRay && inShadow == false)
             {
                 inSun = true;
+
+                //Key1v1 key = new Key1v1();
+                //Key1v1 key2 = new Key1v1();
+                //Door1v1 door = new Door1v1(key);
+                //Player p = new Player();
+                //p.key = key;
+                //if (key == key2)
+                //{
+
+                //}
+
+                //if (door.MyKey == p.key)
+                //{
+
+                //}
             }
 
+            if (other is Door)
+            {
+                if (playerKeys.Contains(other.Parrent))
+                {
+                    other.Unlocked = true;
+                }
+            }
 
             //Do something when we collid with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || other is Door && doorLocked == true)
+            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Crate || (other is Door && other.Unlocked == false))
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
@@ -131,14 +164,6 @@ namespace Gruppe8Eksamensprojekt2019
                     }
                 }
             }
-
-            if (other is Key)
-            {
-                //if (keyState.IsKeyDown(Keys.V))
-                //{
-                //    GameWorld.Destroy(other);
-                //}
-              }
         }
 
         public override void LoadContent(ContentManager content)
@@ -348,11 +373,11 @@ namespace Gruppe8Eksamensprojekt2019
 				case true:
 					if (playerDirection == "R" || playerDirection == "U" || playerDirection == "D")
 					{
-						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
 					}
 					if (playerDirection == "L")
 					{
-						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.FlipHorizontally, drawLayer);
 					}
 					break;
 				case false:
@@ -360,16 +385,16 @@ namespace Gruppe8Eksamensprojekt2019
 					switch(playerDirection)
 					{
 						case "R":
-							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
 							break;
 						case "L":
-							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.FlipHorizontally, drawLayer);
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.FlipHorizontally, drawLayer);
 							break;
 						case "U":
-							spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
 							break;
 						case "D":
-							spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.Scale, SpriteEffects.None, drawLayer);
+							spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
 							break;
 					}
 					break;
