@@ -15,7 +15,7 @@ namespace Gruppe8Eksamensprojekt2019
     {
         protected int health;
         //protected int damage;
-		
+
 
 		protected Rectangle intersection;
         protected float distance;
@@ -120,7 +120,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected virtual void UseAbility(AbilityType ability)
         {
-			
+
         }
 
         protected virtual void Speak()

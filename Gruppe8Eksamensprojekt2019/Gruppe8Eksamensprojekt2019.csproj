@@ -68,7 +68,7 @@
     <Compile Include="GameObjects\Characters\NPC.cs" />
     <Compile Include="GameObjects\Characters\Player.cs" />
     <Compile Include="GameObjects\LevelObjects\Chest.cs" />
-    <Compile Include="GameObjects\LevelObjects\Door.cs" />
+    <Compile Include="GameObjects\LevelObjects\Doors\Door.cs" />
     <Compile Include="GameObjects\LevelObjects\Item.cs" />
     <Compile Include="GameObjects\Ability.cs" />
     <Compile Include="GameObjects\LevelObjects\Shadow.cs" />

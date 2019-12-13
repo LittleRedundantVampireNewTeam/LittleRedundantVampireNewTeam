@@ -205,6 +205,6 @@ namespace Gruppe8Eksamensprojekt2019
 			}
 		}
 
-		
+
 	}
 }

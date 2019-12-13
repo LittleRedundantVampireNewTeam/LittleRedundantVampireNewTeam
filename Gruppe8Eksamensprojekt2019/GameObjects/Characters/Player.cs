@@ -28,6 +28,10 @@ namespace Gruppe8Eksamensprojekt2019
             get { return health; }
         }
 
+        public List<GameObject> playerKeys = new List<GameObject>();
+        public static HashSet<GameObject> lockedDoors = new HashSet<GameObject>();
+
+
         public Player(Vector2 position)
         {
             name = "Ozzy Bloodbourne";
@@ -38,7 +42,7 @@ namespace Gruppe8Eksamensprojekt2019
             drawLayer = 0.5f;
             hasAttacked = false;
 
-            
+
 
             for (int i = 0; i < health; i++)
             {
@@ -75,9 +79,14 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
+            if (other is Key && keyState.IsKeyDown(Keys.V))
+            {
+                playerKeys.Add(other);
+                GameWorld.Destroy(other);
+            }
 
-			//Checks if the player is colliding with a shadow and marks them as 'in a shadow'
-			if (other is Shadow)
+            //Checks if the player is colliding with a shadow and marks them as 'in a shadow'
+            if (other is Shadow)
             {
                 inShadow = true;
                 inSun = false;
@@ -91,7 +100,6 @@ namespace Gruppe8Eksamensprojekt2019
             if (other is SunRay && inShadow == false)
             {
                 inSun = true;
-            }
 
             if (other is Key && keyState.IsKeyDown(Keys.V))
             {
@@ -222,7 +230,7 @@ namespace Gruppe8Eksamensprojekt2019
             sunBurnInstance = sunBurn.CreateInstance();
 
             attackSound = content.Load<SoundEffect>("Whoosh sound effect");
-			
+
         }
 
         private void HandleInput(GameTime gameTime)
@@ -364,5 +372,37 @@ namespace Gruppe8Eksamensprojekt2019
             get { return new Rectangle((int)position.X+(ScaledWidth/4), (int)position.Y, ScaledWidth/2, ScaledHeight); }
         }
 
+			switch(isMoving)
+			{
+				case true:
+					if (playerDirection == "R" || playerDirection == "U" || playerDirection == "D")
+					{
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
+					}
+					if (playerDirection == "L")
+					{
+						spriteBatch.Draw(sprites[currentIndex], position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.FlipHorizontally, drawLayer);
+					}
+					break;
+				case false:
+
+					switch(playerDirection)
+					{
+						case "R":
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
+							break;
+						case "L":
+							spriteBatch.Draw(sprite, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.FlipHorizontally, drawLayer);
+							break;
+						case "U":
+							spriteBatch.Draw(spriteUp, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
+							break;
+						case "D":
+							spriteBatch.Draw(spriteDown, position, null, Color.White, 0, new Vector2(0, 0), 1 * GameWorld.scale, SpriteEffects.None, drawLayer);
+							break;
+					}
+					break;
+			}
+		}
 	}
 }

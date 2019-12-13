@@ -23,11 +23,14 @@ namespace Gruppe8Eksamensprojekt2019
         protected Vector2 position;
         protected Vector2 velocity;
         protected Rectangle intersect;
+
+        protected string name;
         protected TimeSpan timer;
 
         protected bool doorLocked = true; //true skal defineres et andet sted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         protected bool pushing = false;
         protected bool hasShadow;
+
         protected bool giveShadow;
         protected bool isMoving;
 		protected bool healthIsShown;
@@ -46,7 +49,13 @@ namespace Gruppe8Eksamensprojekt2019
         protected float fps;
         private float timeElapsed;
 
-        protected string name;
+
+        public bool Unlocked
+        {
+            get { return unlocked; }
+            set { unlocked = value; }
+        }
+
 
 		
 
@@ -71,12 +80,13 @@ namespace Gruppe8Eksamensprojekt2019
         public GameObject Parrent
         {
             get { return parrent; }
+            set { parrent = value; }
         }
 
-        public Texture2D Sprite
+		public Texture2D Sprite
 		{
 			get { return sprite; }
-			set { value = sprite; }
+			set { sprite = value; }
 		}
 
         public virtual Rectangle CollisionBox

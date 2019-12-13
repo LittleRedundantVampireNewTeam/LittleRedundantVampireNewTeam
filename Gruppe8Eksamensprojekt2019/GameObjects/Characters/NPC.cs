@@ -26,7 +26,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-           
+
         }
 
         private void GivePrompt()
@@ -41,7 +41,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected override void OnCollision(GameObject other)
         {
-            
+
         }
 
         protected void Push()
