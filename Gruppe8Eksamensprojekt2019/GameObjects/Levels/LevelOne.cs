@@ -11,6 +11,7 @@ namespace Gruppe8Eksamensprojekt2019
 {
 	class LevelOne : Level
 	{
+        private List<Key> KeyList = new List<Key>();
         // 0 = Null *
         // 1 = Wall *
         // 2 = Crate *
@@ -24,64 +25,41 @@ namespace Gruppe8Eksamensprojekt2019
         // 10 = Player *
         // 11 = Door1v2 *
 
+
         public LevelOne()
         {
-
-            GameObject newSunRay = new SunRay(new Vector2(19 * 96* GameWorld.Scale, 13 * 96* GameWorld.Scale));
-            GameWorld.collisionObjects.Add(newSunRay);
-            GameWorld.gameObjects.Add(newSunRay);
-
-            GameObject newSunRay1 = new SunRay(new Vector2(31 * 96 * GameWorld.Scale, 12 * 96* GameWorld.Scale));
-            GameWorld.collisionObjects.Add(newSunRay1);
-            GameWorld.gameObjects.Add(newSunRay1);
-
-            GameObject newSunRay2 = new SunRay(new Vector2(39 * 96* GameWorld.Scale, 14 * 96* GameWorld.Scale));
-            GameWorld.collisionObjects.Add(newSunRay2);
-            GameWorld.gameObjects.Add(newSunRay2);
-
-            GameObject newSunRay3 = new SunRay(new Vector2(23 * 96* GameWorld.Scale, 14 * 96* GameWorld.Scale));
-            GameWorld.collisionObjects.Add(newSunRay3);
-            GameWorld.gameObjects.Add(newSunRay3);
-
-            GameObject newSunRay4 = new SunRay(new Vector2(30 * 96* GameWorld.Scale, 17 * 96* GameWorld.Scale));
-            GameWorld.collisionObjects.Add(newSunRay4);
-            GameWorld.gameObjects.Add(newSunRay4);
-
-
-
-
             GenerateLevel(new int[,]
             {
 
                 {0,0,0,0,1,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {1,1,1,1,1,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {1,0,0,0,1,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                {1,0,0,0,11,0,1,1,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,6,0,1,1,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {1,0,0,0,1,0,0,0,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {1,1,1,1,1,0,0,0,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,1,0,0,0,0,0,4,4,0,0,1,1,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,4,4,0,10,0,11,0,12,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,1,0,0,0,0,0,4,4,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,1,0,0,0,0,0,4,4,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                {0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,1,1,0,13,0,14,0,15,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,0,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,1},
-                {0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,4,4,9,9,4,4,0,6,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,2,4,4,2,0,4,4,0,0,4,2,1,9,1,1,0,0,4,4,0,0,1},
+                {0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,4,4,9,9,4,4,0,5,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,2,4,4,2,0,4,4,0,0,4,2,1,0,1,1,0,0,4,4,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,2,0,0,4,4,0,0,4,4,0,0,4,4,0,0,0,0,0,0,4,4,0,0,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,0,0,4,2,0,0,4,4,0,0,4,4,0,0,0,0,0,0,4,8,0,0,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,4,4,0,0,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,9,9,0,0,4,4,0,0,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,2,4,1,0,9,9,0,0,1,1,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,1,1,4,4,0,0,4,4,0,0,4,4,0,0,0,0,0,0,4,8,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,1,1,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,1,1,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,0,0,8,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,9,9,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,0,0,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,7,0,0,1},
-                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,10,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,5,0,0,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,0,0,0,9,1},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1},
 
-            },96 * GameWorld.Scale);
+            }, 96);
         }
 
         public override void GenerateLevel(int[,] level, int size)
@@ -97,58 +75,50 @@ namespace Gruppe8Eksamensprojekt2019
                         case (1):
                             {
                                 GameObject newWall = new Wall(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newWall);
-                                GameWorld.gameObjects.Add(newWall);
+                                AddObj(newWall);
                                 break;
                             }
 
                         case (2):
                             {
                                 GameObject newCrate = new Crate(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newCrate);
-                                GameWorld.gameObjects.Add(newCrate);
+                                AddObj(newCrate);
                                 break;
                             }
 
                         case (3):
                             {
                                 GameObject newSun = new Sun(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newSun);
-                                GameWorld.gameObjects.Add(newSun);
+                                AddObj(newSun);
                                 break;
                             }
 
                         case (4):
                             {
                                 GameObject newSunRay = new SunRay(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newSunRay);
-                                GameWorld.gameObjects.Add(newSunRay);
+                                AddObj(newSunRay);
                                 break;
                             }
 
-                        case (5):
-                            {
-                                break;
-                            }
+                        //case (5):
+                        //    {
+                        //        Key newKeyA = new Key (new Vector2(x * size, y * size));
+                        //        currentKey = newKeyA;
+                        //        AddObj(newKeyA);
+                        //        break;
+                        //    }
 
-                        case (6):
-                            {
-                                Key newKey = new Key(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newKey);
-                                GameWorld.gameObjects.Add(newKey);
-
-                                Door newDoor = new Door(new Vector2(x * size, y * size), newKey);
-                                Player.lockedDoors.Add(newDoor);
-                                GameWorld.collisionObjects.Add(newDoor);
-                                GameWorld.gameObjects.Add(newDoor);
-                                break;
-                            }
+                        //case (6):
+                        //    {
+                        //        Door newDoor = new Door(new Vector2(x * size, y * size), currentKey);
+                        //        AddObj(newDoor);
+                        //        break;
+                        //    }
 
                         case (7):
                             {
                                 GameObject newChest = new Chest(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newChest);
-                                GameWorld.gameObjects.Add(newChest);
+                                AddObj(newChest);
                                 break;
                             }
 
@@ -161,41 +131,82 @@ namespace Gruppe8Eksamensprojekt2019
                         case (9):
                             {
                                 GameObject newVase = new Vase(new Vector2(x * size, y * size));
-                                GameWorld.collisionObjects.Add(newVase);
-                                GameWorld.gameObjects.Add(newVase);
+                                AddObj(newVase);
                                 break;
                             }
 
-                        //case (10):
-                        //    {
-                        //        Key.KeyTwo = new Key(new Vector2(x * size, y * size));
-                        //        GameWorld.collisionObjects.Add(Key.KeyTwo);
-                        //        GameWorld.gameObjects.Add(Key.KeyTwo);
-                        //        //GameObject newKeyTwo = new Key(keyTwoName = "", new Vector2(x * size, y * size), keyPickedUp = false);
-                        //        //GameWorld.collisionObjects.Add(newKeyTwo);
-                        //        //GameWorld.gameObjects.Add(newKeyTwo);
-                        //        break;
-                        //    }
+                        case (10):
+                            {
+                                Key newKeyA = new Key(new Vector2(x * size, y * size), 1);
+                                KeyList.Add(newKeyA);
+                                AddObj(newKeyA);
+                                break;
+                            }
 
-                        //case (11):
-                        //    {
-                        //        Door.DoorTwo = new Door(key: Key.KeyTwo, new Vector2(x * size, y * size), Door.doorLocked = true);
-                        //        Player.lockedDoors.Add(Door.DoorTwo);
-                        //        GameWorld.collisionObjects.Add(Door.DoorTwo);
-                        //        GameWorld.gameObjects.Add(Door.DoorTwo);
-                        //        //GameObject newDoorTwo = new Door(doorTwoName = "1.2", new Vector2(x * size, y * size), doorTwoLocked = true);
-                        //        //GameWorld.collisionObjects.Add(newDoorTwo);
-                        //        //GameWorld.gameObjects.Add(newDoorTwo);
-                        //        break;
-                        //    }
+                        case (11):
+                            {
+                                Key newKeyB = new Key(new Vector2(x * size, y * size), 2);
+                                KeyList.Add(newKeyB);
+                                AddObj(newKeyB);
+                                break;
+                            }
+
+                        case (12):
+                            {
+                                Key newKeyC = new Key(new Vector2(x * size, y * size), 3);
+                                KeyList.Add(newKeyC);
+                                AddObj(newKeyC);
+                                break;
+                            }
+                        case (13):
+                            {
+                                foreach (Key key in KeyList)
+                                {
+                                    if (key.ID == 1)
+                                    {
+                                        Door newDoorA = new Door(new Vector2(x * size, y * size), key);
+                                        AddObj(newDoorA);
+                                    }
+                                }
+                                break;
+                            }
+                        case (14):
+                            {
+                                foreach (Key key in KeyList)
+                                {
+                                    if (key.ID == 2)
+                                    {
+                                        Door newDoorB = new Door(new Vector2(x * size, y * size), key);
+                                        AddObj(newDoorB);
+                                    }
+                                }
+                                break;
+                            }
+                        case (15):
+                            {
+                                foreach (Key key in KeyList)
+                                {
+                                    if (key.ID == 3)
+                                    {
+                                        Door newDoorC = new Door(new Vector2(x * size, y * size), key);
+                                        AddObj(newDoorC);
+                                    }
+                                }
+                                break;
+                            }
                     }
                 }
             }
         }
+        private void AddObj(GameObject newObj)
+        {
+            GameWorld.collisionObjects.Add(newObj);
+            GameWorld.gameObjects.Add(newObj);
+        }
 
         public override void LoadContent(ContentManager content)
         {
-
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -212,6 +223,34 @@ namespace Gruppe8Eksamensprojekt2019
 		{
 
 		}
-
+        /*
+         *     {0,0,0,0,1,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,1,1,1,1,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,1,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,5,0,1,1,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,0,0,0,1,0,0,0,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {1,1,1,1,1,0,0,0,0,0,4,4,0,0,4,4,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,4,4,0,0,1,1,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,4,4,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,4,4,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,4,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,0,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,3,3,1,1,1},
+                {0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,4,4,9,9,4,4,0,6,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,2,4,4,2,0,4,4,0,0,4,2,1,0,1,1,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,2,0,0,4,4,0,0,4,4,0,0,4,4,0,0,0,0,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,1,1,4,4,0,0,4,4,0,0,4,4,0,0,0,0,0,0,4,8,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,4,4,1,1,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,9,9,0,0,4,4,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,9,9,0,0,1,1,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,0,0,8,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,4,4,0,0,4,4,0,0,4,4,0,0,4,4,1,0,0,0,0,0,9,9,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,0,0,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,7,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,0,0,0,9,1},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1},
+                */
 	}
 }

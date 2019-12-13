@@ -12,16 +12,23 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Key : GameObject
     {
-        public Key(Vector2 position)
+        private int iD;
+
+        public int ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
+
+        public Key(Vector2 position, int ID)
         {
             base.position = position;
-            //child = parrentDoor;
+            iD = ID;
         }
 
         public override void LoadContent(ContentManager content)
         {
             sprite = content.Load<Texture2D>("keyTexture");
-            position.Y = position.Y - 150;
         }
 
         public override void Update(GameTime gameTime)
