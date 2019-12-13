@@ -23,7 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
         
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("Treasurechest");
+            sprite = GameWorld.TreasureSprite;
         }
 
         private void OpenChest()

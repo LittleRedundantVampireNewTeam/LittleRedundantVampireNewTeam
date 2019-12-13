@@ -14,13 +14,11 @@ namespace Gruppe8Eksamensprojekt2019
 		public Matrix CameraTransform
 		{
 			get { return cameraTransform; }
-			private set { value = cameraTransform; }
 		}
 
 		public void FollowTarget(Character target)
 		{
-			cameraTransform = Matrix.CreateTranslation(-target.Position.X-(target.Sprite.Width*GameWorld.scale), -target.Position.Y-(target.Sprite.Height*GameWorld.scale),0)
-				* Matrix.CreateTranslation(GameWorld.screenWidth/2*GameWorld.scale,GameWorld.screenHeight/2,0*GameWorld.scale);
+			cameraTransform = Matrix.CreateTranslation(-target.Position.X-(target.Sprite.Width), -target.Position.Y-(target.Sprite.Height),0) * Matrix.CreateTranslation(GameWorld.ScreenWidth/2,GameWorld.ScreenHeight/2,0);
 		}
 	}
 }

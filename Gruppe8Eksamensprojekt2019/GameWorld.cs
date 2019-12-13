@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System;
 using System.Collections.Generic;
 
 namespace Gruppe8Eksamensprojekt2019
@@ -16,16 +17,20 @@ namespace Gruppe8Eksamensprojekt2019
         SpriteBatch spriteBatch;
 
         //Lists
-        private List<GameObject> playerAbilities = new List<GameObject>();
-        public static List<GameObject> shadowObjects = new List<GameObject>();
-        public static List<GameObject> gameObjects = new List<GameObject>();
-        public static List<GameObject> collisionObjects = new List<GameObject>();
-        private static List<GameObject> newObjects = new List<GameObject>();
-        private static List<GameObject> deleteObjects = new List<GameObject>();
+        private static List<GameObject> playerAbilities     = new List<GameObject>();
+        private static List<GameObject> newObjects          = new List<GameObject>();
+        private static List<GameObject> deleteObjects       = new List<GameObject>();
+        private static List<Enemy>      enemies             = new List<Enemy>();
+
+        public static List<GameObject>  shadowObjects       = new List<GameObject>();
+        public static List<GameObject>  gameObjects         = new List<GameObject>();
+        public static List<GameObject>  collisionObjects    = new List<GameObject>();
+        public static List<GameObject>  newCollisionObjects = new List<GameObject>();
+        public static List<UiHeart>     UiHeartList         = new List<UiHeart>();
 
         //Sound & Music
         private Song currentMusic;
-        private byte currentLevel;
+        private byte chooseLevel = 1;
 
         //Textures
         private static Texture2D collisionTexture;
@@ -34,47 +39,62 @@ namespace Gruppe8Eksamensprojekt2019
         private static Texture2D crateSprite;
         private static Texture2D sunSprite;
         private static Texture2D vaseSprite;
-        private static Texture2D enemySprite;
+        //private static Texture2D enemySprite;
+        private static Texture2D uiHealthSprite;
+        private static Texture2D keySprite;
+        private static Texture2D doorSprite;
+        private static Texture2D treasureSprite;
 
         //Display
-        public static int screenWidth;
-        public static int screenHeight;
-        public static float scale;
+        public static int ScreenWidth;
+        public static int ScreenHeight;
+        public static float Scale;
+        static float tileSize;
+        public static Color bgColor = new Color(40,40,40,255);
+
         private Camera camera;
-        
+
         //Game
         private Player player;
-        Level levelOne;
+        Level CurrentLevel;
 
         //GameWorld
         public GameWorld()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
-        //Sprite Properties
+        //Properties
+        public static float TileSize
+        {
+            get { return tileSize; }
+        }
+
         public static Texture2D WallSprite
         {
             get { return wallSprite; }
         }
 
-        public static Texture2D EnemySprite
+        public static Texture2D UiHealthSprite
         {
-            get { return enemySprite; }
+            get { return uiHealthSprite; }
         }
 
+        //public static Texture2D EnemySprite
+        //{
+        //    get { return enemySprite; }
+        //}
 
         public static Texture2D SunSprite
         {
             get { return sunSprite; }
         }
+
         public static Texture2D VaseSprite
         {
             get { return vaseSprite; }
         }
-
 
         public static Texture2D CrateSprite
         {
@@ -84,6 +104,21 @@ namespace Gruppe8Eksamensprojekt2019
         public static Texture2D SunRaySprite
         {
             get { return sunRaySprite; }
+        }
+
+        public static Texture2D KeySprite
+        {
+            get { return keySprite; }
+        }
+
+        public static Texture2D DoorSprite
+        {
+            get { return doorSprite; }
+        }
+
+        public static Texture2D TreasureSprite
+        {
+            get { return treasureSprite; }
         }
 
         /// <summary>
@@ -97,15 +132,33 @@ namespace Gruppe8Eksamensprojekt2019
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
-            screenWidth = graphics.PreferredBackBufferWidth;
-            screenHeight = graphics.PreferredBackBufferHeight;
 
-            scale = ((1f / 1920f) * GraphicsDevice.DisplayMode.Width);
+            ScreenWidth = graphics.PreferredBackBufferWidth;
+            ScreenHeight = graphics.PreferredBackBufferHeight;
+
+            Scale = ((1f / 1920f) * GraphicsDevice.DisplayMode.Width);
+            tileSize = 96 * Scale;
 
             player = new Player(new Vector2(1500, 1500));
             collisionObjects.Add(player);
 
-            levelOne = new LevelOne();
+            switch (chooseLevel)
+            {
+                case (1):
+                    {
+                        CurrentLevel = new LevelOne();
+                        break;
+                    }
+
+                case (2):
+                    {
+                        CurrentLevel = new LevelTwo();
+                        break;
+                    }
+            }
+
+            gameObjects.Add(player);
+            camera = new Camera();
 
             base.Initialize();
         }
@@ -125,14 +178,35 @@ namespace Gruppe8Eksamensprojekt2019
             sunRaySprite         = Content.Load<Texture2D>("Sunlight2");
             sunSprite            = Content.Load<Texture2D>("WindowDark2");
             vaseSprite           = Content.Load<Texture2D>("vaseTexture");
-            enemySprite          = Content.Load<Texture2D>("enemyTexture");
+            //enemySprite          = Content.Load<Texture2D>("enemyTexture");
+            uiHealthSprite       = Content.Load<Texture2D>("healthUI");
+            keySprite            = Content.Load<Texture2D>("keyTexture");
+            doorSprite           = Content.Load<Texture2D>("doorTexture");
+            treasureSprite       = Content.Load<Texture2D>("Treasurechest");
 
-            gameObjects.Add(player);
-            camera = new Camera();
+            currentMusic         = Content.Load<Song>("backgroundMusic");
+
+            MediaPlayer.Play(currentMusic);
+            MediaPlayer.Volume = 0.5f;
+            MediaPlayer.IsRepeating = true;
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.LoadContent(Content);
+                gO.ScaledWidth = (int)(gO.sprite.Width * Scale);
+                gO.ScaledHeight = (int)(gO.sprite.Height * Scale);
+
+                if (gO is Enemy)
+				{
+					enemies.Add((Enemy)gO);
+				}
+            }
+
+            foreach (UiHeart hE in UiHeartList)
+            {
+                hE.LoadContent(Content);
+                hE.ScaledWidth = (int)(hE.sprite.Width * Scale);
+                hE.ScaledHeight = (int)(hE.sprite.Height * Scale);
             }
         }
 
@@ -153,28 +227,46 @@ namespace Gruppe8Eksamensprojekt2019
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+
             //Closes game when pressing esc.
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
             }
 
+            ToggleFullscreen();
+
             //Update camera
             camera.FollowTarget(player);
 
             //Add new objects to main object list
             gameObjects.AddRange(newObjects);
+            collisionObjects.AddRange(newCollisionObjects);
 
             //Clear new & deleted object lists
             newObjects.Clear();
+            newCollisionObjects.Clear();
             deleteObjects.Clear();
 
+            int i = 0;
+
+            foreach (UiHeart hE in UiHeartList)
+            {
+                //hE.Position = new Vector2(UiHeartList[i].Position.X + hE.Sprite.Width, hE.Position.Y);
+                hE.Update(gameTime);
+                hE.Position = new Vector2(hE.Position.X + (hE.Sprite.Width*i*Scale), hE.Position.Y-hE.Sprite.Height);
+                i++;
+            }
+
+			foreach (Enemy enemy in enemies)
+			{
+				enemy.UpdateDistance(player);
+			}
 
             foreach (GameObject gO in gameObjects)
             {
                 //Calls the update method in every gameobject on the list
                 gO.Update(gameTime);
-
 
                 //Calls the CheckCollision method in every game object in the list
                 foreach (GameObject other in collisionObjects)
@@ -206,12 +298,11 @@ namespace Gruppe8Eksamensprojekt2019
                 {
                     gO.HasShadow = false;
                 }
+            }
 
-                //Checks collision on gameobjects 
-                //foreach (GameObject other in gameObjects)
-                //{
-                //    gO.CheckCollision(other);
-                //}
+            if (Keyboard.GetState().IsKeyDown(Keys.R))
+            {
+                RestartGame();
             }
 
             foreach (GameObject gO in deleteObjects)
@@ -219,8 +310,10 @@ namespace Gruppe8Eksamensprojekt2019
                 gameObjects.Remove(gO);
                 collisionObjects.Remove(gO);
             }
-
-            
+            if (player.Health <= 0)
+            {
+                RestartGame();
+            }
 
             base.Update(gameTime);
         }
@@ -231,16 +324,23 @@ namespace Gruppe8Eksamensprojekt2019
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DimGray);
+            GraphicsDevice.Clear(bgColor);
 
-            // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
                 gO.Draw(spriteBatch);
 
-                DrawCollisionBox(gO);
+				DrawCollisionBox(gO);
+			}
+
+            foreach(UiHeart hE in UiHeartList)
+            {
+                if(UiHeart.DrawHealthUI == true)
+                {
+                    hE.Draw(spriteBatch);
+                }
             }
 
             spriteBatch.End();
@@ -255,7 +355,7 @@ namespace Gruppe8Eksamensprojekt2019
 
             Rectangle topLine      = new Rectangle(collisionBox.X, collisionBox.Y, collisionBox.Width, 1);
             Rectangle bottomLine   = new Rectangle(collisionBox.X, collisionBox.Y + collisionBox.Height, collisionBox.Width, 1);
-            Rectangle rightLine = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
+            Rectangle rightLine    = new Rectangle(collisionBox.X + collisionBox.Width, collisionBox.Y, 1, collisionBox.Height);
             Rectangle leftLine     = new Rectangle(collisionBox.X, collisionBox.Y, 1, collisionBox.Height);
 
             // Makes sure the collisionbox adjusts to each sprite.
@@ -268,11 +368,59 @@ namespace Gruppe8Eksamensprojekt2019
         public static void Instantiate(GameObject gO)
         {
             newObjects.Add(gO);
+
+            if (gO is PlayerAttack)
+            {
+                newCollisionObjects.Add(gO);
+            }
         }
 
         public static void Destroy(GameObject gO)
         {
             deleteObjects.Add(gO);
+        }
+
+        private void ToggleFullscreen()
+        {
+            KeyboardState keystate = Keyboard.GetState();
+
+            //Toggles fullscreen
+            if (keystate.IsKeyDown(Keys.F11) && graphics.IsFullScreen == false)
+            {
+                graphics.IsFullScreen = true;
+                graphics.ApplyChanges();
+            }
+            //Toggles windowed
+            else if (keystate.IsKeyDown(Keys.F11) && graphics.IsFullScreen == true)
+            {
+                graphics.IsFullScreen = false;
+                graphics.ApplyChanges();
+            }
+        }
+
+        private void RestartGame()
+        {
+            foreach(GameObject gO in gameObjects)
+            {
+                deleteObjects.Add(gO);
+            }
+
+            foreach (GameObject gO in deleteObjects)
+            {
+                gameObjects.Remove(gO);
+                collisionObjects.Remove(gO);
+            }
+
+            //Clear new & deleted object lists
+            newObjects.Clear();
+            newCollisionObjects.Clear();
+            deleteObjects.Clear();
+            UiHeartList.Clear();
+
+            Console.Clear();
+            //chooseLevel = 2;
+            Initialize();
+            LoadContent();
         }
     }
 }

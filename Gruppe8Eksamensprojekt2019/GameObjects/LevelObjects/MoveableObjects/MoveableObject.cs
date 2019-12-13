@@ -10,8 +10,8 @@ namespace Gruppe8Eksamensprojekt2019
 {
     abstract class MoveableObject : GameObject
     {
-        protected bool isCollidingMO;
-
-        protected abstract void Push();
+      protected bool isCollidingMO;
+      protected bool isPushing;
+      protected char direction = 'U';
     }
 }

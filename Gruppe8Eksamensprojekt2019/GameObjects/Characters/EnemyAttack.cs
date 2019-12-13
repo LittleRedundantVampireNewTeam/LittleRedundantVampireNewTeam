@@ -7,9 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gruppe8Eksamensprojekt2019.GameObjects.Characters
+namespace Gruppe8Eksamensprojekt2019
 {
-    class EnemyAttack : GameObject
+	class EnemyAttack : Attack
+	{
+
+		public override void LoadContent(ContentManager content)
+		{
+
+		}
+
+		public override void Update(GameTime gameTime)
+		{
+			HandleAttack(gameTime);
+		}
+
+		protected override void OnCollision(GameObject other)
+		{
+			if (other is Player && other.Invincible == false)
+			{
+				other.HitByAttack = true;
+			}
+		}
+
+		public EnemyAttack(Texture2D enemyAttackSprite, Vector2 position, Vector2 velocity)
+		{
+			base.sprite = enemyAttackSprite;
+			base.position = position;
+			base.velocity = velocity;
+
+			attackScaledHeight = (int)(sprite.Height * GameWorld.Scale);
+			attackScaledWidth = (int)(sprite.Width * GameWorld.Scale);
+		}
+
+
+	}
+	/*class EnemyAttack : GameObject
     {
         public override void LoadContent(ContentManager content)
         {
@@ -53,5 +86,5 @@ namespace Gruppe8Eksamensprojekt2019.GameObjects.Characters
                 GameWorld.Destroy(this);
             }
         }
-    }
+    }*/
 }
