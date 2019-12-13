@@ -11,9 +11,18 @@ namespace Gruppe8Eksamensprojekt2019
 {
     class Key : GameObject
     {
-        public Key(string name, Vector2 position)
+        private int iD;
+
+        public int ID
+        {
+            get { return iD; }
+            set { iD = value; }
+        }
+
+        public Key(Vector2 position, int ID)
         {
             base.position = position;
+            iD = ID;
         }
 
         public override void LoadContent(ContentManager content)

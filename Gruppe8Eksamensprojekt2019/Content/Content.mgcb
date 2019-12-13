@@ -13,17 +13,17 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Whoosh sound effect.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Whoosh sound effect.mp3
-
 #begin backgroundMusic.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:backgroundMusic.mp3
+
+#begin bacon.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:bacon.mp3
 
 #begin Bookshelf.png
 /importer:TextureImporter
@@ -36,6 +36,48 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Bookshelf.png
+
+#begin Bookshelf2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Bookshelf2.png
+
+#begin Burn.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Burn.mp3
+
+#begin Carpet2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Carpet2.png
+
+#begin CarpetSun2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:CarpetSun2.png
 
 #begin collisionTexture.jpg
 /importer:TextureImporter
@@ -85,6 +127,18 @@
 /processorParam:TextureFormat=Color
 /build:doorTexture.png
 
+#begin Empty.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Empty.png
+
 #begin enemyTexture.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -96,6 +150,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:enemyTexture.png
+
+#begin Floorboards.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Floorboards.png
 
 #begin healthUI.png
 /importer:TextureImporter
@@ -402,6 +468,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:vaseTexture.png
+
+#begin Whoosh sound effect.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Whoosh sound effect.mp3
 
 #begin WindowDark.png
 /importer:TextureImporter

@@ -19,7 +19,7 @@ namespace Gruppe8Eksamensprojekt2019
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = GameWorld.WallSprite;
+            sprite = GameWorld.EmptySprite;
         }
 
         public override void Update(GameTime gameTime)

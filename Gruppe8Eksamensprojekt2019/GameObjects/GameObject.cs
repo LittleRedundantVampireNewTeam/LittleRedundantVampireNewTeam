@@ -31,6 +31,9 @@ namespace Gruppe8Eksamensprojekt2019
         protected bool giveShadow;
         protected bool isMoving;
 		protected bool healthIsShown;
+        protected bool unlocked;
+        protected bool invincible;
+        private bool hitByAttack;
 
         protected byte currentIndex;
 
@@ -45,23 +48,27 @@ namespace Gruppe8Eksamensprojekt2019
 
         protected string name;
 
-		protected bool invincible;
+		
 
-		public bool Invincible
-		{
-			get { return invincible; }
-		}
+        //Properties
+        public bool Unlocked
+        {
+            get { return unlocked; }
+            set { unlocked = value; }
+        }
 
-		private bool hitByAttack;
+        public bool HitByAttack
+        {
+            get { return hitByAttack; }
+            set { hitByAttack = value; }
+        }
 
-		public bool HitByAttack
-		{
-			get { return hitByAttack; }
-			set { hitByAttack = value; }
-		}
+        public bool Invincible
+        {
+            get { return invincible; }
+        }
 
-		//Properties
-		public GameObject Parrent
+        public GameObject Parrent
         {
             get { return parrent; }
         }

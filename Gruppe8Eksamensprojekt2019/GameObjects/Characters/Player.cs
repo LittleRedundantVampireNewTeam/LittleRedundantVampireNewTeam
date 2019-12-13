@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
 
 namespace Gruppe8Eksamensprojekt2019
 {
@@ -13,8 +14,11 @@ namespace Gruppe8Eksamensprojekt2019
         private int regeneration;
         private bool isColliding;
 
+        protected SoundEffect sunBurn;
+        protected SoundEffectInstance sunBurnInstance;
+        public List<GameObject> playerKeys = new List<GameObject>();
 
-	    private KeyboardState keyState; /// NEW
+        private KeyboardState keyState; /// NEW
 
         private bool inShadow = false;
         private bool inSun = false;
@@ -33,6 +37,8 @@ namespace Gruppe8Eksamensprojekt2019
             characterDirection = "R";
             drawLayer = 0.5f;
             hasAttacked = false;
+
+            
 
             for (int i = 0; i < health; i++)
             {
@@ -57,6 +63,10 @@ namespace Gruppe8Eksamensprojekt2019
             //Checks if the player should be taking damage from standing in the sun
             if (invincible == false && (inSun == true || HitByAttack == true))
             {
+                if (sunBurnInstance.State != SoundState.Playing)
+                {
+                    sunBurnInstance.Play();
+                }
                 invincible = true;
 				takeDamage = true;
 				HitByAttack = false;
@@ -83,16 +93,23 @@ namespace Gruppe8Eksamensprojekt2019
                 inSun = true;
             }
 
-            if (other is Key)
+            if (other is Key && keyState.IsKeyDown(Keys.V))
             {
-                //if (keyState.IsKeyDown(Keys.V))
-                //{
-                //    GameWorld.Destroy(other);
-                //}
+                playerKeys.Add(other);
+                GameWorld.Destroy(other);
+            }
+
+            if (other is Door)
+            {
+                if (playerKeys.Contains(other.Parrent))
+                {
+                    other.Unlocked = true;
+                    playerKeys.Remove(other.Parrent);
+                }
             }
 
             // Do something when we collide with another object
-            if (other is Wall || other is Vase || other is Sun || other is Chest || other is Door && doorLocked == true)
+            if (other is Wall || other is Vase || other is Sun || other is Chest || (other is Door && other.Unlocked == false))
             {
                 intersection = Rectangle.Intersect(other.CollisionBox, CollisionBox);
 
@@ -200,6 +217,9 @@ namespace Gruppe8Eksamensprojekt2019
             attackLeft = content.Load<Texture2D>("SlashAttackLeft");
             attackUp = content.Load<Texture2D>("SlashAttackUp");
             attackDown = content.Load<Texture2D>("SlashAttackDown");
+
+            sunBurn = content.Load<SoundEffect>("Burn");
+            sunBurnInstance = sunBurn.CreateInstance();
 
             attackSound = content.Load<SoundEffect>("Whoosh sound effect");
 			

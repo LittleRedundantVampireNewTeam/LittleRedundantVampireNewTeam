@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Attack.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Decoration.cs" />
     <Compile Include="GameObjects\Characters\EnemyAttack.cs" />
     <Compile Include="GameObjects\Characters\PlayerAttack.cs" />
     <Compile Include="GameObjects\LevelObjects\BreakableObjects\BreakableObject.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="GameObjects\Characters\Boss.cs" />
     <Compile Include="GameObjects\Characters\Character.cs" />
     <Compile Include="GameObjects\LevelObjects\Key.cs" />
+    <Compile Include="LevelSetup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameObjects\LevelObjects\BreakableObjects\Vase.cs" />

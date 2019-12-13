@@ -23,6 +23,7 @@ namespace Gruppe8Eksamensprojekt2019
         private static List<Enemy>      enemies             = new List<Enemy>();
 
         public static List<GameObject>  shadowObjects       = new List<GameObject>();
+        public static List<Decoration> decorationsObjects   = new List<Decoration>();
         public static List<GameObject>  gameObjects         = new List<GameObject>();
         public static List<GameObject>  collisionObjects    = new List<GameObject>();
         public static List<GameObject>  newCollisionObjects = new List<GameObject>();
@@ -39,6 +40,15 @@ namespace Gruppe8Eksamensprojekt2019
         private static Texture2D crateSprite;
         private static Texture2D sunSprite;
         private static Texture2D vaseSprite;
+        private static Texture2D emptySprite;
+
+        //Decoration Textures
+        private static Texture2D bookshelfSprite;
+        private static Texture2D carpetTexture;
+        private static Texture2D carpetSunTexture;
+        private static Texture2D decorationSprite;
+        private static Texture2D floorboardTexture;
+
         //private static Texture2D enemySprite;
         private static Texture2D uiHealthSprite;
         private static Texture2D keySprite;
@@ -53,7 +63,7 @@ namespace Gruppe8Eksamensprojekt2019
         public static Color bgColor = new Color(40,40,40,255);
 
         private Camera camera;
-
+        public bool generated = false;
         //Game
         private Player player;
         Level CurrentLevel;
@@ -76,6 +86,11 @@ namespace Gruppe8Eksamensprojekt2019
             get { return wallSprite; }
         }
 
+        public static Texture2D FloorboardTexture
+        {
+            get { return floorboardTexture; }
+        }
+
         public static Texture2D UiHealthSprite
         {
             get { return uiHealthSprite; }
@@ -85,6 +100,29 @@ namespace Gruppe8Eksamensprojekt2019
         //{
         //    get { return enemySprite; }
         //}
+
+        public static Texture2D BookshelfSprite
+        {
+            get { return bookshelfSprite; }
+
+        }
+
+        public static Texture2D CarpetSunTexture
+        {
+            get { return carpetSunTexture; }
+
+        }
+
+        public static Texture2D CarpetTexture
+        {
+            get { return carpetTexture; }
+
+        }
+
+        public static Texture2D EmptySprite
+        {
+            get { return emptySprite; }
+        }
 
         public static Texture2D SunSprite
         {
@@ -129,6 +167,7 @@ namespace Gruppe8Eksamensprojekt2019
         /// </summary>
         protected override void Initialize()
         {
+            gameObjects.Clear();
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             graphics.ApplyChanges();
@@ -141,21 +180,8 @@ namespace Gruppe8Eksamensprojekt2019
 
             player = new Player(new Vector2(1500, 1500));
             collisionObjects.Add(player);
-
-            switch (chooseLevel)
-            {
-                case (1):
-                    {
-                        CurrentLevel = new LevelOne();
-                        break;
-                    }
-
-                case (2):
-                    {
-                        CurrentLevel = new LevelTwo();
-                        break;
-                    }
-            }
+            
+     
 
             gameObjects.Add(player);
             camera = new Camera();
@@ -178,17 +204,49 @@ namespace Gruppe8Eksamensprojekt2019
             sunRaySprite         = Content.Load<Texture2D>("Sunlight2");
             sunSprite            = Content.Load<Texture2D>("WindowDark2");
             vaseSprite           = Content.Load<Texture2D>("vaseTexture");
+            emptySprite          = Content.Load<Texture2D>("Empty");
             //enemySprite          = Content.Load<Texture2D>("enemyTexture");
             uiHealthSprite       = Content.Load<Texture2D>("healthUI");
             keySprite            = Content.Load<Texture2D>("keyTexture");
             doorSprite           = Content.Load<Texture2D>("doorTexture");
             treasureSprite       = Content.Load<Texture2D>("Treasurechest");
 
+            //decorations
+            bookshelfSprite = Content.Load<Texture2D>("bookshelf2");
+            carpetSunTexture = Content.Load<Texture2D>("CarpetSun2");
+            carpetTexture = Content.Load<Texture2D>("Carpet2");
+            floorboardTexture = Content.Load<Texture2D>("Floorboards");
+
             currentMusic         = Content.Load<Song>("backgroundMusic");
 
             MediaPlayer.Play(currentMusic);
             MediaPlayer.Volume = 0.5f;
             MediaPlayer.IsRepeating = true;
+
+            if (generated == false)
+            {
+
+                switch (chooseLevel)
+                {
+                    case (0):
+                        {
+                            CurrentLevel = new LevelSetup();
+                            break;
+                        }
+                    case (1):
+                        {
+                            CurrentLevel = new LevelOne();
+                            break;
+                        }
+
+                    case (2):
+                        {
+                            CurrentLevel = new LevelTwo();
+                            break;
+                        }
+                }
+                generated = true;
+            }
 
             foreach (GameObject gO in gameObjects)
             {
@@ -208,6 +266,8 @@ namespace Gruppe8Eksamensprojekt2019
                 hE.ScaledWidth = (int)(hE.sprite.Width * Scale);
                 hE.ScaledHeight = (int)(hE.sprite.Height * Scale);
             }
+
+            base.LoadContent();
         }
 
 
@@ -217,7 +277,9 @@ namespace Gruppe8Eksamensprojekt2019
         /// </summary>
         protected override void UnloadContent()
         {
+            
             // TODO: Unload non ContentManager content here
+
         }
 
         /// <summary>
@@ -235,6 +297,8 @@ namespace Gruppe8Eksamensprojekt2019
             }
 
             ToggleFullscreen();
+
+        
 
             //Update camera
             camera.FollowTarget(player);
@@ -310,10 +374,12 @@ namespace Gruppe8Eksamensprojekt2019
                 gameObjects.Remove(gO);
                 collisionObjects.Remove(gO);
             }
+            /*
             if (player.Health <= 0)
             {
                 RestartGame();
             }
+            */
 
             base.Update(gameTime);
         }
@@ -324,13 +390,17 @@ namespace Gruppe8Eksamensprojekt2019
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(bgColor);
+            GraphicsDevice.Clear(Color.Black);
 
             spriteBatch.Begin(SpriteSortMode.FrontToBack, transformMatrix: camera.CameraTransform);
 
             foreach (GameObject gO in gameObjects)
             {
-                gO.Draw(spriteBatch);
+                if ((gO.Position.X-player.Position.X)<200 && (gO.Position.Y-player.Position.Y)<200)
+                    {
+                    gO.Draw(spriteBatch);
+                    }
+               
 
 				DrawCollisionBox(gO);
 			}
@@ -340,6 +410,18 @@ namespace Gruppe8Eksamensprojekt2019
                 if(UiHeart.DrawHealthUI == true)
                 {
                     hE.Draw(spriteBatch);
+                }
+            }
+
+            foreach(Decoration dE in decorationsObjects)
+            {
+                
+                if ((dE.Position.X - player.Position.X) < 200
+                    && (dE.Position.Y - player.Position.Y) < 200
+                    && (player.Position.X- dE.Position.X) < 200
+                    && (player.Position.Y - dE.Position.Y) < 200)
+                {
+                    dE.Draw(spriteBatch);
                 }
             }
 
@@ -400,7 +482,8 @@ namespace Gruppe8Eksamensprojekt2019
 
         private void RestartGame()
         {
-            foreach(GameObject gO in gameObjects)
+            CurrentLevel = null;
+            foreach (GameObject gO in gameObjects)
             {
                 deleteObjects.Add(gO);
             }
@@ -416,11 +499,17 @@ namespace Gruppe8Eksamensprojekt2019
             newCollisionObjects.Clear();
             deleteObjects.Clear();
             UiHeartList.Clear();
+            decorationsObjects.Clear();
 
+            generated = false;
+
+ 
             Console.Clear();
-            //chooseLevel = 2;
+            //Content.Unload();
             Initialize();
             LoadContent();
+            
+            
         }
     }
 }

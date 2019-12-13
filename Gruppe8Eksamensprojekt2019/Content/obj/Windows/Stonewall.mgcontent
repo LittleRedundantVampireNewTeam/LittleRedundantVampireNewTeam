@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Stonewall.png</SourceFile>
-  <SourceTime>2019-12-03T22:44:34.0174946+01:00</SourceTime>
-  <DestFile>C:/Users/emmaj/OneDrive/Dokumenter/Datamatiker EADania/1 semester prøve/BackUps/LittleRedundantVampireEmma5.12.19/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Stonewall.xnb</DestFile>
-  <DestTime>2019-12-06T10:10:59.4188213+01:00</DestTime>
+  <SourceFile>C:/Users/Henrik/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/Stonewall.png</SourceFile>
+  <SourceTime>2019-12-12T17:34:05.5414935+01:00</SourceTime>
+  <DestFile>C:/Users/Henrik/Documents/GitHub/LittleRedundantVampireNewTeam/Gruppe8Eksamensprojekt2019/Content/bin/Windows/Stonewall.xnb</DestFile>
+  <DestTime>2019-12-12T17:44:31.1173409+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
