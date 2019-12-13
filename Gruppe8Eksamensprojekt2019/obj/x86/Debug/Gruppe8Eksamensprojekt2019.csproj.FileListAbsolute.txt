@@ -1,0 +1,589 @@
+C:\Users\admin\Documents\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\playerTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\wallTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\EksamensProjekt2019G8\Gruppe8Eksamensprojekt2019\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CoreCompileInputs.cache
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\Stinn\OneDrive\Dokumenter\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\playerTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\rayTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\sunTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\treasureTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\wallTexture.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\emmaj\OneDrive\Dokumenter\Datamatiker EADania\1 semester prøve\BackUps\LittleRedundantVampireEmma5.12.19\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\admin\Desktop\BetersFPSfix\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\admin\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\PeterBjørn\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\Peter-Skole-PC\Documents\GitHub\LittleRedundantVampire\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CoreCompileInputs.cache
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\PeterBjørn\Desktop\New\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\emmaj\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\bacon.wma
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\bacon.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Carpet2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\CarpetSun2.xnb
+C:\Users\Henrik\Documents\GitHub\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Empty.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.wma
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.wma
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\backgroundMusic.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\bacon.wma
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\bacon.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Bookshelf2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Carpet2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\CarpetSun2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\collisionTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Crate3.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\crateTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\doorTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Empty.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\enemyTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\healthUI.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\keyTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttack.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackDown.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackLeft.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackRight.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\SlashAttackUp.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Stonewall.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\StonewallBroken2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Sunlight2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Treasurechest.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\TreasurechestOpen.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy .xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Vampire ozzy2 '.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDown.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk1.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyDownWalk2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyStill.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUp2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk1.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyUpWalk2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireOzzyWalking.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\VampireWalking.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseSound.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\vaseTexture.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Whoosh sound effect.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\WindowDark2.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.csproj.CopyComplete
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.exe
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\obj\x86\Debug\Gruppe8Eksamensprojekt2019.pdb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Burn.xnb
+C:\Users\admin\Desktop\Fikset gamerestart\LittleRedundantVampireNewTeam\Gruppe8Eksamensprojekt2019\bin\Windows\x86\Debug\Content\Floorboards.xnb
